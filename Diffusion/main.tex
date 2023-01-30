@@ -1,0 +1,106 @@
+\documentclass[aspectratio=169, 10pt]{beamer}
+\usepackage{bbm}
+\usepackage{algorithm2e}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{animate}
+\usepackage{hyperref}
+\renewcommand\appendixname{Appendix}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{marvosym}
+\usepackage{fontawesome}
+\colorlet{rred}{red!80!black}
+\colorlet{ggreen}{green!80!black}
+\colorlet{grey}{black!50!white}
+
+\usetheme[progressbar=foot]{metropolis}
+\usepackage{appendixnumberbeamer}
+\setbeamercovered{dynamic}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage[style=authortitle,backend=bibtex]{biblatex}
+\addbibresource{biblio.bib}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+\setlength{\abovecaptionskip}{-3pt plus 0pt minus 0pt}
+
+\usepackage{xspace}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{obs}{Observation}
+
+% math symbols
+\input{fancy-math-fonts.tex}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+\title{Diffusion Models: DALL-E\\ 
+  \large{Deep Learning and Neural Networks: Advanced Topics}}
+\date{March 1, 2023}
+\author{Fabio Brau}
+\institute{Scuola Superiore Sant'Anna, Pisa.}
+% \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+
+\setbeamertemplate{background}{%
+    \begin{picture}(300,253)
+      \hspace{14.45cm}
+       \includegraphics[scale=0.1]{pic/logoretis_noname.png}
+   \end{picture}
+}
+\setbeamercolor{background canvas}{bg=white}
+\begin{document}
+{\setbeamertemplate{background}{%
+    \begin{picture}(300,240)
+      \hspace{0.9cm}
+       \includegraphics[scale=0.35]{pic/tecip_logo-ENG.png}
+       \hspace{0.5cm}
+       \includegraphics[scale=0.085]{pic/logoretis.png}
+   \end{picture}}%
+\maketitle
+}
+\begin{frame}
+  \tableofcontents
+\end{frame}
+\section{Introduction}
+\section{Broader Impacts}
+\begin{frame}{CLIP Model}
+  \begin{center}
+    \it
+    ``We also found discrepancies across gender and race for people
+    categorized into the ‘crime’ and ‘non-human’
+    categories\ldots''\footcite{clip}
+  \end{center}
+\end{frame}
+{%
+  \setbeamercolor{background canvas}{bg=black!10!white}
+  \setbeamertemplate{background}{%
+  \begin{picture}(300,240)
+    \hspace{0.9cm}
+    \includegraphics[scale=0.35]{pic/tecip_logo-ENG.png}
+    \hspace{0.5cm}
+    \includegraphics[scale=0.17]{pic/dipe.png}
+    \hspace{0.5cm}
+    \includegraphics[scale=0.085]{pic/logoretis.png}
+  \end{picture}}
+\begin{frame}{}
+  \textbf{\Huge Thanks for the attention}\\
+  \vspace{20pt}
+  \begin{minipage}[h]{0.6\textwidth}
+  {\large\bf Fabio Brau}
+  \vspace{5pt}
+  \begin{itemize}
+    \item[\faUniversity] {\bf Scuola Superiore Sant'Anna, Pisa}
+    \item[\Letter] \texttt{fabio.brau@santannapisa.it}
+    \item[\faGlobe] \href{http://retis.santannapisa.it/~f.brau/}{\tt %
+                    retis.santannapisa.it/\textasciitilde f.brau}
+    \item[\faLinkedin]
+      \href{https://www.linkedin.com/in/fabio-brau}{\tt%
+        linkedin.com/in/fabio-brau}
+  \end{itemize}
+  \end{minipage}
+\end{frame}
+}
+\end{document}
