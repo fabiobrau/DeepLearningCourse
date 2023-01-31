@@ -14,7 +14,7 @@
 \maketitle
 \tableofcontents
 \chapter{Markov Chains}
-In the section we will introduce the model of a classical markov chain with
+In the section we will introduce the model of a classical Markov chain with
 discrete time for which each state belongs to some finite or countable set of
 possible state. In the next section we extend the definition to states with a
 continuous states or in general a continuous density function.
@@ -49,7 +49,7 @@ $t$ and for each states $s,s_0,\dots,s_n\in S$
   \label{eq:markov-property}
 \end{equation}
 That is, the state assumed at a certain instant $t$ only depends on the
-previous state and not on the all history.
+previous state and not on the whole history.
 \end{defn}
 
 Observe that, since we are assuming that $S$ is finite, then we are assuming
@@ -75,10 +75,22 @@ $\left( \lambda,P \right)$ as stated in the following definition.
   Let $\lambda$ be a discrete distribution, and let $P$ be a transaction
   matrix. A sequence of random variable $\left( x_i \right)_{i\in\N}$ is a
   Markov chain with initial distribution $\lambda$ and transaction matrix
-  $P$ if
+  $P$ 
   \begin{itemize}
     \item $\lambda_i = \Ph\left( X_0=i \right)$;
-    \item $p_{ij} = \Ph\left( X_ \right)<++>
-  \end{itemize}<++>
-\end{defn}<++>
+    \item $p_{ij} = \Ph\left( X_n=j\,\vert\, X_{n-1}=i \right)$ for each
+      state $n$.
+    \item $X_{n+1}$ is independent from $X_0,\dots,X_{n-1}$.
+  \end{itemize}
+\end{defn}
+
+\section{Markov Chain with Continuous State Space}
+
+Let assume $\left(X_t \right)_{t\in\N}$ a sequence of continuous random
+variables, and that the initial variable $X_t$ as a continuous
+distribution $p(x)$. Remember that this implies that 
+\begin{equation}
+  \foreach in 
+  \label{<+label+>}
+\end{equation}<++>
 \end{document}
