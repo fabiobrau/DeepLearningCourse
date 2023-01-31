@@ -1,0 +1,42 @@
+\documentclass{report}
+\usepackage{amsthm, amsfonts, amsmath, amssymb}
+
+% Custom Environments
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+%custom commands
+\input{./fancy-math-fonts.tex}
+\title{Notes}
+\author{Fabio Brau}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{Markov Chains}
+In the section we will introduce the model of a classical markov chain with
+discrete time for which each state belongs to some finite or contouble set of
+possible state. In the next section we extend the definition to states with a
+continuous states or in general a continuous density function.
+\section{Background}
+\section{Countable States Markov Chains}
+Let $\left( X_t \right)_{t\in\N}$ a sequence of random variables. Let us
+assume that each instant $t\in\N$ the variable $X_t$ takes values in a countable state space $S$. 
+\begin{defn}[Markov Property]
+The sequence $(X_t)_{t\in\N}$ satisfies the Markov property if for each time
+$t$ and for each states $s,s_0,\dots,s_n\in S$
+\begin{equation}
+  \Ph(X_{n+1}=s\,\vert\,
+  X_0=s_0,\dots,X_n=s_n)=\Ph(X_{n+1}=s\,\vert\, X_n=s_n).
+  \label{eq:markov-property}
+\end{equation}
+That is, the state assumed at a certain instant $t$ only depends on the
+previous state and not on the all history.
+\end{defn}
+
+Observe that, since we are assuming that $S$ is finite, then we are assuming
+that there exists an enumeration $S=\left\{ s_1,\dots,s_n,\dots \right\}$.
+Hence,  for the sake of simplicity, and without loss of generality, we can
+assume that $S=\N$, from which $X_t\in\N$ for each $t$.
+
+\end{document}
