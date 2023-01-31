@@ -15,10 +15,28 @@
 \tableofcontents
 \chapter{Markov Chains}
 In the section we will introduce the model of a classical markov chain with
-discrete time for which each state belongs to some finite or contouble set of
+discrete time for which each state belongs to some finite or countable set of
 possible state. In the next section we extend the definition to states with a
 continuous states or in general a continuous density function.
 \section{Background}
+Let $\left( \Omega, \FF, \Ph \right)$ a probability space. The class-function $\Ph$
+is a finite measure over the sigma-algebra $\FF$ such that
+$\Ph\left(\Omega\right)=1$. A discrete random variable is represented by a
+measurable function $X:\Omega\to S$, where $S=\left\{ s_1,\dots,s_n,\dots
+\right\}$ equipped with an uniform. The variable is associated to a discrete
+distribution $\lambda$.
+\begin{defn}[Discrete Distribution]
+A sequence $\lambda=\left( \lambda_0,\dots,\lambda_n,\dots \right)$ is a
+\textit{discrete distribution} if and only if $\sum_{i\in\N} \lambda_i = 1$.
+\end{defn}
+
+We will say that a random variable $X$ has distribution $\lambda$ if and only
+if for each possible outcome $i\in\N$, 
+\begin{equation}
+  \Ph(X=i):= \Ph\left( \left\{ w\in\Omega\,:\, X(w)=i \right\}
+  \right)=\lambda_i.
+  \label{eq:discrete-distribution}
+\end{equation}
 \section{Countable States Markov Chains}
 Let $\left( X_t \right)_{t\in\N}$ a sequence of random variables. Let us
 assume that each instant $t\in\N$ the variable $X_t$ takes values in a countable state space $S$. 
@@ -39,4 +57,28 @@ that there exists an enumeration $S=\left\{ s_1,\dots,s_n,\dots \right\}$.
 Hence,  for the sake of simplicity, and without loss of generality, we can
 assume that $S=\N$, from which $X_t\in\N$ for each $t$.
 
+Based on the latter assumption over $S$, a \textit{Markov Chain}  with
+discrete time and countable state set is represented by a tuple 
+$\left( \lambda,P \right)$ as stated in the following definition.
+
+\begin{defn}[Transaction Matrix]
+  A transaction matrix $P=\left( p_{ij} \right)$ is matrix with infinite entries 
+  such that
+  \begin{equation}
+    \forall i\in\N,\quad \sum_{j\in\N} p_{ij} = 1.
+    \label{eq:transaction-matrix}
+  \end{equation}
+  In other words, a matrix $P$ is a transaction matrix if every row $P_{i:}$
+  is a discrete distribution.
+\end{defn}
+\begin{defn}[Markov Chain]
+  Let $\lambda$ be a discrete distribution, and let $P$ be a transaction
+  matrix. A sequence of random variable $\left( x_i \right)_{i\in\N}$ is a
+  Markov chain with initial distribution $\lambda$ and transaction matrix
+  $P$ if
+  \begin{itemize}
+    \item $\lambda_i = \Ph\left( X_0=i \right)$;
+    \item $p_{ij} = \Ph\left( X_ \right)<++>
+  \end{itemize}<++>
+\end{defn}<++>
 \end{document}
