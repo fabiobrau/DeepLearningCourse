@@ -57,7 +57,7 @@ probability measure of the set $X^{-1}(A)$. In formulas,
 
 
 \begin{defn}[Expectation]
-  Let $X$ a random variable. The expectation $E[X]$, when it exists , is
+  Let $X$ a random variable. The expectation $\E[X]$, when it exists , is
   defined by
   \begin{equation}
     \E\left[ X \right]:=\int_\Omega X(\omega)\, d\Ph(\omega).
@@ -103,9 +103,9 @@ measurable sets, then
   \Ph\left( \left( X,Y \right)\in A\times B \right) = \Ph\left( X\in A, Y\in B\right) = \Ph\left(X\in A\right)\Ph\left( Y\in B \right)
 \end{equation}
 
-Similar, but not as easily as the Discrete case we can define the concepts
-of: Conditioned Random Variable (a.k.a conditioned expectation), and
-conditioned probability.
+Similar, but not as easily as the discrete case, we can define the concepts
+of: Conditioned Random Variable (a.k.a \textit{Conditioned Expectation}), and
+\textit{Conditioned probability}.
 
 \begin{prop}[Conditioned Expectation]
   Given a random variable $X$ and given a $\sigma$-algebra $\GG\subseteq\FF$,
@@ -117,9 +117,45 @@ conditioned probability.
   The random variable $Z$ is named \textit{conditioned expectation}, and it is
   usually expressed as $\E\left[ X\,\vert\,\GG \right]:=Z$.
   \begin{proof}
-    Page 218 of Porbability Theori \& Examples (Durrett)
-  \end{proof}<++>
+    The proof is a direct consequnece that the Theorem of Radon-Nikodym. See
+    Durrett for further details.
+  \end{proof}
 \end{prop}
+
+\begin{defn}[Conditioned Variable]
+  Let $X,Y$ two random a random variable measurable on $\FF$. The
+  \textit{Conditioned Variable} is defined as follows
+  \begin{equation}
+    \E\left[ X\,\vert\,Y \right]:=\E\left[ X\,\vert\, \sigma(Y) \right],
+  \end{equation}
+  where remember that $\sigma(Y)$ is the smallest $\sigma$-algebra for which
+  $Y$ is measurable.
+\end{defn}
+
+
+The following two examples aim at providing an idea on the definition of
+conditioned expectation. We focus on two opposite cases, in the first can be
+though as the case of \textit{Conditioning by providing all the information}
+the latter \textit{Conditioning without adding information}.
+
+\begin{oss}[No-Information]
+  Let assume that $X$ is a random variable measurable on $\GG\subseteq \FF$.
+  This is means that finding the probability that $X$ takes certain values
+  by knowing that the exact same event happens is the same of computing the
+  probability. In formulas
+  \begin{equation}
+    \forall B\in\EE,\quad \Ph\left(X\in B\right) =\Ph\left( \E\left[ X\,\vert
+        \GG \right]\in\B \right)
+  \end{equation}
+  that can be also written in the following fancy manner
+  \begin{equation}
+    X\in\GG\quad \Rightarrow\quad \E\left[ X\,\vert\,\GG \right] = X.
+  \end{equation}
+\end{oss}
+
+
+On the otherside, conditioning to independent probability TODO
+
 \begin{defn}[Density Distribution]
   A random variable $X$ admits a \textit{density distribution} if there
   exists a function $f_X:\R^d\to\R_+$ such that, for any open set
