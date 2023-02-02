@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2021.6.7)  31 JAN 2023 17:25
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2021.6.7)  2 FEB 2023 19:02
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -174,44 +174,46 @@ LaTeX Info: Redefining \] on input line 2860.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-\c@defn=\count184
+\c@prop=\count184
+\c@defn=\count185
+\c@oss=\count186
 
 (./fancy-math-fonts.tex)
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count185
+\l__kernel_color_stack_int=\count187
 \l__pdf_internal_box=\box47
 )
 (./main.aux)
 \openout1 = main.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 13
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 15
 .
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 14.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -228,18 +230,18 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Chapter 1.
 [2
 
-] [3] (./main.aux))
+] [3] [4] [5] (./main.aux))
 
 Here is how much of LuaTeX's memory you used:
- 1758 strings out of 480991
+ 1776 strings out of 480991
  100000,319454 words of node,token memory allocated
- 513 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 12 attribute, 53 glue_spec
-, 12 attribute_list, 1 write nodes
-   avail lists: 2:221,3:93,4:5,5:120,6:12,7:1956,8:38,9:105,10:4,11:112
- 19248 multiletter control sequences out of 65536+600000
- 71 fonts using 6808627 bytes
- 30i,6n,26p,161b,187s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 569 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 26 attribute, 53 glue_spec
+, 26 attribute_list, 1 write nodes
+   avail lists: 2:355,3:98,4:10,5:216,6:16,7:2416,8:42,9:159,10:4,11:178
+ 19266 multiletter control sequences out of 65536+600000
+ 72 fonts using 6940379 bytes
+ 30i,7n,26p,161b,254s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></u
 sr/share/texlive/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr
 /share/texlive/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/shar
@@ -255,10 +257,10 @@ nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type
 y7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pf
 b>
-Output written on main.pdf (4 pages, 93258 bytes).
+Output written on main.pdf (6 pages, 111592 bytes).
 
-PDF statistics: 95 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
+PDF statistics: 101 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

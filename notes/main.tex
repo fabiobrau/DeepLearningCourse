@@ -2,8 +2,10 @@
 \usepackage{amsthm, amsfonts, amsmath, amssymb}
 
 % Custom Environments
+\newtheorem{prop}{Proposition}
 \theoremstyle{definition}
 \newtheorem{defn}{Definition}
+\newtheorem{oss}{Remark}
 
 %custom commands
 \input{./fancy-math-fonts.tex}
@@ -18,7 +20,8 @@ In the section we will introduce the model of a classical Markov chain with
 discrete time for which each state belongs to some finite or countable set of
 possible state. In the next section we extend the definition to states with a
 continuous states or in general a continuous density function.
-\section{Background}
+\section{Basic Definitions}
+\subsection{Discrete Probability}
 Let $\left( \Omega, \FF, \Ph \right)$ a probability space. The class-function $\Ph$
 is a finite measure over the sigma-algebra $\FF$ such that
 $\Ph\left(\Omega\right)=1$. A discrete random variable is represented by a
@@ -37,6 +40,111 @@ if for each possible outcome $i\in\N$,
   \right)=\lambda_i.
   \label{eq:discrete-distribution}
 \end{equation}
+
+\subsection{Continuous Probability}
+As in the discrete case, let $\left( \Omega, \FF, \Ph \right)$ a probability
+space. A continuous $d$-dimensional random variable is defined as a measurable map
+$X:\Omega\to\R^d$, where $\R^d$ is equipped with the Lebesgue measure.
+
+Remember that by definition, for each $A\subseteq \R^d$ measurable, we have
+that the probability that $X$ takes values in the set $A$ corresponds to the
+probability measure of the set $X^{-1}(A)$. In formulas, 
+\begin{equation}
+  \Ph\left(X\in A\right):=\Ph\left( \left\{ w\in\Omega\,:\,X(w)\in A \right\}
+  \right)
+  \label{eq:prob}
+\end{equation}
+
+
+\begin{defn}[Expectation]
+  Let $X$ a random variable. The expectation $E[X]$, when it exists , is
+  defined by
+  \begin{equation}
+    \E\left[ X \right]:=\int_\Omega X(\omega)\, d\Ph(\omega).
+    \label{eq:expectation}
+  \end{equation}
+\end{defn}
+
+As in the discrete case, is it possible to define the concept of independence
+even in the continuous case. In particular we can defined the independence of:
+Events, $\sigma$-algebras and random variables.
+
+\begin{defn}[Independence of Events]
+  Let $A,B\in\FF$ two events, they are independent if and only if
+  \begin{equation}
+    \Ph\left( A\cap B \right)=\Ph\left( A \right) \Ph\left(B \right)
+  \end{equation}
+\end{defn}
+
+\begin{defn}[Independence of $\sigma$-Algebras]
+  Two $\sigma$-algebras $\GG_1, \GG_2 \subseteq \FF$ are independent if and
+  only if for each two events $A,B$ respectively in $\GG_1, \GG_2$, they are
+  independent.
+\end{defn}
+
+Before defining the independence of two random variables, let us remember
+that a random variable $X$ generate a $\sigma$-algebra on $\Omega$.
+\begin{oss}
+  Let $X\in\R^d$ be a random variable, the class of set defined by
+  \[
+    \sigma(X):=\left\{ X^{-1}(A)\,:\, A\subseteq R^d\,\mbox{measurable}
+    \right\},
+  \]
+  is a $\sigma$-algebra.
+\end{oss}
+\begin{defn}[Independence of Random Variables]
+  Two random variables $X,Y$ are independent if and only if the corresponding
+  sigma algebras are independent.
+\end{defn}
+
+Observe that the last definition is equivalent to say that for each $A,B$
+measurable sets, then
+\begin{equation}
+  \Ph\left( \left( X,Y \right)\in A\times B \right) = \Ph\left( X\in A, Y\in B\right) = \Ph\left(X\in A\right)\Ph\left( Y\in B \right)
+\end{equation}
+
+Similar, but not as easily as the Discrete case we can define the concepts
+of: Conditioned Random Variable (a.k.a conditioned expectation), and
+conditioned probability.
+
+\begin{prop}[Conditioned Expectation]
+  Given a random variable $X$ and given a $\sigma$-algebra $\GG\subseteq\FF$,
+  there exists a unique random variable $Z$ measurable in $\GG$ such that
+  \[
+    \forall G\in\GG,\quad \int_G X(\omega)\,d\Ph(\omega)=\int_G
+    Y(\omega)\,d\Ph(\omega).
+  \]
+  The random variable $Z$ is named \textit{conditioned expectation}, and it is
+  usually expressed as $\E\left[ X\,\vert\,\GG \right]:=Z$.
+  \begin{proof}
+    Page 218 of Porbability Theori \& Examples (Durrett)
+  \end{proof}<++>
+\end{prop}
+\begin{defn}[Density Distribution]
+  A random variable $X$ admits a \textit{density distribution} if there
+  exists a function $f_X:\R^d\to\R_+$ such that, for any open set
+  $A\subseteq\R^d$ the
+  following equality holds
+  \begin{equation}
+    \Ph\left( X\in A \right) := \Ph\left( \left\{ w\in\Omega\,:\,X(w)\in A \right\} \right)= \int_A f_X(x)\,dx
+    \label{eq:density}
+  \end{equation}
+\end{defn}
+Observe that not all the random variables admit a density function, a
+typical examples is given by the random variable $X\equiv a$, that is equal to the
+constant $a$. In this case, for each open set $A\subseteq \R$ we have that
+\begin{equation}
+  \Ph\left( X\in A \right)=
+  \begin{cases}
+    1, &\mbox{if } a\in A\\
+    0, &\mbox{otherwise}
+  \end{cases}
+  \label{eq:not_f}
+\end{equation}
+
+
+Given two random variables $X\in\R^m,Y\in\R^n$ we can defined the
+joint random variable as follows $(X,Y)\in\R^{m+n}$.
 \section{Countable States Markov Chains}
 Let $\left( X_t \right)_{t\in\N}$ a sequence of random variables. Let us
 assume that each instant $t\in\N$ the variable $X_t$ takes values in a countable state space $S$. 
@@ -86,11 +194,9 @@ $\left( \lambda,P \right)$ as stated in the following definition.
 
 \section{Markov Chain with Continuous State Space}
 
+Let $\left( \Omega,\FF,\Ph \right)$ be a probability space. 
+
 Let assume $\left(X_t \right)_{t\in\N}$ a sequence of continuous random
 variables, and that the initial variable $X_t$ as a continuous
 distribution $p(x)$. Remember that this implies that 
-\begin{equation}
-  \foreach in 
-  \label{<+label+>}
-\end{equation}<++>
 \end{document}
