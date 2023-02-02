@@ -26,7 +26,7 @@ Let $\left( \Omega, \FF, \Ph \right)$ a probability space. The class-function $\
 is a finite measure over the sigma-algebra $\FF$ such that
 $\Ph\left(\Omega\right)=1$. A discrete random variable is represented by a
 measurable function $X:\Omega\to S$, where $S=\left\{ s_1,\dots,s_n,\dots
-\right\}$ equipped with an uniform. The variable is associated to a discrete
+\right\}$ equipped with the discrete measure. The variable is associated to a discrete
 distribution $\lambda$.
 \begin{defn}[Discrete Distribution]
 A sequence $\lambda=\left( \lambda_0,\dots,\lambda_n,\dots \right)$ is a
@@ -193,10 +193,20 @@ $\left( \lambda,P \right)$ as stated in the following definition.
 \end{defn}
 
 \section{Markov Chain with Continuous State Space}
-
-Let $\left( \Omega,\FF,\Ph \right)$ be a probability space. 
-
-Let assume $\left(X_t \right)_{t\in\N}$ a sequence of continuous random
-variables, and that the initial variable $X_t$ as a continuous
-distribution $p(x)$. Remember that this implies that 
+Let assume $\left(X_t \right)_{t\in\N}$ is a sequence of continuous random
+variables, and that the initial variable $X_0$ has a continuous
+distribution $p(x)$. Remember this means that
+\begin{equation}
+  \forall A\subseteq \R,\quad \Ph\left( X\in A \right)=\int_A p(x)\,dx
+  \label{eq:distribution}
+\end{equation}
+\begin{defn}[Markov Chain]
+  Let $p$ a distribution and let $q(x,y)$ a join distribution. The process
+$\left( X_t \right)$ is a Markov chain with continuous state space if
+\begin{itemize}
+  \item $X_0\sim p$
+  \item $\left(X_{t+1}\,\vert\, X_t=x \right) \sim p(x,\cdot)$
+  \item $X_{t+1}$ is independent from $X_0,\dots,X_{t-1}$.
+\end{itemize}
+\end{defn}
 \end{document}
