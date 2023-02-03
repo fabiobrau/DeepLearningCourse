@@ -104,27 +104,31 @@ measurable sets, then
 \end{equation}
 
 Similar, but not as easily as the discrete case, we can define the concepts
-of: Conditioned Random Variable (a.k.a \textit{Conditioned Expectation}), and
-\textit{Conditioned probability}.
+of: Conditional Random Variable (a.k.a \textit{Conditional Expectation}), and
+\textit{Conditional probability}.
 
-\begin{prop}[Conditioned Expectation]
+\begin{prop}[Conditional Expectation]
   Given a random variable $X$ and given a $\sigma$-algebra $\GG\subseteq\FF$,
-  there exists a unique random variable $Z$ measurable in $\GG$ such that
-  \[
-    \forall G\in\GG,\quad \int_G X(\omega)\,d\Ph(\omega)=\int_G
-    Y(\omega)\,d\Ph(\omega).
-  \]
-  The random variable $Z$ is named \textit{conditioned expectation}, and it is
+  there exists a unique random variable $Z$ such that
+  \begin{enumerate}
+    \item $Z$ is measurable in $\GG$. In formulas $X\in\GG$ or directly
+      $\sigma(Z)\subseteq \GG$.
+    \item  \(
+        \forall G\in\GG,\quad \int_G X(\omega)\,d\Ph(\omega)=\int_G
+        Y(\omega)\,d\Ph(\omega).
+          \)
+  \end{enumerate}
+  The random variable $Z$ is named \textit{conditional expectation}, and it is
   usually expressed as $\E\left[ X\,\vert\,\GG \right]:=Z$.
   \begin{proof}
-    The proof is a direct consequnece that the Theorem of Radon-Nikodym. See
+    The proof is a direct consequence of the Theorem of Radon-Nikodym. See
     Durrett for further details.
   \end{proof}
 \end{prop}
 
-\begin{defn}[Conditioned Variable]
-  Let $X,Y$ two random a random variable measurable on $\FF$. The
-  \textit{Conditioned Variable} is defined as follows
+\begin{defn}[Conditional to a Variable]
+  Let $X,Y$ two random variables measurable on $\FF$. The
+  \textit{Conditional to a Variable} is defined as follows
   \begin{equation}
     \E\left[ X\,\vert\,Y \right]:=\E\left[ X\,\vert\, \sigma(Y) \right],
   \end{equation}
@@ -132,30 +136,41 @@ of: Conditioned Random Variable (a.k.a \textit{Conditioned Expectation}), and
   $Y$ is measurable.
 \end{defn}
 
-
-The following two examples aim at providing an idea on the definition of
-conditioned expectation. We focus on two opposite cases, in the first can be
+The following two examples aim at providing an idea of the definition of
+conditional expectation. The conditional expectation can be thought as the
+best estimate of $X$ under the hypothesis that certain events happen.
+We focus on two opposite cases, in the first can be
 though as the case of \textit{Conditioning by providing all the information}
 the latter \textit{Conditioning without adding information}.
 
 \begin{oss}[No-Information]
-  Let assume that $X$ is a random variable measurable on $\GG\subseteq \FF$.
-  This is means that finding the probability that $X$ takes certain values
-  by knowing that the exact same event happens is the same of computing the
-  probability. In formulas
-  \begin{equation}
-    \forall B\in\EE,\quad \Ph\left(X\in B\right) =\Ph\left( \E\left[ X\,\vert
-        \GG \right]\in\B \right)
-  \end{equation}
-  that can be also written in the following fancy manner
+  Let us assume that $X$ is a random variable measurable on $\GG\subseteq \FF$.
+  This means that finding the probability that $X$ takes certain values in
+  $B$  by knowing that a set of possible events $\GG$ happen. If the event
+  $\left\{ X\in B\right\}$ is in $\GG$, than we are not providing a further
+  information. In formulas
   \begin{equation}
     X\in\GG\quad \Rightarrow\quad \E\left[ X\,\vert\,\GG \right] = X.
   \end{equation}
 \end{oss}
 
 
-On the otherside, conditioning to independent probability TODO
-
+\begin{oss}[All-Information]
+  Let us assume that $X$ is independent of a $\sigma$-algebra $\GG$. Then the
+  conditional expectation of $X$ on $\GG$ is given by
+  \begin{equation}
+    \E[X\,\vert\,\GG]=\E[X].
+  \end{equation}
+  \begin{proof}
+    Let $A\in\GG$. Since $X$ is independent of $\GG$, then, by definition,
+    for each $A\in\GG$, $X$ is independent of the characterization function
+    over $A$. This implies that
+    \begin{equation}
+      E\left[ X\,I_A \right] =E\left[ X \right]E\left[ I_A \right]
+    \end{equation}
+    from which it is easy to deduce the thesis.
+  \end{proof}
+\end{oss}
 \begin{defn}[Density Distribution]
   A random variable $X$ admits a \textit{density distribution} if there
   exists a function $f_X:\R^d\to\R_+$ such that, for any open set
