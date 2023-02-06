@@ -246,7 +246,20 @@ $\left( \lambda,P \right)$ as stated in the following definition.
 \section{Markov Chain with Continuous State Space}
 Let assume $\left(X_t \right)_{t\in\N}$ is a sequence of continuous random
 variables, and that the initial variable $X_0$ has a continuous
-distribution $p(x)$. Remember this means that
+distribution $q(x)$. 
+
+\subsection{Distribution Notation}
+From know on we will make use of a useful distributional notation.
+Let $X$ be a continuous random variable from the probability space
+$\left( \Omega,\FF,\Ph \right)$ to the continuous state space $\left(
+E,\EE  \right)$, e.g., $E=\R^n$ equipped with the Lebesgue measure and
+$\EE$ the Borel $\sigma$-algebra of measurable sets.
+
+A density function of the variable $X$, $p(X):E\to\R$
+\begin{equation}
+  \Ph\left( X\in\A \right) = \int_A p(X)\, dX\int_Ap(X)(x)\,\dx
+\end{equation}
+Remember this means that
 \begin{equation}
   \forall A\subseteq \R,\quad \Ph\left( X\in A \right)=\int_A p(x)\,dx
   \label{eq:distribution}
@@ -260,4 +273,5 @@ $\left( X_t \right)$ is a Markov chain with continuous state space if
   \item $X_{t+1}$ is independent from $X_0,\dots,X_{t-1}$.
 \end{itemize}
 \end{defn}
+
 \end{document}
