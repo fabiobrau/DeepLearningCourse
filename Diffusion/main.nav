@@ -21,7 +21,7 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@subsectionpages {3}{3}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {2}{Broader Impacts}{4}{Broader Impacts}{0}}
+\headcommand {\sectionentry {2}{Diffusion Models}{4}{Diffusion Models}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\slideentry {2}{0}{1}{4/4}{}{0}}
 \defcounter {refsection}{0}\relax 
@@ -34,8 +34,46 @@
 \headcommand {\slideentry {2}{0}{3}{6/6}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {6}{6}}
-\headcommand {\beamer@partpages {1}{6}}
-\headcommand {\beamer@subsectionpages {4}{6}}
-\headcommand {\beamer@sectionpages {4}{6}}
-\headcommand {\beamer@documentpages {6}}
-\headcommand {\gdef \inserttotalframenumber {3}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{0}{4}{7/7}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {7}{7}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{0}{5}{8/8}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {8}{8}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{0}{6}{9/9}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {9}{9}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{0}{7}{10/10}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {10}{10}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{0}{8}{11/11}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {11}{11}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {4}{11}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {4}{11}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {3}{Broader Impacts}{12}{Broader Impacts}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{0}{1}{12/12}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {12}{12}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{0}{2}{13/13}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {13}{13}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{0}{3}{14/14}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\beamer@partpages {1}{14}}
+\headcommand {\beamer@subsectionpages {12}{14}}
+\headcommand {\beamer@sectionpages {12}{14}}
+\headcommand {\beamer@documentpages {14}}
+\headcommand {\gdef \inserttotalframenumber {10}}

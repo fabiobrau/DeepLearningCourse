@@ -150,7 +150,51 @@
     \verb http://proceedings.mlr.press/v139/radford21a/radford21a.pdf
     \endverb
     \field{year}{2021}
-    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{thermodynamic}{article}{}
+    \name{author}{4}{}{%
+      {{hash=SDJ}{%
+         family={Sohl-Dickstein},
+         familyi={S\bibinithyphendelim D\bibinitperiod},
+         given={Jascha},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WEA}{%
+         family={Weiss},
+         familyi={W\bibinitperiod},
+         given={Eric\bibnamedelima A},
+         giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=MN}{%
+         family={Maheswaranathan},
+         familyi={M\bibinitperiod},
+         given={Niru},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=GS}{%
+         family={Ganguli},
+         familyi={G\bibinitperiod},
+         given={Surya},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \list{publisher}{1}{%
+      {ICML}%
+    }
+    \strng{namehash}{SDJ+1}
+    \strng{fullhash}{SDJWEAMNGS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{series}{International Conference on Machine Learning}
+    \field{title}{Deep Unsupervised Learning using Nonequilibrium
+  Thermodynamics}
+    \field{year}{2021}
   \endentry
 \enddatalist
 \endinput

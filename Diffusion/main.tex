@@ -37,6 +37,8 @@
 \input{fancy-math-fonts.tex}
 \DeclareMathOperator*{\argmin}{argmin}
 \DeclareMathOperator*{\argmax}{argmax}
+
+
 \title{Diffusion Models: DALL-E\\ 
   \large{Deep Learning and Neural Networks: Advanced Topics}}
 \date{March 1, 2023}
@@ -65,6 +67,131 @@
   \tableofcontents
 \end{frame}
 \section{Introduction}
+\section{Diffusion Models}
+\begin{frame}{Overview}
+  \begin{center}
+    \it
+    Diffusion models are generative models that aim at denoising data
+  \end{center}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.2]{./pic/diffusion_intro.png}
+  \end{figure}
+\end{frame}
+\begin{frame}{Timeline}
+\begin{enumerate}
+  \item[\bf 2015)] \textit{\ldots Non-equilibrium Thermodynamics}. Sohl-Dickstein
+    et al. ICML\vfill
+  \item[\bf 2020)] \textit{Denoising Diffusion Probabilistic Models}.
+  Ho et al. NeurIPS.\vfill
+  \item[\bf 2021)] \textit{Score-Based Generative Modeling Through SDE}. Song et
+    al. ICLR.
+\end{enumerate}
+\end{frame}
+\begin{frame}{Deep Unsupervised Learning using Non-Equilibrium Thermodynamics}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[scale=.23]{./pic/thermodynimc.png}
+    \caption{Diffusion process as a \textbf{Markov Chain} with \textbf{Continuous
+    State Space} and \textbf{Discrete Time}.\footcite{thermodynamic}}
+  \end{figure}
+\end{frame}
+\begin{frame}{Reminder: Markov Chains with Discrete Time}
+\textbf{Informal Definition}\\ 
+A sequence of random variables $\xx^{(0)},\xx^{(1)},\cdots,\xx^{(t)},\cdots$,
+such that:
+\begin{itemize}
+  \item $\xx^{(t)}\in S$, where $S$ \textbf{State Space}
+  \item The future $\xx^{(t+1)}$ depends on the present $\xx^{(t)}$ 
+    but not on the past $\xx^{(t-1)}$
+\end{itemize}
+  \vfill
+  \begin{minipage}[t]{0.4\textwidth}
+    \begin{center}
+      \textbf{Discrete State Space $S$}
+    \end{center}
+  \end{minipage}\hfill%
+  \begin{minipage}[t]{0.4\textwidth}
+    \begin{center}
+      \textbf{Continuous State Space $S$}
+    \end{center}
+  \end{minipage}
+\end{frame}
+
+\begin{frame}{Reminder: MCDT with Discrete State Space}
+  \begin{minipage}[t]{0.45\textwidth}
+    \textbf{Definition}\\
+    A sequence of random variables $\left\{ \xx^{(t)}\right\}_{t\in\TT}
+    \subseteq S$
+    \begin{itemize}
+      \item \textbf{Discrete Time Property}\\
+      \(
+        \xx^{(0)},\,\xx^{(1)},\cdots,\xx^{(t)},\cdots 
+      \)
+      \item \textbf{Markov Property}\\
+      \(
+        \Ph\left( \xx^{(t+1)}\in A\,\vert\, \xx^{(0)},\ldots,\xx^{(t)}
+        \right)=\Ph\left(\xx^{(t+1)}\in A\,\vert\,\xx^{(t)} \right)
+      \)
+    \end{itemize}
+  \end{minipage}\hfill%
+  \begin{minipage}[t]{0.5\textwidth}
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[scale=0.1]{./pic/mcdt_discrete_space.png}
+      \caption{Two MCs with a discrete state space of respectively $2$ and
+      $3$ states each.}
+    \end{figure}
+  \end{minipage}
+\end{frame}
+\begin{frame}{Reminder: DTMC with Continuous State Space}
+  Let assume $\xx,\yy\in S$ where $S$ continuous state space (e.g.
+  $S=\R^d$)\.\
+  \textbf{Joint Distribution} $p(\xx,\yy)$
+  \[
+    \Ph\left( \xx\in A\,\vert\,\yy\in B \right)&=
+    \int_A\int_B p\left( \xx,\yy \right)\,d\xx\,d\yy
+  \]
+
+  \textbf{Transactional Kernel} $p(\xx\,\vert\,\yy)$
+  \[
+    p\left( \xx,\yy \right) = p(\xx\,\vert\,\yy)\,p\left( \xx \right)
+  \]
+  \textbf{Marginal Distribution} $p(\xx)$
+  \[
+    p\left( \xx \right)=\int_S p\left( \xx,\yy \right)\,d\yy = \int_S p(\xx\,\vert\,\yy)\,p\left( \xx \right)\,d\yy 
+  \]
+
+\end{frame}
+
+\begin{frame}{Markov Chains with Discrete Time}
+\textbf{Definition}\\ 
+  A sequence of random variables $\left\{ \xx^{(t)}\right\}_{t\in\TT}
+  \subseteq S$, such that the future $\xx^{(t+1)}$ depends on
+  the present $\xx^{(t)}$ but not on the past $\xx^{(t-1)}$.\\
+  \begin{itemize}
+    \item \textbf{Discrete Time Property}\\
+      \(
+        \xx^{(0)},\,\xx^{(1)},\cdots,\xx^{(t)},\cdots 
+      \)
+    \item \textbf{Markov Property}\\
+      \(
+        \Ph\left( \xx^{(t+1)}\in A\,\vert\, \xx^{(0)},\ldots,\xx^{(t)}
+        \right)=\Ph\left(\xx^{(t+1)}\in A\,\vert\,\xx^{(t)} \right)
+      \)
+  \end{itemize}
+  \vfill
+  \begin{minipage}[t]{0.4\textwidth}
+    \begin{center}
+      \textbf{Discrete State Space $S$}
+    \end{center}
+  \end{minipage}\hfill%
+  \begin{minipage}[t]{0.4\textwidth}
+    \begin{center}
+      \textbf{Continuous State Space $S$}
+    \end{center}
+  \end{minipage}
+\end{frame}
 \section{Broader Impacts}
 \begin{frame}{CLIP Model}
   \begin{center}

@@ -7,10 +7,20 @@
   editor = 	 {Meila, Marina and Zhang, Tong},
   volume = 	 {139},
   series = 	 {Proceedings of Machine Learning Research},
-  month = 	 {18--24 Jul},
   publisher =    {PMLR},
   pdf = 	 {http://proceedings.mlr.press/v139/radford21a/radford21a.pdf},
   url = 	 {https://proceedings.mlr.press/v139/radford21a.html},
   abstract = 	 {State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories. This restricted form of supervision limits their generality and usability since additional labeled data is needed to specify any other visual concept. Learning directly from raw text about images is a promising alternative which leverages a much broader source of supervision. We demonstrate that the simple pre-training task of predicting which caption goes with which image is an efficient and scalable way to learn SOTA image representations from scratch on a dataset of 400 million (image, text) pairs collected from the internet. After pre-training, natural language is used to reference learned visual concepts (or describe new ones) enabling zero-shot transfer of the model to downstream tasks. We study the performance of this approach by benchmarking on over 30 different existing computer vision datasets, spanning tasks such as OCR, action recognition in videos, geo-localization, and many types of fine-grained object classification. The model transfers non-trivially to most tasks and is often competitive with a fully supervised baseline without the need for any dataset specific training. For instance, we match the accuracy of the original ResNet-50 on ImageNet zero-shot without needing to use any of the 1.28 million training examples it was trained on.}
 }
+
+@article{thermodynamic, 
+  title={Deep Unsupervised Learning using Nonequilibrium Thermodynamics}, 
+  abstractNote={A central problem in machine learning involves modeling complex data-sets using highly ﬂexible families of probability distributions in which learning, sampling, inference, and evaluation are still analytically or computationally tractable. Here, we develop an approach that simultaneously achieves both ﬂexibility and tractability. The essential idea, inspired by non-equilibrium statistical physics, is to systematically and slowly destroy structure in a data distribution through an iterative forward diffusion process. We then learn a reverse diffusion process that restores structure in data, yielding a highly ﬂexible and tractable generative model of the data. This approach allows us to rapidly learn, sample from, and evaluate probabilities in deep generative models with thousands of layers or time steps, as well as to compute conditional and posterior probabilities under the learned model. We additionally release an open source reference implementation of the algorithm.}, 
+  author={Sohl-Dickstein, Jascha and Weiss, Eric A and Maheswaranathan, Niru and Ganguli, Surya}, 
+  language={en},
+year={2021},
+publisher={ICML},
+series = {International Conference on Machine Learning}}
+
+@book{Norris_1998, title={Markov Chains}, ISBN={978-0-521-63396-3}, abstractNote={Publisher Description (unedited publisher data) Markov chains are central to the understanding of random processes. This is not only because they pervade the applications of random processes, but also because one can calculate explicitly many quantities of interest. This textbook, aimed at advanced undergraduate or MSc students with some background in basic probability theory, focuses on Markov chains and quickly develops a coherent and rigorous theory whilst showing also how actually to apply it. Both discrete-time and continuous-time chains are studied. A distinguishing feature is an introduction to more advanced topics such as martingales and potentials in the established context of Markov chains. There are applications to simulation, economics, optimal control, genetics, queues and many other topics, and exercises and examples drawn both from theory and practice. It will therefore be an ideal text either for elementary courses on random processes or those that are more oriented towards applications.}, note={Google-Books-ID: qM65VRmOJZAC}, publisher={Cambridge University Press}, author={Norris, J. R.}, year={1998}, month={Jul}, language={en} }
 
