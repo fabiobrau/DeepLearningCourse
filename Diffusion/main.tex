@@ -16,7 +16,7 @@
 
 \usetheme[progressbar=foot]{metropolis}
 \usepackage{appendixnumberbeamer}
-\setbeamercovered{dynamic}
+\setbeamercovered{invisible}
 
 \usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
@@ -106,47 +106,72 @@ such that:
     but not on the past $\xx^{(t-1)}$
 \end{itemize}
   \vfill
-  \begin{minipage}[t]{0.4\textwidth}
+  \begin{minipage}[t]{0.5\textwidth}
     \begin{center}
       \textbf{Discrete State Space $S$}
     \end{center}
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.5\textwidth, trim=0 0 0
+      3cm]{./pic/markov_chain_discrete space.png}\
+    \end{figure}
   \end{minipage}\hfill%
-  \begin{minipage}[t]{0.4\textwidth}
+  \begin{minipage}[t]{0.5\textwidth}
     \begin{center}
       \textbf{Continuous State Space $S$}
     \end{center}
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=\textwidth, trim=0 0 0
+      4cm]{./pic/markov_chain_continous space2.png}
+    \end{figure}
   \end{minipage}
 \end{frame}
 
 \begin{frame}{Reminder: MCDT with Discrete State Space}
-  \begin{minipage}[t]{0.45\textwidth}
+  \begin{minipage}[t]{0.6\textwidth}
     \textbf{Definition}\\
-    A sequence of random variables $\left\{ \xx^{(t)}\right\}_{t\in\TT}
-    \subseteq S$
+    A sequence $\left\{ \xx^{(t)}\right\}_{t\in\N}
+    \subseteq S$, a matrix $P=\left( p_{ij} \right)$.
+    \vspace{1cm}
     \begin{itemize}
-      \item \textbf{Discrete Time Property}\\
-      \(
-        \xx^{(0)},\,\xx^{(1)},\cdots,\xx^{(t)},\cdots 
+      %\item %\textbf{Discrete Time Property}\\
+      %\(
+      %  \xx^{(0)},\,\xx^{(1)},\cdots,\xx^{(t)},\cdots 
+      %\)
+      %\item \textbf{Discrete Space}\\
+      \item \textbf{Discrete state space}: \(
+        S=\left\{ s_0,\cdots,s_n,\cdots \right\}
+      \) 
+      \vspace{1cm}
+    \item \textbf{Markov Property:} $\xx^{(t+1)}$ not dep. $\xx^{(0)},\cdots,\xx^{(t-1)}$.
+      \vspace{1cm}
+
+    \item \textbf{Transaction Matrix}: \(
+        \Ph\left( \xx^{(t+1)}=s_j \vert \xx^{(t)}=s_i\right)=p_{ij}
       \)
-      \item \textbf{Markov Property}\\
-      \(
-        \Ph\left( \xx^{(t+1)}\in A\,\vert\, \xx^{(0)},\ldots,\xx^{(t)}
-        \right)=\Ph\left(\xx^{(t+1)}\in A\,\vert\,\xx^{(t)} \right)
-      \)
+%      \(
+%        \Ph\left( \xx^{(t+1)}\in A\,\vert\, \xx^{(0)},\ldots,\xx^{(t)}
+%        \right)=\Ph\left(\xx^{(t+1)}\in A\,\vert\,\xx^{(t)} \right)
+%      \)
     \end{itemize}
   \end{minipage}\hfill%
-  \begin{minipage}[t]{0.5\textwidth}
+  \onslide<2>{%
+  \begin{minipage}[t]{0.3\textwidth}
+    \textbf{$P$ is a stochastic matrix!}\\
+    \[
+      \forall i,\quad \sum_{j\in\N}p_{ij}=1
+    \]
     \begin{figure}[h!]
       \centering
-      \includegraphics[scale=0.1]{./pic/mcdt_discrete_space.png}
-      \caption{Two MCs with a discrete state space of respectively $2$ and
-      $3$ states each.}
+      \includegraphics[width=\textwidth]{./pic/mcdt_discrete_space.png}
     \end{figure}
   \end{minipage}
+  }
 \end{frame}
 \begin{frame}{Reminder: DTMC with Continuous State Space}
   Let assume $\xx,\yy\in S$ where $S$ continuous state space (e.g.
-  $S=\R^d$)\.\
+  $S=\R^d$).\\
   \textbf{Joint Distribution} $p(\xx,\yy)$
   \[
     \Ph\left( \xx\in A\,\vert\,\yy\in B \right)&=
@@ -155,11 +180,12 @@ such that:
 
   \textbf{Transactional Kernel} $p(\xx\,\vert\,\yy)$
   \[
-    p\left( \xx,\yy \right) = p(\xx\,\vert\,\yy)\,p\left( \xx \right)
+    p\left( \xx,\yy \right) = p(\xx\,\vert\,\yy)\,p\left( \yy \right)
   \]
   \textbf{Marginal Distribution} $p(\xx)$
   \[
-    p\left( \xx \right)=\int_S p\left( \xx,\yy \right)\,d\yy = \int_S p(\xx\,\vert\,\yy)\,p\left( \xx \right)\,d\yy 
+    p\left( \xx \right)=\int_S p\left( \xx,\yy \right)\,d\yy = \int_S
+    p(\xx\,\vert\,\yy)\,p\left( \yy\right)\,d\yy 
   \]
 
 \end{frame}
