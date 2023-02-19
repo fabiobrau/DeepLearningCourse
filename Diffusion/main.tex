@@ -1,13 +1,13 @@
 \documentclass[aspectratio=169, 10pt]{beamer}
 \usepackage{bbm}
-\usepackage{algorithm2e}
-\usepackage{mathtools}
-\usepackage{graphicx}
-\usepackage{animate}
-\usepackage{hyperref}
+%\usepackage{algorithm2e}
+%\usepackage{mathtools}
+%\usepackage{graphicx}
+%\usepackage{animate}
+%\usepackage{hyperref}
 \renewcommand\appendixname{Appendix}
-\usepackage{xcolor}
-\usepackage{tikz}
+%\usepackage{xcolor}
+%\usepackage{tikz}
 \usepackage{marvosym}
 \usepackage{fontawesome}
 \colorlet{rred}{red!80!black}
@@ -15,6 +15,7 @@
 \colorlet{grey}{black!50!white}
 
 \usetheme[progressbar=foot]{metropolis}
+\metroset{block=fill}
 \usepackage{appendixnumberbeamer}
 \setbeamercovered{invisible}
 
@@ -28,7 +29,7 @@
 \setbeamertemplate{caption}{\raggedright\insertcaption\par}
 \setlength{\abovecaptionskip}{-3pt plus 0pt minus 0pt}
 
-\usepackage{xspace}
+%\usepackage{xspace}
 \theoremstyle{definition}
 \newtheorem{defn}{Definition}
 \newtheorem{obs}{Observation}
@@ -127,7 +128,6 @@ such that:
     \end{figure}
   \end{minipage}
 \end{frame}
-
 \begin{frame}{Reminder: MCDT with Discrete State Space}
   \begin{minipage}[t]{0.6\textwidth}
     \textbf{Definition}\\
@@ -172,9 +172,10 @@ such that:
 \begin{frame}{Reminder: DTMC with Continuous State Space}
   Let assume $\xx,\yy\in S$ where $S$ continuous state space (e.g.
   $S=\R^d$).\\
+  \vfill
   \textbf{Joint Distribution} $p(\xx,\yy)$
   \[
-    \Ph\left( \xx\in A\,\vert\,\yy\in B \right)&=
+    \Ph\left( \xx\in A\,\vert\,\yy\in B \right)=
     \int_A\int_B p\left( \xx,\yy \right)\,d\xx\,d\yy
   \]
 
@@ -189,35 +190,69 @@ such that:
   \]
 
 \end{frame}
-
-\begin{frame}{Markov Chains with Discrete Time}
-\textbf{Definition}\\ 
-  A sequence of random variables $\left\{ \xx^{(t)}\right\}_{t\in\TT}
-  \subseteq S$, such that the future $\xx^{(t+1)}$ depends on
-  the present $\xx^{(t)}$ but not on the past $\xx^{(t-1)}$.\\
+\begin{frame}{Forward Diffusion Process}
+  \begin{center}
+    ``Adding noise to data\ldots''
+  \end{center}
   \begin{itemize}
-    \item \textbf{Discrete Time Property}\\
-      \(
-        \xx^{(0)},\,\xx^{(1)},\cdots,\xx^{(t)},\cdots 
-      \)
-    \item \textbf{Markov Property}\\
-      \(
-        \Ph\left( \xx^{(t+1)}\in A\,\vert\, \xx^{(0)},\ldots,\xx^{(t)}
-        \right)=\Ph\left(\xx^{(t+1)}\in A\,\vert\,\xx^{(t)} \right)
-      \)
+    \item \textbf{Data Distribution}: $\xx^{(0)}\sim q$
+      \hfill\onslide<2->{{\color{red} Not Analytic!!}}
+    \item \textbf{Transaction Kernel}: $q\left( \xx^{(t)}\,\vert\,\xx^{(t-1)}
+      \right)=\NN\left( \xx^{(t)};\sqrt{1-\beta_t}\xx^{(t-1)}; \beta_t I \right)$
+    \item \textbf{Variance Scheduler}: $\beta_0,\cdots,\beta_T\in\left(
+      0,1\right)$% \hfill\onslide<2->{{\color{red} $\beta_0=0,\,\beta_T=1$}}
+
   \end{itemize}
-  \vfill
-  \begin{minipage}[t]{0.4\textwidth}
-    \begin{center}
-      \textbf{Discrete State Space $S$}
-    \end{center}
-  \end{minipage}\hfill%
-  \begin{minipage}[t]{0.4\textwidth}
-    \begin{center}
-      \textbf{Continuous State Space $S$}
-    \end{center}
-  \end{minipage}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.75\textwidth]{./pic/forward-diffusion.png}
+  \end{figure}
 \end{frame}
+\begin{frame}{Forward Diffusion Process: Explicit Representation}
+  \[
+    \xx^{(t)}=\sqrt{1-\beta_t}\,\xx^{(t-1)} +
+    \sqrt{\beta_t}\,\varepsilonb_t,\quad
+    \varepsilonb_t\sim\NN(0,I)
+  \]
+  \begin{block}{Observation: Many small noisy steps $\approx$ Large Noisy
+    step}
+    \[
+      \xx^{(t)} = \sqrt{1-\alpha_t}\, \xx^{(0)} + \sqrt{\alpha_t}
+      \varepsilonb,\quad \varepsilonb\sim\NN(0,I)
+    \]
+    where
+    \[
+      \alpha_t = 1-\prod_{i=0}^t(1-\beta_i)
+    \]
+  \end{block}
+\end{frame}
+\begin{frame}{Forward Diffusion Process: Distribution Representation}
+  \begin{center}
+    Markov property allows breaking up distributional Representation\ldots
+  \end{center}
+  \begin{equation}
+    \begin{aligned}
+    q(\xx^{(0)},\ldots,\xx^{(T)}) &= q\left( \xx^{(T)}\,|\,
+      \xx^{(0)},\ldots,\xx^{(T-1)} \right)\,q\left(
+      \xx^{(0)},\ldots,\xx^{(T-1)} \right)\\
+      \pause
+      &= q\left(\xx^{(T)}\,\vert\, \xx^{(T-1)}\right) q\left(
+      \xx^{(0)},\ldots,\xx^{(T-1)} \right)\\
+      &\vdots\\
+    \end{aligned}
+  \end{equation}
+  \pause
+  \begin{block}{Distributional Representation}
+    \[
+      q(\xx^{(0)},\ldots,\xx^{(T)})= q(\xx^{(0)})\prod_{t=1}^T q\left(
+          \xx^{(t)}\,\vert\,\xx^{(t-1)}
+        \right)
+    \]
+  \end{block}
+\end{frame}
+\begin{frame}{Inverse Diffusion Process}
+
+\end{frame}<++>
 \section{Broader Impacts}
 \begin{frame}{CLIP Model}
   \begin{center}
@@ -256,4 +291,56 @@ such that:
   \end{minipage}
 \end{frame}
 }
+\appendix
+\section{Proof Details}
+\begin{frame}{Proof of Explicit Representation of Forward Diffusion Process}
+  Let us proceeding by induction by assuming 
+  $\xx^{(t)} = \sqrt{1-\alpha_t}\, \xx^{(0)} + \sqrt{\alpha_t}\,\varepsilonb$
+  where $\varepsilonb\sim\NN(0,I)$ and where $\alpha_t =
+  1-\prod_{i=0}^t(1-\beta_i)$. 
+  \begin{equation}
+    \begin{aligned}
+      \xx^{(t+1)} &=  \sqrt{1-\beta_{t+1}}\, \xx^{(t)} +
+      \sqrt{\beta_{t+1}}\,\varepsilonb_{t+1}\\
+      &=\sqrt{1-\beta_{t+1}}\, \left(
+      \sqrt{1-\alpha_t}\, \xx^{(0)} + \sqrt{\alpha_t}\,\varepsilonb\right) +
+      \sqrt{\beta_{t+1}}\,\varepsilonb_{t+1}\\
+      &= \sqrt{\left( \prod_{i=0}^{t+1}(1-\beta_i) \right)}\xx^{(0)} +
+      \sqrt{(1-\beta_{t+1})\alpha_t+\beta_{t+1}}\,\tilde\varepsilonb
+    \end{aligned}
+  \end{equation}
+    where the last term of the summation is obtained by observing that, since
+    $\sqrt{(1-\beta_{t+1})\alpha_t}\,\varepsilonb$ and $\sqrt{\beta_{t+1}}\,\varepsilonb_{t+1}$ 
+      are independent, then the variance of their sum (that still has a
+      gaussian distribution) is given by
+      $(1-\beta_{t+1})\alpha_t+ \beta_{t+1}$.
+\end{frame}
 \end{document}
+\begin{frame}{Markov Chains with Discrete Time}
+\textbf{Definition}\\ 
+  A sequence of random variables $\left\{ \xx^{(t)}\right\}_{t\in\TT}
+  \subseteq S$, such that the future $\xx^{(t+1)}$ depends on
+  the present $\xx^{(t)}$ but not on the past $\xx^{(t-1)}$.\\
+  \begin{itemize}
+    \item \textbf{Discrete Time Property}\\
+      \(
+        \xx^{(0)},\,\xx^{(1)},\cdots,\xx^{(t)},\cdots 
+      \)
+    \item \textbf{Markov Property}\\
+      \(
+        \Ph\left( \xx^{(t+1)}\in A\,\vert\, \xx^{(0)},\ldots,\xx^{(t)}
+        \right)=\Ph\left(\xx^{(t+1)}\in A\,\vert\,\xx^{(t)} \right)
+      \)
+  \end{itemize}
+  \vfill
+  \begin{minipage}[t]{0.4\textwidth}
+    \begin{center}
+      \textbf{Discrete State Space $S$}
+    \end{center}
+  \end{minipage}\hfill%
+  \begin{minipage}[t]{0.4\textwidth}
+    \begin{center}
+      \textbf{Continuous State Space $S$}
+    \end{center}
+  \end{minipage}
+\end{frame}

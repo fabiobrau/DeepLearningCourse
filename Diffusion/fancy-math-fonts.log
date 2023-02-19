@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.11.28)  8 FEB 2023 16:38
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.11.28)  19 FEB 2023 10:40
  restricted system commands enabled.
 **fancy-math-fonts.tex
 (./fancy-math-fonts.tex
@@ -51,12 +51,12 @@ Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
 
 
 Here is how much of LuaTeX's memory you used:
- 67 strings out of 478824
+ 71 strings out of 478824
  100000,383344 words of node,token memory allocated 301 words of node memory still in use:
    1 hlist, 1 dir, 3 kern, 1 glyph, 1 attribute, 39 glue_spec, 1 attribute_list 
 nodes
    avail lists: 2:10,3:3,4:1
- 19853 multiletter control sequences out of 65536+600000
+ 19857 multiletter control sequences out of 65536+600000
  22 fonts using 2516239 bytes
- 13i,0n,15p,71b,15s stack positions out of 5000i,500n,10000p,200000b,200000s
+ 13i,0n,15p,88b,15s stack positions out of 5000i,500n,10000p,200000b,200000s
 !  ==> Fatal error occurred, no output PDF file produced!
