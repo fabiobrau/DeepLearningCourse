@@ -7,7 +7,17 @@
 %\usepackage{hyperref}
 \renewcommand\appendixname{Appendix}
 %\usepackage{xcolor}
-%\usepackage{tikz}
+\usepackage[customcolors]{hf-tikz}
+%\tikzset{offset def/.style={
+%        above left offset={-0.1,0.35},
+%        below right offset={0.1,-0.2},
+%    },
+%    color def/.style={
+%        offset def,
+%        set fill color=green,
+%        set border color=red,
+%    },
+%}
 \usepackage{marvosym}
 \usepackage{fontawesome}
 \colorlet{rred}{red!80!black}
@@ -199,8 +209,8 @@ such that:
       \hfill\onslide<2->{{\color{red} Not Analytic!!}}
     \item \textbf{Transaction Kernel}: $q\left( \xx^{(t)}\,\vert\,\xx^{(t-1)}
       \right)=\NN\left( \xx^{(t)};\sqrt{1-\beta_t}\xx^{(t-1)}; \beta_t I \right)$
-    \item \textbf{Variance Scheduler}: $\beta_0,\cdots,\beta_T\in\left(
-      0,1\right)$% \hfill\onslide<2->{{\color{red} $\beta_0=0,\,\beta_T=1$}}
+    \item \textbf{Variance Scheduler}: $\beta_1,\cdots,\beta_T\in\left(
+      0,1\right]$ \hfill\onslide<2->{{\color{red} $\beta_T=1$}}
 
   \end{itemize}
   \begin{figure}[h!]
@@ -250,9 +260,118 @@ such that:
     \]
   \end{block}
 \end{frame}
-\begin{frame}{Inverse Diffusion Process}
-
-\end{frame}<++>
+\begin{frame}{Reverse Diffusion Process}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics<1>[clip, width=\textwidth, trim=0 6.3cm 0 4.5cm]{./pic/reverse-diffusion.png}%
+    \includegraphics<2>[width=\textwidth,trim=0 6.3cm 0 4.5cm]{./pic/reverse-diffusion.png}
+  \end{figure}
+\end{frame}
+\begin{frame}{Reverse Diffusion Process}
+  \begin{minipage}[t]{0.45\textwidth}
+    \begin{center}
+      \bf 
+      Forward Diffusion Process
+    \end{center}
+    \begin{equation*}
+      \begin{aligned}
+        q(\xx^{(0)}) &\quad\mbox{Data Distribution}\\
+        q(\xx^{(0\ldots T)})&= q(\xx^{(0)})\prod_{t=1}^T q\left(
+          \xx^{(t)}\,\vert\,\xx^{(t-1)}\right)\\
+      \end{aligned}
+    \end{equation*}
+  \end{minipage}\hfill%
+  \begin{minipage}[t]{0.45\textwidth}
+    \begin{center}
+      \bf 
+      Reverse Diffusion Process
+    \end{center}
+    \begin{equation*}
+      \begin{aligned}
+        q(x^{(T)}) &= \NN(0,I)\\
+          q(\xx^{(0\ldots T)})&= q(\xx^{(T)})\prod_{t=1}^T q\left(
+          \xx^{(t-1)}\,\vert\,\xx^{(t)}\right)
+      \end{aligned}
+    \end{equation*}
+  \end{minipage}
+  \pause
+  \begin{block}{Theorem. Reverse of Gaussian DP is $\approx$ Gaussian DP\footcite{thermodynamic}}
+    If $|\beta_i-\beta_{i+1}|\approx 0$, i.e. diffusion \textbf{slow
+    enough}, then% $q\left( \xx^{(t)}\,\vert\,\xx^{(t-1)} \right)=\NN\left( \xx^{(t)};\sqrt{1-\beta_t}\xx^{(t-1)}; \beta_t I \right)$ is such that
+    \[
+      q(\xx^{(t-1)}\,\vert\, \xx^{(t)}) 
+      \approx \NN\left(\xx^{(t-1)};\,\onslide<3->{\tikzmarkin{z1}} 
+        \mub_\theta\onslide<3->{\tikzmarkend{z1}}\left(
+        \xx^{(t)},t \right),\,
+        \onslide<3->{\tikzmarkin{z2}}\Sigmab_\theta\onslide<3->{\tikzmarkend{z2}}\left(
+    \xx^{(t)},t \right)\right)
+    \]
+  \end{block}
+  \onslide<3->{\tikzmarkin{b} Mean $\mub_\theta$ and covariance
+  $\Sigmab_\theta$ have to be learned!!\tikzmarkend{b}}
+\end{frame}
+\begin{frame}{Visualization of Diffusion Process: 2D dimensional case}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{./pic/summary-forw-reverse.png}\footcite{thermodynamic}
+  \end{figure}
+\end{frame}
+\begin{frame}{Training of $\mub_\theta$ and  $\Sigmab_\theta$}
+  \begin{minipage}[t]{0.45\textwidth}
+    \begin{center}
+      \bf Aim
+    \end{center}
+    Seach for the best parameters $\theta$ 
+    \[
+      q(\xx^{(0)}) \approx p_\theta(\xx^{(0)})
+    \]
+      where $\xx^{(0)}\,\cdots,\,\xx^{(T)}$ diffusion process
+      \begin{block}{Estimated Reverse Process}
+    \[
+      \small
+      \begin{aligned}
+        & p_\theta(\xx^{(T)}) = \NN\left( \xx^{(T)}; 0, I \right)\\
+        & p_\theta(\cdot\,\vert\, \xx^{(t)})=
+        \NN\left(\mub_\theta\left(\xx^{(t)},t \right),
+          \Sigmab_\theta\left(\xx^{(t)},t \right)\right)
+      \end{aligned}
+    \]
+  \end{block}
+  \end{minipage}\hfill%
+  \begin{minipage}[t]{0.5\textwidth}
+    \onslide<2->{%
+    \begin{center}
+      \bf Method
+    \end{center}
+    Minimize the \textit{Kullback–Leibler} Divergence
+    \[
+      \small
+      \onslide<3->{\tikzmarkin{a}(0.1,0.6)(-0.1,-0.5)}%
+      D_{KL}(q\,||\,p_\theta):=\int q(\xx^{(0)})\log\left(
+      \frac{q(\xx^{(0)})}{p_\theta(\xx^{(0)})}\right)\,d \xx^{(0)}\\
+      \onslide<3->{\tikzmarkend{a}}
+    \]
+      \begin{center}
+        \onslide<3->{%
+          \textbf{Easy??}\\
+        }
+        \onslide<4->{%
+          \begin{minipage}[t]{0.45\textwidth}
+            \vspace{1cm}
+            \tikzmarkin{b} \noindent \textbf{No.} $q(\xx^{(0)})$ is analytically
+          intractable!!\tikzmarkend{b}
+        \end{minipage}\hspace{0.5cm}%
+        \begin{minipage}[t]{0.35\textwidth}
+          \begin{figure}[h]
+            \centering
+            \includegraphics<4->[width=\textwidth]{./pic/sample.png}
+          \end{figure}
+        \end{minipage}
+        }
+      \end{center}
+    }
+  \end{minipage}
+\end{frame}
 \section{Broader Impacts}
 \begin{frame}{CLIP Model}
   \begin{center}

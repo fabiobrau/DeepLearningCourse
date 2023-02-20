@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.11.28)  19 FEB 2023 12:41
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.11.28)  20 FEB 2023 18:12
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -787,7 +787,101 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 (Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/marvosym/marvosym.sty
+(/usr/share/texlive/texmf-dist/tex/latex/hf-tikz/hf-tikz.sty
+Package: hf-tikz 2014/07/25 v0.3a A simple way to highlight formulas and formula
+ parts.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfnodeparttextbox=\box72
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@nodesepstart=\dimen284
+\pgf@nodesepend=\dimen285
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen286
+\pgffor@skip=\dimen287
+\pgffor@stack=\toks45
+\pgffor@toks=\toks46
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@plot@mark@count=\count316
+\pgfplotmarksize=\dimen288
+)
+\tikz@lastx=\dimen289
+\tikz@lasty=\dimen290
+\tikz@lastxsaved=\dimen291
+\tikz@lastysaved=\dimen292
+\tikz@lastmovetox=\dimen293
+\tikz@lastmovetoy=\dimen294
+\tikzleveldistance=\dimen295
+\tikzsiblingdistance=\dimen296
+\tikz@figbox=\box73
+\tikz@figbox@bg=\box74
+\tikz@tempbox=\box75
+\tikz@tempbox@bg=\box76
+\tikztreelevel=\count317
+\tikznumberofchildren=\count318
+\tikznumberofcurrentchild=\count319
+\tikz@fig@count=\count320
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfmatrixcurrentrow=\count321
+\pgfmatrixcurrentcolumn=\count322
+\pgf@matrix@numberofcolumns=\count323
+)
+\tikz@expandcount=\count324
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshadings.code.tex
+File: tikzlibraryshadings.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryshadings.cod
+e.tex
+File: pgflibraryshadings.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)) (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2021-01-09 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
+File: l3backend-luatex.def 2020-01-29 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count325
+\l__pdf_internal_box=\box77
+))
+Package: xparse 2020-10-27 L3 Experimental document command parser
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)))
+ (/usr/share/texlive/texmf-dist/tex/latex/marvosym/marvosym.sty
 Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesome.sty
@@ -801,37 +895,25 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-generic
 .tex) (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
-(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2021-01-09 L3 programming layer (loader) 
-
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
-File: l3backend-luatex.def 2020-01-29 L3 backend support: PDF output (LuaTeX)
-\l__color_backend_stack_int=\count316
-\l__pdf_internal_box=\box72
-))
-Package: xparse 2020-10-27 L3 Experimental document command parser
-
-(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex))
 Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
-Lua module: fontspec 2020/02/21 2.7i Font selection for XeLaTeX and LuaLaTeX (/
-usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
+Lua module: fontspec 2020/02/21 2.7i Font selection for XeLaTeX and LuaLaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count317
-\l__fontspec_language_int=\count318
-\l__fontspec_strnum_int=\count319
-\l__fontspec_tmp_int=\count320
-\l__fontspec_tmpa_int=\count321
-\l__fontspec_tmpb_int=\count322
-\l__fontspec_tmpc_int=\count323
-\l__fontspec_em_int=\count324
-\l__fontspec_emdef_int=\count325
-\l__fontspec_strong_int=\count326
-\l__fontspec_strongdef_int=\count327
-\l__fontspec_tmpa_dim=\dimen284
-\l__fontspec_tmpb_dim=\dimen285
-\l__fontspec_tmpc_dim=\dimen286
+\l__fontspec_script_int=\count326
+\l__fontspec_language_int=\count327
+\l__fontspec_strnum_int=\count328
+\l__fontspec_tmp_int=\count329
+\l__fontspec_tmpa_int=\count330
+\l__fontspec_tmpb_int=\count331
+\l__fontspec_tmpc_int=\count332
+\l__fontspec_em_int=\count333
+\l__fontspec_emdef_int=\count334
+\l__fontspec_strong_int=\count335
+\l__fontspec_strongdef_int=\count336
+\l__fontspec_tmpa_dim=\dimen297
+\l__fontspec_tmpb_dim=\dimen298
+\l__fontspec_tmpc_dim=\dimen299
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
@@ -872,97 +954,25 @@ opolis.sty
 Package: beamerthememetropolis 2017/01/23 v1.2 Metropolis Beamer theme
  (/usr/share/texlive/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
-
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
-\pgfopts@list@add@a@toks=\toks45
-\pgfopts@list@add@b@toks=\toks46
+\pgfopts@list@add@a@toks=\toks47
+\pgfopts@list@add@b@toks=\toks48
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/beamerinnerthem
 emetropolis.sty
 Package: beamerinnerthememetropolis 2017/01/23 Metropolis inner theme
  (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count328
-\calc@Bcount=\count329
-\calc@Adimen=\dimen287
-\calc@Bdimen=\dimen288
+\calc@Acount=\count337
+\calc@Bcount=\count338
+\calc@Adimen=\dimen300
+\calc@Bdimen=\dimen301
 \calc@Askip=\skip63
 \calc@Bskip=\skip64
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count330
+\calc@Ccount=\count339
 \calc@Cskip=\skip65
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfnodeparttextbox=\box73
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
-.sty
-Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@nodesepstart=\dimen289
-\pgf@nodesepend=\dimen290
-)
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
-.sty
-Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
-)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen291
-\pgffor@skip=\dimen292
-\pgffor@stack=\toks47
-\pgffor@toks=\toks48
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
-.code.tex
-File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@plot@mark@count=\count331
-\pgfplotmarksize=\dimen293
-)
-\tikz@lastx=\dimen294
-\tikz@lasty=\dimen295
-\tikz@lastxsaved=\dimen296
-\tikz@lastysaved=\dimen297
-\tikz@lastmovetox=\dimen298
-\tikz@lastmovetoy=\dimen299
-\tikzleveldistance=\dimen300
-\tikzsiblingdistance=\dimen301
-\tikz@figbox=\box74
-\tikz@figbox@bg=\box75
-\tikz@tempbox=\box76
-\tikz@tempbox@bg=\box77
-\tikztreelevel=\count332
-\tikznumberofchildren=\count333
-\tikznumberofcurrentchild=\count334
-\tikz@fig@count=\count335
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfmatrixcurrentrow=\count336
-\pgfmatrixcurrentcolumn=\count337
-\pgf@matrix@numberofcolumns=\count338
-)
-\tikz@expandcount=\count339
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)))
 \metropolis@titleseparator@linewidth=\skip66
 \metropolis@progressonsectionpage=\skip67
 \metropolis@progressonsectionpage@linewidth=\skip68
@@ -1494,31 +1504,31 @@ chnical note
  (./main.aux)
 \openout1 = main.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 57
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 67
 .
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1576,7 +1586,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 
 ))
-Package hyperref Info: Link coloring OFF on input line 57.
+Package hyperref Info: Link coloring OFF on input line 67.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1589,68 +1599,68 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count499
 )
-LaTeX Info: Redefining \ref on input line 57.
-LaTeX Info: Redefining \pageref on input line 57.
-LaTeX Info: Redefining \nameref on input line 57.
+LaTeX Info: Redefining \ref on input line 67.
+LaTeX Info: Redefining \pageref on input line 67.
+LaTeX Info: Redefining \nameref on input line 67.
 
 (./main.out) (./main.out)
 \@outlinefile=\write6
 
 \openout6 = main.out
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 57.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 67.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 57.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 67.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 57.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 57.
+(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 67.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/FiraSansLight(0)/b/n on input line 5
+(Font)                  OT1/cmr/bx/n --> TU/FiraSansLight(0)/b/n on input line 6
 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/FiraSansLight(0)/b/n on input line 5
+(Font)                  OT1/cmr/bx/n --> TU/FiraSansLight(0)/b/n on input line 6
 7.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 57.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/FiraSansLight(0)/m/n on input line 5
+(Font)                  OT1/cmss/m/n --> TU/FiraSansLight(0)/m/n on input line 6
 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/FiraSansLight(0)/m/n on input line 
-57.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 57.
+67.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/FiraSansLight(0)/m/it on input line 
-57.
+67.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/FiraSansLight(0)/m/it on input line
- 57.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 57.
+ 67.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/m/n on input line 57.
+(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/m/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/m/n on input line 57.
+(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/m/n on input line 67.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
 (Font)                  TU/FiraSansLight(0)/m/n --> TU/FiraSansLight(0)/b/n on i
-nput line 57.
+nput line 67.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  TU/FiraSansLight(0)/m/it --> TU/FiraSansLight(0)/b/it on
- input line 57.
+ input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> TU/lmr/b/n on input line 57.
+(Font)                  OT1/cmss/b/n --> TU/lmr/b/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
 (Font)                  TU/FiraSansLight(0)/b/n --> TU/FiraSansLight(0)/b/n on i
-nput line 57.
+nput line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  TU/FiraSansLight(0)/m/n --> TU/FiraSansLight(0)/b/n on i
-nput line 57.
+nput line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  TU/FiraSansLight(0)/m/it --> TU/FiraSansLight(0)/b/it on
- input line 57.
+ input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  TU/FiraMono(0)/m/n --> TU/FiraMono(0)/b/n on input line 
-57.
+67.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
 -English.dict
@@ -1682,64 +1692,64 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 57.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 57.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 57.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 57.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 57.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 57.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 57.
-LaTeX Font Info:    Redeclaring math accent \check on input line 57.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 57.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 57.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 57.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 57.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 67.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 67.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 67.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 67.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 67.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 67.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 67.
+LaTeX Font Info:    Redeclaring math accent \check on input line 67.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 67.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 67.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 67.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 67.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 57.
+(Font)              `operators' in the math version `normal' on input line 67.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 57.
+(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 67.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 57.
+(Font)              `operators' in the math version `bold' on input line 67.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> TU/lmr/m/n on input line 57.
+(Font)                  OT1/cmss/b/n --> TU/lmr/m/n on input line 67.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 57.
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 57.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 67.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  TU/FiraSansLight(0)/m/it --> TU/lmr/m/it on input line 5
+(Font)                  TU/FiraSansLight(0)/m/it --> TU/lmr/m/it on input line 6
 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  TU/FiraSansLight(0)/b/n --> TU/lmr/b/n on input line 57.
+(Font)                  TU/FiraSansLight(0)/b/n --> TU/lmr/b/n on input line 67.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  TU/FiraSansLight(0)/m/n --> TU/FiraSansLight(0)/m/n on i
-nput line 57.
+nput line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  TU/FiraMono(0)/m/n --> TU/FiraMono(0)/m/n on input line 
-57.
+67.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 57.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  TU/FiraSansLight(0)/b/it --> TU/lmr/b/it on input line 5
+(Font)                  TU/FiraSansLight(0)/b/it --> TU/lmr/b/it on input line 6
 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  TU/FiraSansLight(0)/b/n --> TU/FiraSansLight(0)/b/n on i
-nput line 57.
+nput line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  TU/FiraMono(0)/b/n --> TU/FiraMono(0)/b/n on input line 
-57.
+67.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -1768,25 +1778,25 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
 (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 57.
-Package biblatex Info: Reference segment=0 on input line 57.
+Package biblatex Info: Reference section=0 on input line 67.
+Package biblatex Info: Reference segment=0 on input line 67.
 
 Package pgfplots notification 'compat/show suggested version=true': you might be
 nefit from \pgfplotsset{compat=1.17} (current compat level: 1.9).
 
 (./main.nav)
-Overfull \vbox (13.79993pt too high) detected at line 65
+Overfull \vbox (13.79993pt too high) detected at line 75
  []
 
 <pic/tecip_logo-ENG.png, id=33, 353.6412pt x 142.6128pt>
 File: pic/tecip_logo-ENG.png Graphic file (type png)
 <use pic/tecip_logo-ENG.png>
-Package luatex.def Info: pic/tecip_logo-ENG.png  used on input line 65.
+Package luatex.def Info: pic/tecip_logo-ENG.png  used on input line 75.
 (luatex.def)             Requested size: 123.77626pt x 49.9152pt.
 <pic/logoretis.png, id=34, 1043.9pt x 592.614pt>
 File: pic/logoretis.png Graphic file (type png)
 <use pic/logoretis.png>
-Package luatex.def Info: pic/logoretis.png  used on input line 65.
+Package luatex.def Info: pic/logoretis.png  used on input line 75.
 (luatex.def)             Requested size: 88.73828pt x 50.37604pt.
 [1
 
@@ -1795,31 +1805,31 @@ pic/logoretis.png>] (./main.toc)
 <pic/logoretis_noname.png, id=48, 376.40625pt x 200.24812pt>
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 69.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 79.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [2
 
 <./pic/logoretis_noname.png>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 70.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 80.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [3
 
 ]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 71.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 81.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [4
 
@@ -1827,18 +1837,18 @@ Package luatex.def Info: pic/logoretis_noname.png  used on input line 71.
 <./pic/diffusion_intro.png, id=71, 1792.6975pt x 644.4075pt>
 File: ./pic/diffusion_intro.png Graphic file (type png)
 <use ./pic/diffusion_intro.png>
-Package luatex.def Info: ./pic/diffusion_intro.png  used on input line 81.
+Package luatex.def Info: ./pic/diffusion_intro.png  used on input line 91.
 (luatex.def)             Requested size: 358.53316pt x 128.87921pt.
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 81.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 91.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [5
 
 <./pic/diffusion_intro.png>]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 91.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 101.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [6
 
@@ -1846,11 +1856,11 @@ Package luatex.def Info: pic/logoretis_noname.png  used on input line 91.
 <./pic/thermodynimc.png, id=84, 1443.3925pt x 491.8375pt>
 File: ./pic/thermodynimc.png Graphic file (type png)
 <use ./pic/thermodynimc.png>
-Package luatex.def Info: ./pic/thermodynimc.png  used on input line 99.
+Package luatex.def Info: ./pic/thermodynimc.png  used on input line 109.
 (luatex.def)             Requested size: 331.9733pt x 113.12024pt.
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 99.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 109.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [7
 
@@ -1859,60 +1869,60 @@ Package luatex.def Info: pic/logoretis_noname.png  used on input line 99.
 File: ./pic/markov_chain_discrete space.png Graphic file (type png)
 <use ./pic/markov_chain_discrete space.png>
 Package luatex.def Info: ./pic/markov_chain_discrete space.png  used on input li
-ne 130.
+ne 140.
 (luatex.def)             Requested size: 99.58464pt x 86.34908pt.
 <./pic/markov_chain_continous space2.png, id=95, 1303.87125pt x 816.04875pt>
 File: ./pic/markov_chain_continous space2.png Graphic file (type png)
 <use ./pic/markov_chain_continous space2.png>
 Package luatex.def Info: ./pic/markov_chain_continous space2.png  used on input 
-line 130.
+line 140.
 (luatex.def)             Requested size: 199.1693pt x 107.25986pt.
 
-Overfull \vbox (8.62366pt too high) detected at line 130
+Overfull \vbox (8.62366pt too high) detected at line 140
  []
 
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 130.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 140.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
 [8
 
 <./pic/markov_chain_discrete space.png><./pic/markov_chain_continous space2.png>
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 171--171
+Underfull \hbox (badness 10000) in paragraph at lines 181--181
 
  []
 
 <./pic/mcdt_discrete_space.png, id=108, 1155.31625pt x 621.32124pt>
 File: ./pic/mcdt_discrete_space.png Graphic file (type png)
 <use ./pic/mcdt_discrete_space.png>
-Package luatex.def Info: ./pic/mcdt_discrete_space.png  used on input line 171.
+Package luatex.def Info: ./pic/mcdt_discrete_space.png  used on input line 181.
 (luatex.def)             Requested size: 119.50279pt x 64.25941pt.
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 171.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 181.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
 [9
 
 <./pic/mcdt_discrete_space.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 171--171
+Underfull \hbox (badness 10000) in paragraph at lines 181--181
 
  []
 
 File: ./pic/mcdt_discrete_space.png Graphic file (type png)
 <use ./pic/mcdt_discrete_space.png>
-Package luatex.def Info: ./pic/mcdt_discrete_space.png  used on input line 171.
+Package luatex.def Info: ./pic/mcdt_discrete_space.png  used on input line 181.
 (luatex.def)             Requested size: 119.50279pt x 64.25941pt.
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 171.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 181.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
 [10
 
 ]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 192.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 202.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [11
 
@@ -1920,119 +1930,235 @@ Package luatex.def Info: pic/logoretis_noname.png  used on input line 192.
 <./pic/forward-diffusion.png, id=130, 1459.4525pt x 511.9125pt>
 File: ./pic/forward-diffusion.png Graphic file (type png)
 <use ./pic/forward-diffusion.png>
-Package luatex.def Info: ./pic/forward-diffusion.png  used on input line 210.
+Package luatex.def Info: ./pic/forward-diffusion.png  used on input line 220.
 (luatex.def)             Requested size: 298.75394pt x 104.78651pt.
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 210.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 220.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [12
 
 <./pic/forward-diffusion.png>]
 File: ./pic/forward-diffusion.png Graphic file (type png)
 <use ./pic/forward-diffusion.png>
-Package luatex.def Info: ./pic/forward-diffusion.png  used on input line 210.
+Package luatex.def Info: ./pic/forward-diffusion.png  used on input line 220.
 (luatex.def)             Requested size: 298.75394pt x 104.78651pt.
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 210.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 220.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [13
 
 ]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 228.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 238.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [14
 
 ]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 252.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 262.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [15
 
 ]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 252.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 262.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [16
 
 ]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 252.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 262.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [17
 
 ]
+<./pic/reverse-diffusion.png, id=163, 1469.49pt x 682.55pt>
+File: ./pic/reverse-diffusion.png Graphic file (type png)
+<use ./pic/reverse-diffusion.png>
+Package luatex.def Info: ./pic/reverse-diffusion.png  used on input line 269.
+(luatex.def)             Requested size: 398.3386pt x 101.72241pt.
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 255.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 269.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [18
 
-]
-Overfull \hbox (5.58pt too wide) in paragraph at lines 255--256
-[][][][][][]   [][][]  
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+<./pic/reverse-diffusion.png>]
+File: ./pic/reverse-diffusion.png Graphic file (type png)
+<use ./pic/reverse-diffusion.png>
+Package luatex.def Info: ./pic/reverse-diffusion.png  used on input line 269.
+(luatex.def)             Requested size: 398.3386pt x 101.72241pt.
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 256.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 269.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [19
 
 ]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 256.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 312.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+ [20
 
-[20]
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 264.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 312.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [21
 
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
 ]
-LaTeX Font Info:    Trying to load font information for U+mvs on input line 292.
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 312.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+ [22
 
- (/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd)
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+]
+<./pic/summary-forw-reverse.png, id=202, 963.6pt x 542.025pt>
+File: ./pic/summary-forw-reverse.png Graphic file (type png)
+<use ./pic/summary-forw-reverse.png>
+Package luatex.def Info: ./pic/summary-forw-reverse.png  used on input line 318.
+
+(luatex.def)             Requested size: 298.75394pt x 168.04254pt.
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 318.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+ [23
+
+<./pic/summary-forw-reverse.png>]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 374.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 374.
+
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 374.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+[24
+
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 374.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 374.
+
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 374.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+[25
+
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 374.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 374.
+
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 374.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+[26
+
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 374.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 374.
+
+<./pic/sample.png, id=236, 359.3425pt x 414.54875pt>
+File: ./pic/sample.png Graphic file (type png)
+<use ./pic/sample.png>
+Package luatex.def Info: ./pic/sample.png  used on input line 374.
+(luatex.def)             Requested size: 69.71046pt x 80.41603pt.
+
+Overfull \vbox (10.84383pt too high) detected at line 374
+ []
+
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 374.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+[27
+
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+<./pic/sample.png>]
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 375.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+ [28
+
+]
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 383.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+ [29
+
+]
+LaTeX Font Info:    Trying to load font information for U+mvs on input line 411.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd)
 File: pic/tecip_logo-ENG.png Graphic file (type png)
 <use pic/tecip_logo-ENG.png>
-Package luatex.def Info: pic/tecip_logo-ENG.png  used on input line 292.
+Package luatex.def Info: pic/tecip_logo-ENG.png  used on input line 411.
 (luatex.def)             Requested size: 123.77626pt x 49.9152pt.
-<pic/dipe.png, id=191, 714.9912pt x 286.1892pt>
+<pic/dipe.png, id=259, 714.9912pt x 286.1892pt>
 File: pic/dipe.png Graphic file (type png)
 <use pic/dipe.png>
-Package luatex.def Info: pic/dipe.png  used on input line 292.
+Package luatex.def Info: pic/dipe.png  used on input line 411.
 (luatex.def)             Requested size: 121.54689pt x 48.6515pt.
 File: pic/logoretis.png Graphic file (type png)
 <use pic/logoretis.png>
-Package luatex.def Info: pic/logoretis.png  used on input line 292.
+Package luatex.def Info: pic/logoretis.png  used on input line 411.
 (luatex.def)             Requested size: 88.73828pt x 50.37604pt.
- [22
+ [30
 
 <./pic/dipe.png>]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 295.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 414.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
- [23
+[31
 
 ]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 317.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 436.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
- [24
+ [32
 
 ]
 \tf@nav=\write7
@@ -2053,16 +2179,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 48020 strings out of 478824
+ 48479 strings out of 478824
  125031,1977958 words of node,token memory allocated
- 8777 words of node memory still in use:
+ 8861 words of node memory still in use:
    155 hlist, 29 vlist, 21 rule, 28 disc, 3 local_par, 41 math, 170 glue, 103 ke
-rn, 24 penalty, 472 glyph, 174 attribute, 80 glue_spec, 174 attribute_list, 4 wr
+rn, 24 penalty, 472 glyph, 195 attribute, 80 glue_spec, 195 attribute_list, 4 wr
 ite, 16 pdf_colorstack nodes
-   avail lists: 1:1,2:440,3:213,4:204,5:230,6:33,7:1470,8:49,9:506,10:16,11:70
- 65540 multiletter control sequences out of 65536+600000
- 133 fonts using 26809959 bytes
- 131i,14n,131p,1844b,1871s stack positions out of 5000i,500n,10000p,200000b,200000s
+   avail lists: 1:2,2:1822,3:780,4:240,5:276,6:45,7:1897,8:141,9:865,10:16,11:91
+
+ 65888 multiletter control sequences out of 65536+600000
+ 161 fonts using 31555887 bytes
+ 131i,18n,131p,1844b,1994s stack positions out of 5000i,500n,10000p,200000b,200000s
 
 warning  (pdf backend): unreferenced destination with name 'cite.0@clip'
 
@@ -2070,24 +2197,35 @@ warning  (pdf backend): unreferenced destination with name 'cite.0@thermodynamic
 '
 </usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf><
 /usr/share/texlive/texmf-dist/fonts/opentype/public/fontawesome/FontAwesome.otf>
-</usr/share/texmf/fonts/opentype/public/lm/lmromandemi10-regular.otf></usr/share
-/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-LightItalic.otf></usr/sh
-are/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-Light.otf></usr/share
-/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-Book.otf></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/marvosym/marvosym
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+</usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/tex
+mf/fonts/opentype/public/lm/lmromandemi10-regular.otf></usr/share/texlive/texmf-
+dist/fonts/opentype/public/fira/FiraSans-LightItalic.otf></usr/share/texlive/tex
+mf-dist/fonts/opentype/public/fira/FiraSans-Light.otf></usr/share/texlive/texmf-
+dist/fonts/opentype/public/fira/FiraSans-Book.otf></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (32 pages, 4813644 bytes).
 
-Output written on main.pdf (24 pages, 3455538 bytes).
-
-PDF statistics: 289 PDF objects out of 1000 (max. 8388607)
- 206 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 131072)
- 56 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 401 PDF objects out of 1000 (max. 8388607)
+ 289 compressed objects within 3 object streams
+ 72 named destinations out of 1000 (max. 131072)
+ 66 words of extra memory for PDF output out of 10000 (max. 100000000)
 
