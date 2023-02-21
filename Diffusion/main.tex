@@ -30,7 +30,7 @@
 \setbeamercovered{invisible}
 
 \usepackage{booktabs}
-\usepackage[scale=2]{ccicons}
+%\usepackage[scale=2]{ccicons}
 \usepackage[style=authortitle,backend=bibtex]{biblatex}
 \addbibresource{biblio.bib}
 
@@ -385,7 +385,7 @@ such that:
     \pause
     \begin{center}
       \bf
-      Semplification I: Minimize the Cross Entropy
+      Simplification I: Minimize the Cross Entropy
     \end{center}
     \[
     D_{KL}\left( q(\xx^{(0)})||p_\theta(\xx^{)0)} \right) =
@@ -396,6 +396,132 @@ such that:
     \underbrace{\int-q(\xx^{(0)})\log(p_\theta(\xx^{(0)}))\,d\xx^{(0)}}_{L_{CE}(p_\theta)}}
     \]
 \end{frame}
+\begin{frame}{Training of $\mub_\theta$ and  $\Sigmab_\theta$}
+  \begin{center}
+    \bf
+    Minimize the Cross Entropy Loss
+  \end{center}
+    \[
+      \tikzmarkin{a2}(0.1,0.6)(-0.1,-0.5)L_{CE}(\,p_\theta(\xx^{(0)}):=-\int
+        q(\xx^{(0)})\log\left( p_\theta(\xx^{(0)})\right)\,d
+      \xx^{(0)}\tikzmarkend{a2}
+    \]
+    \pause
+    \begin{block}{Observation: Marginal Distribution}
+      \[
+        \tiny
+        p_\theta(\xx^{(0)})=\int p_\theta(\xx^{(0\ldots T)})\,
+        d\xx^{(1\ldots T)}
+      \]
+    \end{block}
+    \pause
+    \begin{center}
+      \bf
+      Simplification II: Jensen Inequality
+    \end{center}
+    \[
+      L_{CE}(p_\theta) \le - \E_{q(\xx^{(0\ldots T)})}\left[ \log
+      \frac{q(\xx^{(1\ldots T)}\,\vert\, 
+    \xx^{(0)})}{p_\theta(\xx^{(0\ldots T)})}\right]
+    \]
+\end{frame}
+\begin{frame}{Training of $\mub_\theta$ and  $\Sigmab_\theta$}
+  \begin{minipage}[t]{0.75\textwidth}
+\ldots after some algebraic steps :)
+  \begin{center}
+    \bf
+    Reformulated Loss Function
+  \end{center}
+  \[
+    \LL = \LL_T + \sum_{t=1}^{T-1}\LL_t + \LL_0
+  \]
+  where, 
+  \[
+    \begin{aligned}
+      \LL_T &= \E_{q(\xx^{(0\ldots T)})}\left[ D_{KL}\left(
+      q(\xx^{(T)}\,\vert\, \xx^{(0)}) \quad||\quad p_\theta(\xx^{(T)}) \right)
+    \right] \\
+     \LL_t &= \E_{q(\xx^{(0\ldots T)})}\left[ D_{KL}\left(
+        q(\xx^{(t)}\,\vert\, \xx^{(t+1)},\xx^{(0)}) \quad||\quad
+      p_\theta(\xx^{(t)}\,\vert\, \xx^{(t+1)}) \right)
+    \right]
+    \\
+    \LL_0 &= \E_{q(\xx^{(0\ldots T)})}\left[ p_\theta(\xx^{(0)}\,\vert\, \xx^{(1)}) \right]
+  \end{aligned}
+  \]
+\end{minipage}\hfill%
+\begin{minipage}[t]{0.20\textwidth}
+  \vspace{4cm}
+  \textbf{Note.}\\
+  $\LL_T$ is constant.\\
+  $\LL_0,\,\LL_t$ explicit.\\
+\end{minipage}\\
+ % \tikzmarkin{a3}All the expectations can be \textbf{explicitly} calculated
+ % and only depends on $\theta$!!\tikzmarkend{a3}
+\end{frame}
+\begin{frame}{Neural Network that estimate $\mub_\theta$ and
+  $\Sigmab_\theta$}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics<1>[width=0.45\textwidth]{./pic/diff_net_1.png}%
+    \includegraphics<2>[width=0.45\textwidth]{./pic/diff_net_2.png}%
+  \caption{Prposed Neural Network for CIFAR10 image generation. T=1000}
+  \end{figure}
+\end{frame}
+\begin{frame}{Sampling or Generative Stage}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{./pic/sampling.png}
+  \end{figure}
+\end{frame}
+\begin{frame}{Experiments}
+  \begin{minipage}[h!]{0.5\textwidth}
+    \begin{center}
+      \bf
+      Bark Dataset
+    \end{center}
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=\textwidth]{./pic/bark.png}
+    \end{figure}
+  \end{minipage}\hfill%
+  \begin{minipage}[h!]{0.5\textwidth}
+
+    \begin{center}
+      \bf MNIST
+    \end{center}
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.75\textwidth]{./pic/mnist_thermo.png}
+    \end{figure}
+  \end{minipage}
+  \vfill .\footcite{thermodynamic}
+\end{frame}
+\begin{frame}{Experiments}
+  \begin{minipage}[h!]{0.5\textwidth}
+    \begin{center}
+      \bf CIFAR10 (original)
+    \end{center}
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.75\textwidth]{./pic/cifar10_thermo_original.png}
+    \end{figure}
+  \end{minipage}\hfill%
+  \begin{minipage}[h!]{0.5\textwidth}
+    \begin{center}
+      \bf CIFAR10 (generated)
+    \end{center}
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.75\textwidth]{./pic/cifar10_thermo_generated.png}
+    \end{figure}
+  \end{minipage}\hfill
+
+
+  \vfill .\footcite{thermodynamic}
+
+\end{frame}<++>
+
 \section{Broader Impacts}
 \begin{frame}{CLIP Model}
   \begin{center}
