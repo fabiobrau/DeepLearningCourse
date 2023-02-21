@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.11.28)  20 FEB 2023 18:12
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.11.28)  21 FEB 2023 12:14
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2115,50 +2115,74 @@ Missing character: There is no ; (U+003B) in font nullfont!
 <./pic/sample.png>]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 375.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 398.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [28
+
+Missing character: There is no ; (U+003B) in font nullfont!
+]
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 398.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+ [29
+
+Missing character: There is no ; (U+003B) in font nullfont!
+]
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 398.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+ [30
+
+Missing character: There is no ; (U+003B) in font nullfont!
+]
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 399.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+ [31
 
 ]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 383.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 407.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
- [29
+ [32
 
 ]
-LaTeX Font Info:    Trying to load font information for U+mvs on input line 411.
+LaTeX Font Info:    Trying to load font information for U+mvs on input line 435.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd)
 File: pic/tecip_logo-ENG.png Graphic file (type png)
 <use pic/tecip_logo-ENG.png>
-Package luatex.def Info: pic/tecip_logo-ENG.png  used on input line 411.
+Package luatex.def Info: pic/tecip_logo-ENG.png  used on input line 435.
 (luatex.def)             Requested size: 123.77626pt x 49.9152pt.
-<pic/dipe.png, id=259, 714.9912pt x 286.1892pt>
+<pic/dipe.png, id=278, 714.9912pt x 286.1892pt>
 File: pic/dipe.png Graphic file (type png)
 <use pic/dipe.png>
-Package luatex.def Info: pic/dipe.png  used on input line 411.
+Package luatex.def Info: pic/dipe.png  used on input line 435.
 (luatex.def)             Requested size: 121.54689pt x 48.6515pt.
 File: pic/logoretis.png Graphic file (type png)
 <use pic/logoretis.png>
-Package luatex.def Info: pic/logoretis.png  used on input line 411.
+Package luatex.def Info: pic/logoretis.png  used on input line 435.
 (luatex.def)             Requested size: 88.73828pt x 50.37604pt.
- [30
+ [33
 
 <./pic/dipe.png>]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 414.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 438.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
-[31
+[34
 
 ]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 436.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 460.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
- [32
+ [35
 
 ]
 \tf@nav=\write7
@@ -2179,15 +2203,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 48479 strings out of 478824
+ 48525 strings out of 478824
  125031,1977958 words of node,token memory allocated
- 8861 words of node memory still in use:
+ 8885 words of node memory still in use:
    155 hlist, 29 vlist, 21 rule, 28 disc, 3 local_par, 41 math, 170 glue, 103 ke
-rn, 24 penalty, 472 glyph, 195 attribute, 80 glue_spec, 195 attribute_list, 4 wr
+rn, 24 penalty, 472 glyph, 201 attribute, 80 glue_spec, 201 attribute_list, 4 wr
 ite, 16 pdf_colorstack nodes
-   avail lists: 1:2,2:1822,3:780,4:240,5:276,6:45,7:1897,8:141,9:865,10:16,11:91
+   avail lists: 1:2,2:1810,3:780,4:240,5:276,6:45,7:1897,8:141,9:865,10:16,11:91
 
- 65888 multiletter control sequences out of 65536+600000
+ 65910 multiletter control sequences out of 65536+600000
  161 fonts using 31555887 bytes
  131i,18n,131p,1844b,1994s stack positions out of 5000i,500n,10000p,200000b,200000s
 
@@ -2206,26 +2230,29 @@ dist/fonts/opentype/public/fira/FiraSans-Book.otf></usr/share/texlive/texmf-dist
 type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (32 pages, 4813644 bytes).
+cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cme
+xtra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cmextra/cmmib9.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/marvosym/marvosym.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (35 pages, 4842813 bytes).
 
-PDF statistics: 401 PDF objects out of 1000 (max. 8388607)
- 289 compressed objects within 3 object streams
- 72 named destinations out of 1000 (max. 131072)
+PDF statistics: 429 PDF objects out of 1000 (max. 8388607)
+ 310 compressed objects within 4 object streams
+ 78 named destinations out of 1000 (max. 131072)
  66 words of extra memory for PDF output out of 10000 (max. 100000000)
 
