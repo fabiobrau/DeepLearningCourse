@@ -1,0 +1,273 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{ho}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=HJ}{%
+         family={Ho},
+         familyi={H\bibinitperiod},
+         given={Jonathan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=JA}{%
+         family={Jain},
+         familyi={J\bibinitperiod},
+         given={Ajay},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=AP}{%
+         family={Abbeel},
+         familyi={A\bibinitperiod},
+         given={Pieter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \name{editor}{5}{}{%
+      {{hash=LH}{%
+         family={Larochelle},
+         familyi={L\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={Ranzato},
+         familyi={R\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HR}{%
+         family={Hadsell},
+         familyi={H\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Balcan},
+         familyi={B\bibinitperiod},
+         given={M.F.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Lin},
+         familyi={L\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Curran Associates, Inc.}%
+    }
+    \strng{namehash}{HJJAAP1}
+    \strng{fullhash}{HJJAAP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{booktitle}{Advances in Neural Information Processing Systems}
+    \field{pages}{6840\bibrangedash 6851}
+    \field{title}{Denoising Diffusion Probabilistic Models}
+    \verb{url}
+    \verb https://proceedings.neurips.cc/paper/2020/file/4c5bcfec8584af0d967f1a
+    \verb b10179ca4b-Paper.pdf
+    \endverb
+    \field{volume}{33}
+    \field{year}{2020}
+  \endentry
+
+  \entry{clip}{inproceedings}{}
+    \name{author}{12}{}{%
+      {{hash=RA}{%
+         family={Radford},
+         familyi={R\bibinitperiod},
+         given={Alec},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KJW}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Jong\bibnamedelima Wook},
+         giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=HC}{%
+         family={Hallacy},
+         familyi={H\bibinitperiod},
+         given={Chris},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Ramesh},
+         familyi={R\bibinitperiod},
+         given={Aditya},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GG}{%
+         family={Goh},
+         familyi={G\bibinitperiod},
+         given={Gabriel},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=AS}{%
+         family={Agarwal},
+         familyi={A\bibinitperiod},
+         given={Sandhini},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Sastry},
+         familyi={S\bibinitperiod},
+         given={Girish},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Askell},
+         familyi={A\bibinitperiod},
+         given={Amanda},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MP}{%
+         family={Mishkin},
+         familyi={M\bibinitperiod},
+         given={Pamela},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Clark},
+         familyi={C\bibinitperiod},
+         given={Jack},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KG}{%
+         family={Krueger},
+         familyi={K\bibinitperiod},
+         given={Gretchen},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=SI}{%
+         family={Sutskever},
+         familyi={S\bibinitperiod},
+         given={Ilya},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \name{editor}{2}{}{%
+      {{hash=MM}{%
+         family={Meila},
+         familyi={M\bibinitperiod},
+         given={Marina},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=ZT}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Tong},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {PMLR}%
+    }
+    \strng{namehash}{RA+1}
+    \strng{fullhash}{RAKJWHCRAGGASSGAAMPCJKGSI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{abstract}{%
+    State-of-the-art computer vision systems are trained to predict a fixed set
+  of predetermined object categories. This restricted form of supervision
+  limits their generality and usability since additional labeled data is needed
+  to specify any other visual concept. Learning directly from raw text about
+  images is a promising alternative which leverages a much broader source of
+  supervision. We demonstrate that the simple pre-training task of predicting
+  which caption goes with which image is an efficient and scalable way to learn
+  SOTA image representations from scratch on a dataset of 400 million (image,
+  text) pairs collected from the internet. After pre-training, natural language
+  is used to reference learned visual concepts (or describe new ones) enabling
+  zero-shot transfer of the model to downstream tasks. We study the performance
+  of this approach by benchmarking on over 30 different existing computer
+  vision datasets, spanning tasks such as OCR, action recognition in videos,
+  geo-localization, and many types of fine-grained object classification. The
+  model transfers non-trivially to most tasks and is often competitive with a
+  fully supervised baseline without the need for any dataset specific training.
+  For instance, we match the accuracy of the original ResNet-50 on ImageNet
+  zero-shot without needing to use any of the 1.28 million training examples it
+  was trained on.%
+    }
+    \field{booktitle}{Proceedings of the 38th International Conference on
+  Machine Learning}
+    \field{pages}{8748\bibrangedash 8763}
+    \field{series}{Proceedings of Machine Learning Research}
+    \field{title}{Learning Transferable Visual Models From Natural Language
+  Supervision}
+    \verb{url}
+    \verb https://proceedings.mlr.press/v139/radford21a.html
+    \endverb
+    \field{volume}{139}
+    \verb{file}
+    \verb http://proceedings.mlr.press/v139/radford21a/radford21a.pdf
+    \endverb
+    \field{year}{2021}
+  \endentry
+
+  \entry{thermodynamic}{article}{}
+    \name{author}{4}{}{%
+      {{hash=SDJ}{%
+         family={Sohl-Dickstein},
+         familyi={S\bibinithyphendelim D\bibinitperiod},
+         given={Jascha},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WEA}{%
+         family={Weiss},
+         familyi={W\bibinitperiod},
+         given={Eric\bibnamedelima A},
+         giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=MN}{%
+         family={Maheswaranathan},
+         familyi={M\bibinitperiod},
+         given={Niru},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=GS}{%
+         family={Ganguli},
+         familyi={G\bibinitperiod},
+         given={Surya},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \list{publisher}{1}{%
+      {ICML}%
+    }
+    \strng{namehash}{SDJ+1}
+    \strng{fullhash}{SDJWEAMNGS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{series}{International Conference on Machine Learning}
+    \field{title}{Deep Unsupervised Learning using Nonequilibrium
+  Thermodynamics}
+    \field{year}{2021}
+  \endentry
+\enddatalist
+\endinput

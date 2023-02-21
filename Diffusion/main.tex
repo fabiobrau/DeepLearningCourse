@@ -78,6 +78,15 @@
   \tableofcontents
 \end{frame}
 \section{Introduction}
+\begin{frame}{Generative Models}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.65\textwidth]{./pic/generative-overview.png}
+    \caption{Overview of different generative
+    models\footnote{\textbf{Credits}
+  https://lilianweng.github.io/posts/2021-07-11-diffusion-models/}}
+  \end{figure}
+\end{frame}
 \section{Diffusion Models}
 \begin{frame}{Overview}
   \begin{center}
@@ -528,11 +537,93 @@ such that:
   \item[\bf 2021)] \textit{Score-Based Generative Modeling Through SDE}. Song et
     al. ICLR.
 \end{enumerate}
-\begin{frame}{Denoising Diffusion Probabilistic Model}
-
-\end{frame}<++>
 \end{frame}
+\begin{frame}{Denoising Diffusion Probabilistic Model}
+  \begin{center}
+    \bf 
+    Small technical improvements highly impact the
+    performance\ldots\footcite{ho}
+  \end{center}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{./pic/ho_diffusion.png}
+  \end{figure}
+  \begin{block}{Simplification I: Diagonal Uniform Covariance
+    Matrix}
+    \[
+      p_\theta(\xx^{(t-1)}\,\vert\,\xx^{(t)}) = \NN\left(\xx^{(t-1)};\, 
+        \mub_\theta\left(
+        \xx^{(t)},t \right),\, \Sigmab_\theta\left(\xx^{(t)},t \right)\right)
+    \]
+    where
+    \[
+      \Sigmab_\theta\left( \xx^{(t)},t  \right)= \sigma_t^2 I
+    \]
+  \end{block}
+  \vfill
+\end{frame}
+\begin{frame}{Denoising Diffusion Probabilistic Model}
+  \textbf{Previous work aim at estimating}
+  \(
+    \mub_\theta(\xx^{(t)},t)
+  \) and
+  \(
+    \Sigmab_\theta(\xx^{(t)},t)
+    \).
+    \begin{block}{Simplification II: Estimating the commited error}
+      \[
+        \mub_\theta(\xx^{(t)})= \frac{1}{\sqrt{1-\beta_t}}\left( \xx^{(t)} -
+          \frac{1-\beta_t}{\sqrt{\alpha_t}}\quad\onslide<2->{\tikzmarkin{a4}}\varepsilonb_\theta(\xx^{(t)},t)\onslide<2->{\tikzmarkend{a4}}
+      \right)
+      \]
+    \onslide<2->{\tikzmarkin{a5} $\varepsilonb_\theta(\xx^{(t)},t)$ DNN
+      (U-Net) with
+      learnable parameters!!\tikzmarkend{a5}}
+    \end{block}
+      \vfill
+    \onslide<3->{%
+    \begin{block}{Simplification III: Training on random istants $t$}
+      \[
+        \LL_{simple} = \E_{t,\xx^{(0)},\varepsilonb}
+        \left[ 
+          \left\|\varepsilonb - \varepsilonb_\theta\left( \sqrt{1-\alpha_t}\xx^{(0)} + 
+        \sqrt{\alpha_t}\varepsilonb,t \right)\right\| 
+      \right]
+      \]
+      where
+      \[
+        t\sim \UU\left\{ 1,\ldots,T \right\},\quad \xx^{(0)}\sim q,\quad
+        \varepsilon \sim \NN(0,I)
+      \]
+      \end{block}}
+\end{frame}
+\begin{frame}{Training and Sampling Procedure}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{./pic/ho_algo.png}
+  \end{figure}
+\end{frame}
+\begin{frame}{Experiments: Sample Quality}
+  \begin{minipage}[t]{0.6\textwidth}
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=\textwidth]{./pic/ho_celeb.png}
+    \end{figure}
+  \end{minipage}\hfill%
+  \begin{minipage}[t]{0.35\textwidth}
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=\textwidth]{./pic/ho_result.png}
+      \caption{Metrics for CIFAR10}
+    \end{figure}
+    \textbf{Note.}
+    \begin{enumerate}
+      \item High FID $\Rightarrow$ high quality 
+      \item Training improved
+    \end{enumerate}
+  \end{minipage}
 
+\end{frame}
 \section{Broader Impacts}
 \begin{frame}{CLIP Model}
   \begin{center}
