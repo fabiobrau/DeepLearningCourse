@@ -659,12 +659,24 @@ such that:
     \end{figure}
     \textbf{Note.}
     \begin{enumerate}
-      \item High FID $\Rightarrow$ high quality 
+      \item High FID (Frechet Implicit Distance) $\Rightarrow$ high quality 
       \item Training improved
     \end{enumerate}
   \end{minipage}
 
 \end{frame}
+\begin{frame}{Experiments: Diffusion vs GAN/VAE}
+  \begin{center}
+    \it ``Diffusion models get comparable result to Generative Adversarial
+    Networks and Variational Autoencoders''
+  \end{center}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{{./pic/ho_table.png}}
+    \caption{CIFAR10 results. NLL measured in bits/dim\footcite{ho}}
+  \end{figure}%
+\end{frame}
+
 \begin{frame}{Experiments: Images Interpolation}
   \begin{figure}[h!]
     \centering
@@ -690,10 +702,35 @@ such that:
     al. ICLR.
 \end{enumerate}
 \end{frame}
-\begin{frame}{Score-Based Generative Modeling Through SDE}
-  TODO
+\begin{frame}{Score-Based Generative Modeling Through SDE (no details)}
+  \begin{minipage}[h]{0.45\textwidth}
+    \begin{center}
+      \footnotesize 
+      \textbf{Discrete Time} Markov Chain with \textbf{Continuous} State Space
+    \end{center}
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=\textwidth]{./pic/ho_diffusion.png}
+    \end{figure}
+  \end{minipage}\hfill%
+  \begin{minipage}[h]{0.45\textwidth}
+    \begin{center}
+      \footnotesize 
+      \textbf{\color{rred} Continuous Time} Markov Chain with
+      \textbf{Continuous} State Space\\
+    \end{center}
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=\textwidth]{./pic/sda_intro.png}
+    \end{figure}
+  \end{minipage}\footcite{sde}
 \end{frame}
-
+%\begin{frame}{Continous Diffusion Process}
+%  \begin{figure}[h!]
+%    \centering
+%    \includegraphics[width=0.6\textwidth]{./pic/sde_overview.png}
+%  \end{figure}
+%\end{frame}
 \section{DALL-E}
 \begin{frame}{Samples}
 \end{frame}

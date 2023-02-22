@@ -4,8 +4,8 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {2}{Diffusion Models}{6}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{DALL-E}{54}{0}{3}
+\beamer@sectionintoc {3}{DALL-E}{55}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Broader Impacts}{57}{0}{4}
+\beamer@sectionintoc {4}{Broader Impacts}{58}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {5}{Proof Details}{62}{1}{5}
+\beamer@sectionintoc {5}{Proof Details}{63}{1}{5}
