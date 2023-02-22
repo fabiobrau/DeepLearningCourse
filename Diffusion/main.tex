@@ -79,6 +79,14 @@
 \end{frame}
 \section{Introduction}
 \begin{frame}{Generative Models}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.75\textwidth]{./pic/generative-models-introa.png}
+    \caption{Schema of generative
+    models\footnote{\textbf{Credits}https://towardsdatascience.com/understanding-diffusion-probabilistic-models-dpms-1940329d6048}}
+  \end{figure}
+\end{frame}
+\begin{frame}{Generative Models}
   \begin{figure}[h]
     \centering
     \includegraphics[width=0.65\textwidth]{./pic/generative-overview.png}
@@ -270,11 +278,38 @@ such that:
   \end{block}
 \end{frame}
 \begin{frame}{Reverse Diffusion Process}
+  \onslide<2->{%
+  \textbf{\color{blue}Fixed Forward Process}
+  {\color{blue}\footnotesize
+  \[
+    \begin{aligned}
+      & \mbox{Initial Distribution} &\hspace{5cm} &\mbox{Gaussian Transaction
+      Kernel}\\
+     &q(\xx^{(0)})& & 
+     q\left( \xx^{(t)}\,\vert\,\xx^{(t-1)}\right)=
+     \NN\left(\xx^{(t)};\sqrt{1-\beta_t}\xx^{(t-1)}; \beta_t I \right)
+    \end{aligned}
+  \]}}
   \begin{figure}[h!]
     \centering
-    \includegraphics<1>[clip, width=\textwidth, trim=0 6.3cm 0 4.5cm]{./pic/reverse-diffusion.png}%
-    \includegraphics<2>[width=\textwidth,trim=0 6.3cm 0 4.5cm]{./pic/reverse-diffusion.png}
+    %\includegraphics<1>[clip, width=\textwidth, trim=0 6.3cm 0 4.5cm]{./pic/reverse-diffusion.png}%
+    %\includegraphics<2>[width=\textwidth,trim=0 6.3cm 0 4.5cm]{./pic/reverse-diffusion.png}
+    \includegraphics[width=\textwidth, trim=0 1cm 0 2cm]{{./pic/reverse-diffusion-2.png}}%
   \end{figure}
+  \vfill
+  \onslide<3->{%
+  {\color{rred}\footnotesize
+  \[
+    \begin{aligned}
+      & \mbox{Initial Distribution}& \hspace{1cm}\mbox{Approximation of}
+      &\hspace{1cm}&\mbox{Gaussian Kernel with parameters}&\\
+      &p(\xx^{(T)})\sim\NN(0,I)& q(\xx^{(t-1)}\,\vert\,\xx^{(t)})&&
+      p_\theta(\xx^{(t-1)}\,\vert\, \xx^{(t)})=
+      \NN\left(\xx^{(t-1)};\mub_\theta\left(\xx^{(t)},t
+      \right),\Sigmab_\theta\left(\xx^{(t)},t \right)\right)&
+    \end{aligned}
+  \]}}
+  \textbf{\color{rred}Learned Reverse Process}\\
 \end{frame}
 \begin{frame}{Reverse Diffusion Process}
   \begin{minipage}[t]{0.45\textwidth}
@@ -337,7 +372,7 @@ such that:
       where $\xx^{(0)}\,\cdots,\,\xx^{(T)}$ diffusion process
       \begin{block}{Estimated Reverse Process}
     \[
-      \small
+     % \small
       \begin{aligned}
         & p_\theta(\xx^{(T)}) = \NN\left( \xx^{(T)}; 0, I \right)\\
         & p_\theta(\cdot\,\vert\, \xx^{(t)})=
@@ -354,7 +389,7 @@ such that:
     \end{center}
     Minimize the \textit{Kullback–Leibler} Divergence
     \[
-      \small
+      %\small
       \onslide<3->{\tikzmarkin{a}(0.1,0.6)(-0.1,-0.5)}%
       D_{KL}(q\,||\,p_\theta):=\int q(\xx^{(0)})\log\left(
       \frac{q(\xx^{(0)})}{p_\theta(\xx^{(0)})}\right)\,d \xx^{(0)}\\
@@ -418,7 +453,7 @@ such that:
     \pause
     \begin{block}{Observation: Marginal Distribution}
       \[
-        \tiny
+        %\tiny
         p_\theta(\xx^{(0)})=\int p_\theta(\xx^{(0\ldots T)})\,
         d\xx^{(1\ldots T)}
       \]
@@ -624,7 +659,51 @@ such that:
   \end{minipage}
 
 \end{frame}
+\begin{frame}{Experiments: Images Interpolation}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{./pic/ho_interpolation.png}
+  \end{figure}
+  \[
+    \xx^{(T)}_\lambda := \lambda\xx^{(T)}_{\tt source_r} +
+    (1-\lambda)\xx^{(T)}_{\tt source_l},\quad \lambda\in\left[ 0,1
+    \right]
+  \]
+  \pause
+  \[
+    \xx^{(0)}_\lambda \sim p_\theta(\xx^{(T)}),\quad \mbox{by diffusion}
+  \]
+\end{frame}
+\begin{frame}{Timeline}
+\begin{enumerate}
+  \item[\bf 2015)] \textit{\ldots Non-equilibrium
+  Thermodynamics}. Sohl-Dickstein et al. ICML. {\color{ggreen} \checkmark}\vfill
+  \item[\bf 2020)] \textit{Denoising Diffusion Probabilistic Models}.
+  Ho et al. NeurIPS.{\color{ggreen} \checkmark}\vfill
+  \item[\bf 2021)] \textit{Score-Based Generative Modeling Through SDE}. Song et
+    al. ICLR.
+\end{enumerate}
+\end{frame}
+\begin{frame}{Score-Based Generative Modeling Through SDE}
+  TODO
+\end{frame}
+
 \section{Broader Impacts}
+\begin{frame}{Image Generation}
+  \begin{enumerate}
+    \item Diffusion models, as generative models, can be used for malicius
+      porpouse. Fake images can become less detectable.
+    \item Diffusion models relfect the biases in the dataset in which they
+      are trianed. Hence, using generated images for training other
+      models can produce a \textbf{fade in} effect.
+  \end{enumerate}
+  \pause
+  \begin{center}
+    \it``If samples from generative models trained on these datasets
+    proliferate throughout the internet, then these biases will only be
+    reinforced further.\footcite{ho}''
+  \end{center}
+\end{frame}
 \begin{frame}{CLIP Model}
   \begin{center}
     \it
