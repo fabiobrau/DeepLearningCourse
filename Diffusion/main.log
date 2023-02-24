@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.11.28)  22 FEB 2023 14:11
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.11.28)  24 FEB 2023 16:09
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2418,101 +2418,174 @@ Package luatex.def Info: pic/logoretis_noname.png  used on input line 704.
 ]
 File: ./pic/ho_diffusion.png Graphic file (type png)
 <use ./pic/ho_diffusion.png>
-Package luatex.def Info: ./pic/ho_diffusion.png  used on input line 727.
+Package luatex.def Info: ./pic/ho_diffusion.png  used on input line 729.
 (luatex.def)             Requested size: 179.25114pt x 28.51566pt.
 <./pic/sda_intro.png, id=428, 1312.905pt x 558.085pt>
 File: ./pic/sda_intro.png Graphic file (type png)
 <use ./pic/sda_intro.png>
-Package luatex.def Info: ./pic/sda_intro.png  used on input line 727.
+Package luatex.def Info: ./pic/sda_intro.png  used on input line 729.
 (luatex.def)             Requested size: 179.25114pt x 76.18979pt.
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 727.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 729.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [54
 
 <./pic/sda_intro.png>]
+<./pic/sde_overview.png, id=438, 1625.07124pt x 562.1pt>
+File: ./pic/sde_overview.png Graphic file (type png)
+<use ./pic/sde_overview.png>
+Package luatex.def Info: ./pic/sde_overview.png  used on input line 772.
+(luatex.def)             Requested size: 199.1693pt x 129.58047pt.
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 734.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 772.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [55
 
-]
+<./pic/sde_overview.png>]
+File: ./pic/sde_overview.png Graphic file (type png)
+<use ./pic/sde_overview.png>
+Package luatex.def Info: ./pic/sde_overview.png  used on input line 772.
+(luatex.def)             Requested size: 199.1693pt x 129.58047pt.
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 736.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 772.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [56
 
 ]
+File: ./pic/sde_overview.png Graphic file (type png)
+<use ./pic/sde_overview.png>
+Package luatex.def Info: ./pic/sde_overview.png  used on input line 795.
+(luatex.def)             Requested size: 199.1693pt x 132.41086pt.
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 738.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 795.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [57
 
 ]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 739.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 796.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [58
 
 ]
+<./pic/dalle-intro.png, id=468, 1115.16624pt x 803.0pt>
+File: ./pic/dalle-intro.png Graphic file (type png)
+<use ./pic/dalle-intro.png>
+Package luatex.def Info: ./pic/dalle-intro.png  used on input line 815.
+(luatex.def)             Requested size: 199.1693pt x 143.40651pt.
+<./pic/dalle-samples.png, id=469, 781.92125pt x 852.18375pt>
+File: ./pic/dalle-samples.png Graphic file (type png)
+<use ./pic/dalle-samples.png>
+Package luatex.def Info: ./pic/dalle-samples.png  used on input line 815.
+(luatex.def)             Requested size: 149.37697pt x 162.80081pt.
+
+Overfull \vbox (19.45476pt too high) detected at line 815
+ []
+
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 754.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 815.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
- [59
+[59
+
+<./pic/dalle-intro.png><./pic/dalle-samples.png>]
+<./pic/dalle-samples2.png, id=478, 1795.70876pt x 732.7375pt>
+File: ./pic/dalle-samples2.png Graphic file (type png)
+<use ./pic/dalle-samples2.png>
+Package luatex.def Info: ./pic/dalle-samples2.png  used on input line 827.
+(luatex.def)             Requested size: 338.59023pt x 138.15941pt.
+
+Overfull \vbox (16.80269pt too high) detected at line 827
+ []
+
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 827.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+[60
+
+<./pic/dalle-samples2.png>]
+<./pic/dalle-samples3.png, id=487, 1796.7125pt x 773.89125pt>
+File: ./pic/dalle-samples3.png Graphic file (type png)
+<use ./pic/dalle-samples3.png>
+Package luatex.def Info: ./pic/dalle-samples3.png  used on input line 827.
+(luatex.def)             Requested size: 338.59023pt x 139.13414pt.
+
+Overfull \vbox (17.77742pt too high) detected at line 827
+ []
+
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 827.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+[61
+
+<./pic/dalle-samples3.png>]
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 828.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+ [62
 
 ]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 754.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 843.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
- [60
+ [63
 
 ]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 762.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 843.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
- [61
+ [64
 
 ]
-LaTeX Font Info:    Trying to load font information for U+mvs on input line 790.
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 851.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+ [65
+
+]
+LaTeX Font Info:    Trying to load font information for U+mvs on input line 879.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd)
 File: pic/tecip_logo-ENG.png Graphic file (type png)
 <use pic/tecip_logo-ENG.png>
-Package luatex.def Info: pic/tecip_logo-ENG.png  used on input line 790.
+Package luatex.def Info: pic/tecip_logo-ENG.png  used on input line 879.
 (luatex.def)             Requested size: 123.77626pt x 49.9152pt.
-<pic/dipe.png, id=486, 714.9912pt x 286.1892pt>
+<pic/dipe.png, id=528, 714.9912pt x 286.1892pt>
 File: pic/dipe.png Graphic file (type png)
 <use pic/dipe.png>
-Package luatex.def Info: pic/dipe.png  used on input line 790.
+Package luatex.def Info: pic/dipe.png  used on input line 879.
 (luatex.def)             Requested size: 121.54689pt x 48.6515pt.
 File: pic/logoretis.png Graphic file (type png)
 <use pic/logoretis.png>
-Package luatex.def Info: pic/logoretis.png  used on input line 790.
+Package luatex.def Info: pic/logoretis.png  used on input line 879.
 (luatex.def)             Requested size: 88.73828pt x 50.37604pt.
- [62
+ [66
 
 <./pic/dipe.png>]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 793.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 882.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
-[63
+[67
 
 ]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 815.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 904.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
- [64
+ [68
 
 ]
 \tf@nav=\write7
@@ -2526,23 +2599,23 @@ Package luatex.def Info: pic/logoretis_noname.png  used on input line 815.
 \openout9 = main.snm
  (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9264C5F70B3537DDB9E07C1A50A38441;623.
+(rerunfilecheck)             Checksum: 4D5AD0FC7F8828AA1018E86D7A671FEC;628.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 48805 strings out of 478824
+ 48912 strings out of 478824
  125031,1977958 words of node,token memory allocated
- 9013 words of node memory still in use:
+ 9033 words of node memory still in use:
    155 hlist, 29 vlist, 21 rule, 28 disc, 3 local_par, 41 math, 170 glue, 103 ke
-rn, 24 penalty, 472 glyph, 233 attribute, 80 glue_spec, 233 attribute_list, 4 wr
+rn, 24 penalty, 472 glyph, 238 attribute, 80 glue_spec, 238 attribute_list, 4 wr
 ite, 16 pdf_colorstack nodes
-   avail lists: 1:3,2:1758,3:780,4:240,5:281,6:45,7:1897,8:141,9:865,10:16,11:13
+   avail lists: 1:3,2:1748,3:780,4:258,5:284,6:45,7:1897,8:141,9:865,10:18,11:13
 9
- 65861 multiletter control sequences out of 65536+600000
- 161 fonts using 31859143 bytes
+ 65894 multiletter control sequences out of 65536+600000
+ 163 fonts using 32334999 bytes
  131i,18n,131p,1844b,1756s stack positions out of 5000i,500n,10000p,200000b,200000s
 
 warning  (pdf backend): unreferenced destination with name 'cite.0@clip'
@@ -2554,41 +2627,43 @@ warning  (pdf backend): unreferenced destination with name 'cite.0@ho'
 warning  (pdf backend): unreferenced destination with name 'cite.0@thermodynamic
 '
 </usr/share/texlive/texmf-dist/fonts/opentype/public/fontawesome/FontAwesome.otf
-></usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf>
-</usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/tex
-mf/fonts/opentype/public/lm/lmromandemi10-regular.otf></usr/share/texlive/texmf-
-dist/fonts/opentype/public/fira/FiraSans-LightItalic.otf></usr/share/texlive/tex
-mf-dist/fonts/opentype/public/fira/FiraSans-Light.otf></usr/share/texlive/texmf-
-dist/fonts/opentype/public/fira/FiraSans-Book.otf></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cme
-xtra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/marvosym/marvosym.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (64 pages, 13204941 bytes).
+></usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-Italic.otf><
+/usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf></
+usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf
+/fonts/opentype/public/lm/lmromandemi10-regular.otf></usr/share/texlive/texmf-di
+st/fonts/opentype/public/fira/FiraSans-LightItalic.otf></usr/share/texlive/texmf
+-dist/fonts/opentype/public/fira/FiraSans-Light.otf></usr/share/texlive/texmf-di
+st/fonts/opentype/public/fira/FiraSans-Book.otf></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+extra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmext
+ra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/marvosym/marvosym.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/symbols/msbm7.pfb>
+Output written on main.pdf (68 pages, 17676161 bytes).
 
-PDF statistics: 643 PDF objects out of 1000 (max. 8388607)
- 459 compressed objects within 5 object streams
- 139 named destinations out of 1000 (max. 131072)
- 64 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 694 PDF objects out of 1000 (max. 8388607)
+ 487 compressed objects within 5 object streams
+ 147 named destinations out of 1000 (max. 131072)
+ 114 words of extra memory for PDF output out of 10000 (max. 100000000)
 

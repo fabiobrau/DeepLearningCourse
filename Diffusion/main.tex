@@ -50,7 +50,7 @@
 \DeclareMathOperator*{\argmax}{argmax}
 
 
-\title{Diffusion Models: DALL-E\\ 
+\title{Diffusion Models and an application to DALL-E2\\ 
   \large{Deep Learning and Neural Networks: Advanced Topics}}
 \date{March 1, 2023}
 \author{Fabio Brau}
@@ -706,7 +706,7 @@ such that:
   \begin{minipage}[h]{0.45\textwidth}
     \begin{center}
       \footnotesize 
-      \textbf{Discrete Time} Markov Chain with \textbf{Continuous} State Space
+      \textbf{Discrete Time}
     \end{center}
     \begin{figure}[h]
       \centering
@@ -716,25 +716,114 @@ such that:
   \begin{minipage}[h]{0.45\textwidth}
     \begin{center}
       \footnotesize 
-      \textbf{\color{rred} Continuous Time} Markov Chain with
-      \textbf{Continuous} State Space\\
+      \textbf{\color{rred} Continuous Time}\\
     \end{center}
     \begin{figure}[h]
       \centering
       \includegraphics[width=\textwidth]{./pic/sda_intro.png}
     \end{figure}
   \end{minipage}\footcite{sde}
+  \begin{block}{Stochastic Process}
+    Continous sequence of $\xx$ indexed by $t\in\left[ 0,T \right]$, where $\xx(t)$ has distribution $p_t(\xx)$;
+  \end{block}
 \end{frame}
-%\begin{frame}{Continous Diffusion Process}
-%  \begin{figure}[h!]
-%    \centering
-%    \includegraphics[width=0.6\textwidth]{./pic/sde_overview.png}
-%  \end{figure}
-%\end{frame}
-\section{DALL-E}
-\begin{frame}{Samples}
+\begin{frame}{Continuous Diffusion Process described by SDE}
+  %\begin{minipage}[t]{0.5\textwidth}
+  %  \footnotesize
+  %  \begin{center}
+  %    \bf
+  %    Discrete time Diffusion Process
+  %  \end{center}
+  %  \[
+  %    \xx^{(t)}=\sqrt{1-\beta_t}\xx^{(t-1)} + \sqrt{\beta_t}
+  %    \varepsilonb^{(t)}
+  %  \]
+  %  where $\varepsilonb\sim\NN(0,I)$.
+  %\end{minipage}\hfill%
+  \begin{minipage}[t]{0.5\textwidth}
+    \begin{center}
+      \bf
+      Continous Diffusion Process
+    \end{center}
+    \[
+      d\xx(t) = f(\xx,t) dt + g(t)\,d\ww(t)
+    \]
+    \begin{enumerate}
+      \item $f(\xx,t)$ drift coefficient.
+      \item $g(t)$ diffusion coefficient.
+      \item $\ww(t)$, Weiner Process
+    \end{enumerate}
+
+    \begin{center}
+      \bf
+      Weiner Process
+    \end{center}
+      \[
+        \ww(t)-\ww(s) \sim \NN(0,(t-s)I)
+      \]
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.5\textwidth}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[clip, width=\textwidth,trim = 0 0 26.75cm 0]{./pic/sde_overview.png}
+  \end{figure}
+  \end{minipage}
+  \pause
 \end{frame}
-\begin{frame}{Timeline}
+\begin{frame}{Reverse Process explicity given by $\nabla_{\xx} p_t(\xx)$}
+  \begin{minipage}[t]{0.45\textwidth}
+    \vspace{0.6cm}
+    \begin{block}{Theorem}
+      \footnotesize
+      Reverse Process is still a diffusion process
+      \[
+        d\xx(t) = \bar f(\xx,t)\,dt + g(t)\,d\bar\ww(t)\\
+      \]
+      where
+      \begin{itemize}
+        \item $\bar f(\xx,t) = f(\xx,t) - g(t)^{2} \nabla_{\xx} log(p_t(\xx))$
+          \item $\bar \ww(t)=\ww(T-t)$, reverse Weiner Process
+      \end{itemize}
+    \end{block}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.5\textwidth}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[clip, width=\textwidth,trim = 27.4cm 0 0 0]{./pic/sde_overview.png}
+  \end{figure}
+  \end{minipage}
+\end{frame}
+\section{DALL-E2}
+\begin{frame}{Introduction}
+  \begin{center}
+    \bf
+    A Ramesh et al. (Open AI). ``\textit{Hierarchical Text-Conditional Image 
+    Generation with CLIP Latents.}''. February 2022.
+  \end{center}
+  \begin{minipage}[t]{0.5\textwidth}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{./pic/dalle-intro.png}
+  \end{figure}
+  \end{minipage}\hfill%
+  \begin{minipage}[t]{0.5\textwidth}
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=0.75\textwidth]{./pic/dalle-samples.png}
+    \end{figure}
+  \end{minipage}
+\end{frame}
+\begin{frame}{Introduction}
+  \begin{center}
+    \bf\bf DALL-E2: a new AI system that can create realistic images and art from a 
+    description in natural language
+  \end{center}
+  \begin{figure}[h]
+    \centering
+    \includegraphics<1>[clip, width=0.85\textwidth, trim=0 0 0 0]{./pic/dalle-samples2.png}%
+    \includegraphics<2->[clip, width=0.85\textwidth, trim=0 0 0 1.25cm]{./pic/dalle-samples3.png}
+    \caption{\footnote{\textbf{Credits:} DALL-E2 website}}
+  \end{figure}
 \end{frame}
 \section{Broader Impacts}
 \begin{frame}{Image Generation}
