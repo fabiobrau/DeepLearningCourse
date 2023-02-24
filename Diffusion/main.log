@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.11.28)  24 FEB 2023 16:09
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.11.28)  24 FEB 2023 17:01
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2526,66 +2526,103 @@ Package luatex.def Info: pic/logoretis_noname.png  used on input line 827.
 [61
 
 <./pic/dalle-samples3.png>]
+<./pic/dalle-encdec.png, id=497, 1597.97pt x 594.22pt>
+File: ./pic/dalle-encdec.png Graphic file (type png)
+<use ./pic/dalle-encdec.png>
+Package luatex.def Info: ./pic/dalle-encdec.png  used on input line 850.
+(luatex.def)             Requested size: 187.21962pt x 69.61685pt.
+<./pic/dalle-clip.png, id=498, 1221.56375pt x 409.53pt>
+File: ./pic/dalle-clip.png Graphic file (type png)
+<use ./pic/dalle-clip.png>
+Package luatex.def Info: ./pic/dalle-clip.png  used on input line 850.
+(luatex.def)             Requested size: 187.21962pt x 62.76411pt.
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 828.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 850.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [62
 
-]
+<./pic/dalle-encdec.png><./pic/dalle-clip.png>]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 843.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 852.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [63
 
 ]
+Overfull \hbox (5.58pt too wide) in paragraph at lines 852--853
+[][][][][][]   [][][]  
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 843.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 853.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
  [64
 
 ]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 851.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 853.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
- [65
+
+[65]
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 868.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+ [66
 
 ]
-LaTeX Font Info:    Trying to load font information for U+mvs on input line 879.
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 868.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+ [67
 
+]
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 876.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+ [68
 
-(/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd)
+]
+LaTeX Font Info:    Trying to load font information for U+mvs on input line 904.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd)
 File: pic/tecip_logo-ENG.png Graphic file (type png)
 <use pic/tecip_logo-ENG.png>
-Package luatex.def Info: pic/tecip_logo-ENG.png  used on input line 879.
+Package luatex.def Info: pic/tecip_logo-ENG.png  used on input line 904.
 (luatex.def)             Requested size: 123.77626pt x 49.9152pt.
-<pic/dipe.png, id=528, 714.9912pt x 286.1892pt>
+<pic/dipe.png, id=547, 714.9912pt x 286.1892pt>
 File: pic/dipe.png Graphic file (type png)
 <use pic/dipe.png>
-Package luatex.def Info: pic/dipe.png  used on input line 879.
+Package luatex.def Info: pic/dipe.png  used on input line 904.
 (luatex.def)             Requested size: 121.54689pt x 48.6515pt.
 File: pic/logoretis.png Graphic file (type png)
 <use pic/logoretis.png>
-Package luatex.def Info: pic/logoretis.png  used on input line 879.
+Package luatex.def Info: pic/logoretis.png  used on input line 904.
 (luatex.def)             Requested size: 88.73828pt x 50.37604pt.
- [66
+
+[69
 
 <./pic/dipe.png>]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 882.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 907.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
-[67
+ [70
 
 ]
 File: pic/logoretis_noname.png Graphic file (type png)
 <use pic/logoretis_noname.png>
-Package luatex.def Info: pic/logoretis_noname.png  used on input line 904.
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 929.
 (luatex.def)             Requested size: 37.64282pt x 20.02597pt.
- [68
+ [71
 
 ]
 \tf@nav=\write7
@@ -2606,7 +2643,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 48912 strings out of 478824
+ 48962 strings out of 478824
  125031,1977958 words of node,token memory allocated
  9033 words of node memory still in use:
    155 hlist, 29 vlist, 21 rule, 28 disc, 3 local_par, 41 math, 170 glue, 103 ke
@@ -2614,7 +2651,7 @@ rn, 24 penalty, 472 glyph, 238 attribute, 80 glue_spec, 238 attribute_list, 4 wr
 ite, 16 pdf_colorstack nodes
    avail lists: 1:3,2:1748,3:780,4:258,5:284,6:45,7:1897,8:141,9:865,10:18,11:13
 9
- 65894 multiletter control sequences out of 65536+600000
+ 65908 multiletter control sequences out of 65536+600000
  163 fonts using 32334999 bytes
  131i,18n,131p,1844b,1756s stack positions out of 5000i,500n,10000p,200000b,200000s
 
@@ -2660,10 +2697,10 @@ pe1/public/marvosym/marvosym.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/symbols/msbm7.pfb>
-Output written on main.pdf (68 pages, 17676161 bytes).
+Output written on main.pdf (71 pages, 18169992 bytes).
 
-PDF statistics: 694 PDF objects out of 1000 (max. 8388607)
- 487 compressed objects within 5 object streams
- 147 named destinations out of 1000 (max. 131072)
+PDF statistics: 714 PDF objects out of 1000 (max. 8388607)
+ 500 compressed objects within 5 object streams
+ 153 named destinations out of 1000 (max. 131072)
  114 words of extra memory for PDF output out of 10000 (max. 100000000)
 
