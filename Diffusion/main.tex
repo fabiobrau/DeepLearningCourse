@@ -834,6 +834,10 @@ such that:
       \centering
       \includegraphics[width=1\textwidth]{./pic/dalle-encdec.png}
     \end{figure}
+    \begin{center}
+      Diffusion models allows generating images with  high sample fedelity
+      and photorealism
+    \end{center}
   \end{minipage}\hfill%
   \begin{minipage}[t]{0.47\textwidth}
     \begin{center}
@@ -842,14 +846,59 @@ such that:
     \begin{figure}[h]
       \vspace{0.25cm}
       \centering
-      \includegraphics[width=\textwidth]{./pic/dalle-clip.png}
+      \includegraphics[width=\textwidth]{./pic/dalle-clip-intro.png}
     \end{figure}
+  \begin{center}
+    Embedding of images and text in the same latent space
+  \end{center}
   \end{minipage}\hfill%
-  \begin{minipage}[t]{0.5\textwidth}
-  \end{minipage}
+  \footcite{dalle2}
 \end{frame}
 \begin{frame}{CLIP: Latent Embedding model}
-\end{frame}<++>
+  \begin{column}{0.5\textwidth}
+    \only<1>{\begin{enumerate}
+    \item  The \textbf{Text Encoder} takes a text $y$ in
+      and embeds it in $z\in\R^n$.
+      \vspace{0.5cm}
+    \item The \textbf{Image Encoder} takes an image $x$ and embeds it in the
+      latent space $\R^n$.
+      \vspace{0.5cm}
+    \item \textbf{Property}: The two embedded objects can be directly compared
+      through cosine similarity.
+    \end{enumerate}}
+    \only<2->{\begin{enumerate}
+        \item[4.] \textbf{Aim}: Zero-shot classification (of unseen
+      datasets, see later.)
+      \vspace{0.5cm}
+        \item[5.]  The \textbf{Text Encoder} is a Transformer for NLP ($63M$ of
+      parameters, next lectures).
+      \vspace{0.5cm}
+    \item[6.] The \textbf{Image Encoder} include ResNet-50 and Vision-Transformers
+  \end{enumerate}}
+  \end{column}\hfill%
+  \begin{column}{0.45\textwidth}
+    \begin{figure}[t]
+      \centering
+      \includegraphics[width=\textwidth]{./pic/dalle-clip.png}
+      \caption{CLIP allows embedding of images and text in the same latent
+      space.}
+    \end{figure}
+  \end{column}
+  \footcite{clip}
+\end{frame}
+%\begin{frame}{CLIP: Latent Embedding Model}
+%  \begin{minipage}[t]{0.5\textwidth}
+%  \end{minipage}\hfill
+%  \begin{minipage}[t]{0.4\textwidth}
+%    \begin{figure}[t]
+%      \centering
+%      \includegraphics[width=\textwidth]{./pic/dalle-clip.png}
+%      \caption{CLIP allows embedding of images and text in the same latent
+%      space.}
+%    \end{figure}
+%  \end{minipage}
+%  \footcite{clip}
+%\end{frame}
 \section{Broader Impacts}
 \begin{frame}{Image Generation}
   \begin{enumerate}

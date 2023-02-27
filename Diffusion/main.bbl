@@ -225,6 +225,59 @@
     \field{year}{2021}
   \endentry
 
+  \entry{dalle2}{article}{}
+    \name{author}{5}{}{%
+      {{hash=RA}{%
+         family={Ramesh},
+         familyi={R\bibinitperiod},
+         given={Aditya},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=DP}{%
+         family={Dhariwal},
+         familyi={D\bibinitperiod},
+         given={Prafulla},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=NA}{%
+         family={Nichol},
+         familyi={N\bibinitperiod},
+         given={Alex},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Chu},
+         familyi={C\bibinitperiod},
+         given={Casey},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Mark},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {arXiv}%
+    }
+    \strng{namehash}{RA+2}
+    \strng{fullhash}{RADPNACCCM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{note}{arXiv:2204.06125 [cs]}
+    \field{number}{arXiv:2204.06125}
+    \field{title}{Hierarchical Text-Conditional Image Generation with CLIP
+  Latents}
+    \verb{url}
+    \verb http://arxiv.org/abs/2204.06125
+    \endverb
+    \field{year}{2022}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
   \entry{thermodynamic}{article}{}
     \name{author}{4}{}{%
       {{hash=SDJ}{%
