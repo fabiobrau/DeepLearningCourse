@@ -1,4 +1,4 @@
-\documentclass[aspectratio=169, 10pt]{beamer}
+\documentclass[aspectratio=169, 9pt]{beamer}
 \usepackage{bbm}
 %\usepackage{algorithm2e}
 %\usepackage{mathtools}
@@ -83,7 +83,7 @@
     \centering
     \includegraphics[width=0.75\textwidth]{./pic/generative-models-introa.png}
     \caption{Schema of generative
-    models\footnote{\textbf{Credits}https://towardsdatascience.com/understanding-diffusion-probabilistic-models-dpms-1940329d6048}}
+    models\footnote{\textbf{Credits:} https://towardsdatascience.com/understanding-diffusion-probabilistic-models-dpms-1940329d6048}}
   \end{figure}
 \end{frame}
 \begin{frame}{Generative Models}
@@ -108,14 +108,15 @@
 \end{frame}
 \begin{frame}{Timeline}
 \begin{enumerate}
-  \item[\bf 2015)] \textit{\ldots Non-equilibrium Thermodynamics}. Sohl-Dickstein
-    et al. ICML\vfill
+  \item[\bf 2015)] \textit{Deep Unsupervised Learning with Non-equilibrium
+  Thermodynamics}. Sohl-Dickstein et al. ICML.\vfill
   \item[\bf 2020)] \textit{Denoising Diffusion Probabilistic Models}.
   Ho et al. NeurIPS.\vfill
   \item[\bf 2021)] \textit{Score-Based Generative Modeling Through SDE}. Song et
     al. ICLR.
 \end{enumerate}
 \end{frame}
+
 \begin{frame}{Deep Unsupervised Learning using Non-Equilibrium Thermodynamics}
   \begin{figure}[h!]
     \centering
@@ -127,46 +128,43 @@
 \begin{frame}{Reminder: Markov Chains with Discrete Time}
 \textbf{Informal Definition}\\ 
 A sequence of random variables $\xx^{(0)},\xx^{(1)},\cdots,\xx^{(t)},\cdots$,
-such that:
+such that
 \begin{itemize}
   \item $\xx^{(t)}\in S$, where $S$ \textbf{State Space}
   \item The future $\xx^{(t+1)}$ depends on the present $\xx^{(t)}$ 
     but not on the past $\xx^{(t-1)}$
 \end{itemize}
   \vfill
-  \begin{minipage}[t]{0.5\textwidth}
+\begin{columns}
+  \begin{column}{0.5\textwidth}
     \begin{center}
-      \textbf{Discrete State Space $S$}
+      \textbf{Discrete State Space} $S$
     \end{center}
     \begin{figure}[h!]
       \centering
       \includegraphics[width=0.5\textwidth, trim=0 0 0
       3cm]{./pic/markov_chain_discrete space.png}\
     \end{figure}
-  \end{minipage}\hfill%
-  \begin{minipage}[t]{0.5\textwidth}
+  \end{column}
+  \begin{column}{0.5\textwidth}
     \begin{center}
       \textbf{Continuous State Space $S$}
-    \end{center}
-    \begin{figure}[h!]
+      \begin{figure}[h!]
       \centering
-      \includegraphics[width=\textwidth, trim=0 0 0
-      4cm]{./pic/markov_chain_continous space2.png}
+      \includegraphics[width=0.75\textwidth, trim=0 0 0 2cm]{./pic/markov_chain_continous space2.png}
     \end{figure}
-  \end{minipage}
+    \end{center}
+  \end{column}
+\end{columns}
 \end{frame}
-\begin{frame}{Reminder: MCDT with Discrete State Space}
-  \begin{minipage}[t]{0.6\textwidth}
+\begin{frame}{Reminder: Disrete Time Markov Chain with Discrete State Space}
+  \begin{columns}
+  \begin{column}{0.6\textwidth}
     \textbf{Definition}\\
     A sequence $\left\{ \xx^{(t)}\right\}_{t\in\N}
     \subseteq S$, a matrix $P=\left( p_{ij} \right)$.
     \vspace{1cm}
     \begin{itemize}
-      %\item %\textbf{Discrete Time Property}\\
-      %\(
-      %  \xx^{(0)},\,\xx^{(1)},\cdots,\xx^{(t)},\cdots 
-      %\)
-      %\item \textbf{Discrete Space}\\
       \item \textbf{Discrete state space}: \(
         S=\left\{ s_0,\cdots,s_n,\cdots \right\}
       \) 
@@ -177,45 +175,45 @@ such that:
     \item \textbf{Transaction Matrix}: \(
         \Ph\left( \xx^{(t+1)}=s_j \vert \xx^{(t)}=s_i\right)=p_{ij}
       \)
-%      \(
-%        \Ph\left( \xx^{(t+1)}\in A\,\vert\, \xx^{(0)},\ldots,\xx^{(t)}
-%        \right)=\Ph\left(\xx^{(t+1)}\in A\,\vert\,\xx^{(t)} \right)
-%      \)
     \end{itemize}
-  \end{minipage}\hfill%
-  \onslide<2>{%
-  \begin{minipage}[t]{0.3\textwidth}
-    \textbf{$P$ is a stochastic matrix!}\\
-    \[
-      \forall i,\quad \sum_{j\in\N}p_{ij}=1
-    \]
-    \begin{figure}[h!]
-      \centering
-      \includegraphics[width=\textwidth]{./pic/mcdt_discrete_space.png}
-    \end{figure}
-  \end{minipage}
-  }
+  \end{column}
+    \begin{column}{0.4\textwidth}
+      \onslide<2>{%
+      \begin{block}{\textbf{$P$ is a stochastic matrix!}}
+        \[
+          \forall i,\quad \sum_{j\in\N}p_{ij}=1
+        \]
+      \end{block}
+      \vspace{1cm}
+      \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.75\textwidth]{./pic/mcdt_discrete_space.png}
+      \end{figure}
+    }
+  \end{column}%
+  \end{columns}
 \end{frame}
 \begin{frame}{Reminder: DTMC with Continuous State Space}
   Let assume $\xx,\yy\in S$ where $S$ continuous state space (e.g.
   $S=\R^d$).\\
   \vfill
-  \textbf{Joint Distribution} $p(\xx,\yy)$
+  \begin{block}{\textbf{Joint Distribution} $p(\xx,\yy)$}
   \[
     \Ph\left( \xx\in A\,\vert\,\yy\in B \right)=
     \int_A\int_B p\left( \xx,\yy \right)\,d\xx\,d\yy
   \]
-
-  \textbf{Transactional Kernel} $p(\xx\,\vert\,\yy)$
-  \[
-    p\left( \xx,\yy \right) = p(\xx\,\vert\,\yy)\,p\left( \yy \right)
-  \]
-  \textbf{Marginal Distribution} $p(\xx)$
-  \[
-    p\left( \xx \right)=\int_S p\left( \xx,\yy \right)\,d\yy = \int_S
-    p(\xx\,\vert\,\yy)\,p\left( \yy\right)\,d\yy 
-  \]
-
+\end{block}
+\begin{block}{\textbf{Transactional Kernel} $p(\xx\,\vert\,\yy)$}
+    \[
+      p\left( \xx,\yy \right) = p(\xx\,\vert\,\yy)\,p\left( \yy \right)
+    \]
+  \end{block}
+  \begin{block}{\textbf{Marginal Distribution} $p(\xx)$}
+    \[
+      p\left( \xx \right)=\int_S p\left( \xx,\yy \right)\,d\yy = \int_S
+      p(\xx\,\vert\,\yy)\,p\left( \yy\right)\,d\yy 
+    \]
+  \end{block}
 \end{frame}
 \begin{frame}{Forward Diffusion Process}
   \begin{center}
@@ -226,9 +224,7 @@ such that:
       \hfill\onslide<2->{{\color{red} Not Analytic!!}}
     \item \textbf{Transaction Kernel}: $q\left( \xx^{(t)}\,\vert\,\xx^{(t-1)}
       \right)=\NN\left( \xx^{(t)};\sqrt{1-\beta_t}\xx^{(t-1)}; \beta_t I \right)$
-    \item \textbf{Variance Scheduler}: $\beta_1,\cdots,\beta_T\in\left(
-      0,1\right]$ \hfill\onslide<2->{{\color{red} $\beta_T=1$}}
-
+    \item \textbf{Variance Scheduler}: $0<\beta_1<\cdots<\beta_T< 1$ 
   \end{itemize}
   \begin{figure}[h!]
     \centering
@@ -308,8 +304,7 @@ such that:
       \NN\left(\xx^{(t-1)};\mub_\theta\left(\xx^{(t)},t
       \right),\Sigmab_\theta\left(\xx^{(t)},t \right)\right)&
     \end{aligned}
-  \]}}
-  \textbf{\color{rred}Learned Reverse Process}\\
+  \]} \textbf{\color{rred}Learned Reverse Process}}
 \end{frame}
 \begin{frame}{Reverse Diffusion Process}
   \begin{minipage}[t]{0.45\textwidth}
@@ -340,7 +335,7 @@ such that:
   \end{minipage}
   \pause
   \begin{block}{Theorem. Reverse of Gaussian DP is $\approx$ Gaussian DP\footcite{thermodynamic}}
-    If $|\beta_i-\beta_{i+1}|\approx 0$, i.e. diffusion \textbf{slow
+    If $|\beta_i-\beta_{i+1}|\approx 0$, i.e.\ diffusion \textbf{slow
     enough}, then% $q\left( \xx^{(t)}\,\vert\,\xx^{(t-1)} \right)=\NN\left( \xx^{(t)};\sqrt{1-\beta_t}\xx^{(t-1)}; \beta_t I \right)$ is such that
     \[
       q(\xx^{(t-1)}\,\vert\, \xx^{(t)}) 
@@ -351,7 +346,8 @@ such that:
     \xx^{(t)},t \right)\right)
     \]
   \end{block}
-  \onslide<3->{\tikzmarkin{b} Mean $\mub_\theta$ and covariance
+  \onslide<3->{\tikzmarkin[below right offset={-0.2,0.2}, above left
+    offset={0.,-0.2}]{b} Mean $\mub_\theta$ and covariance
   $\Sigmab_\theta$ have to be learned!!\tikzmarkend{b}}
 \end{frame}
 \begin{frame}{Visualization of Diffusion Process: 2D dimensional case}
@@ -361,18 +357,19 @@ such that:
   \end{figure}
 \end{frame}
 \begin{frame}{Training of $\mub_\theta$ and  $\Sigmab_\theta$}
-  \begin{minipage}[t]{0.45\textwidth}
+  \begin{columns}
+  \begin{column}{0.45\textwidth}
     \begin{center}
       \bf Aim
     \end{center}
-    Seach for the best parameters $\theta$ 
+    Search for the best parameters $\theta$ 
     \[
       q(\xx^{(0)}) \approx p_\theta(\xx^{(0)})
     \]
       where $\xx^{(0)}\,\cdots,\,\xx^{(T)}$ diffusion process
+      \vspace{1cm}
       \begin{block}{Estimated Reverse Process}
     \[
-     % \small
       \begin{aligned}
         & p_\theta(\xx^{(T)}) = \NN\left( \xx^{(T)}; 0, I \right)\\
         & p_\theta(\cdot\,\vert\, \xx^{(t)})=
@@ -381,40 +378,44 @@ such that:
       \end{aligned}
     \]
   \end{block}
-  \end{minipage}\hfill%
-  \begin{minipage}[t]{0.5\textwidth}
+  \end{column}
+  \begin{column}{0.45\textwidth}
     \onslide<2->{%
-    \begin{center}
-      \bf Method
-    \end{center}
-    Minimize the \textit{Kullback–Leibler} Divergence
-    \[
-      %\small
-      \onslide<3->{\tikzmarkin{a}(0.1,0.6)(-0.1,-0.5)}%
-      D_{KL}(q\,||\,p_\theta):=\int q(\xx^{(0)})\log\left(
-      \frac{q(\xx^{(0)})}{p_\theta(\xx^{(0)})}\right)\,d \xx^{(0)}\\
-      \onslide<3->{\tikzmarkend{a}}
-    \]
       \begin{center}
-        \onslide<3->{%
+        \bf Method
+      \end{center}
+      Minimize the \textit{Kullback–Leibler} Divergence
+      \[
+        \onslide<3->{\tikzmarkin{a13}(0.1,-0.4)(-0.1,0.55)}%
+        D_{KL}(q\,||\,p_\theta):=\int q(\xx^{(0)})\log\left(
+        \frac{q(\xx^{(0)})}{p_\theta(\xx^{(0)})}\right)\,d \xx^{(0)}
+        \onslide<3->{\tikzmarkend{a13}}
+      \]}
+      \onslide<3->{%
+        \begin{center}
           \textbf{Easy??}\\
+      \end{center}
+      }
+      \begin{columns}
+        \begin{column}{0.45\textwidth}
+          \onslide<4->{%
+            \begin{center}
+              \tikzmarkin{nope}\textbf{No.} $q(\xx^{(0)})$ is analytically
+              intractable!!\hspace{1em}\tikzmarkend{nope}
+            \end{center}
         }
-        \onslide<4->{%
-          \begin{minipage}[t]{0.45\textwidth}
-            \vspace{1cm}
-            \tikzmarkin{b} \noindent \textbf{No.} $q(\xx^{(0)})$ is analytically
-          intractable!!\tikzmarkend{b}
-        \end{minipage}\hspace{0.5cm}%
-        \begin{minipage}[t]{0.35\textwidth}
+        \end{column}\hspace{0.5cm}%
+        \begin{column}{0.35\textwidth}
+          \visible<4->{%
           \begin{figure}[h]
             \centering
-            \includegraphics<4->[width=\textwidth]{./pic/sample.png}
+            \includegraphics[width=\textwidth]{./pic/sample.png}%
           \end{figure}
-        \end{minipage}
-        }
-      \end{center}
-    }
-  \end{minipage}
+        }%
+        \end{column}
+      \end{columns}
+    \end{column}
+  \end{columns}
 \end{frame}
 \begin{frame}{Training of $\mub_\theta$ and  $\Sigmab_\theta$}
   \begin{center}
@@ -563,10 +564,11 @@ such that:
   \vfill .\footcite{thermodynamic}
 \end{frame}
 
+
 \begin{frame}{Timeline}
 \begin{enumerate}
   \item[\bf 2015)] \textit{\ldots Non-equilibrium
-  Thermodynamics}. Sohl-Dickstein et al. ICML\hfill {\color{ggreen} \checkmark}\vfill
+  Thermodynamics}. Sohl-Dickstein et al. ICML. {\color{ggreen} \checkmark}\vfill
   \item[\bf 2020)] \textit{Denoising Diffusion Probabilistic Models}.
   Ho et al. NeurIPS.\vfill
   \item[\bf 2021)] \textit{Score-Based Generative Modeling Through SDE}. Song et
@@ -659,7 +661,7 @@ such that:
     \end{figure}
     \textbf{Note.}
     \begin{enumerate}
-      \item High FID (Frechet Implicit Distance) $\Rightarrow$ high quality 
+      \item Low FID (Frechet Implicit Distance) $\Rightarrow$ high quality 
       \item Training improved
     \end{enumerate}
   \end{minipage}
@@ -855,6 +857,7 @@ such that:
   \footcite{dalle2}
 \end{frame}
 \begin{frame}{CLIP: Latent Embedding model}
+  \begin{columns}
   \begin{column}{0.5\textwidth}
     \only<1>{\begin{enumerate}
     \item  The \textbf{Text Encoder} takes a text $y$ in
@@ -875,7 +878,7 @@ such that:
       \vspace{0.5cm}
     \item[6.] The \textbf{Image Encoder} include ResNet-50 and Vision-Transformers
   \end{enumerate}}
-  \end{column}\hfill%
+  \end{column}
   \begin{column}{0.45\textwidth}
     \begin{figure}[t]
       \centering
@@ -885,6 +888,7 @@ such that:
     \end{figure}
   \end{column}
   \footcite{clip}
+\end{columns}
 \end{frame}
 %\begin{frame}{CLIP: Latent Embedding Model}
 %  \begin{minipage}[t]{0.5\textwidth}
