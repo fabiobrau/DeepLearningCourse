@@ -890,31 +890,54 @@ such that
   \footcite{clip}
 \end{columns}
 \end{frame}
-%\begin{frame}{CLIP: Latent Embedding Model}
-%  \begin{minipage}[t]{0.5\textwidth}
-%  \end{minipage}\hfill
-%  \begin{minipage}[t]{0.4\textwidth}
-%    \begin{figure}[t]
-%      \centering
-%      \includegraphics[width=\textwidth]{./pic/dalle-clip.png}
-%      \caption{CLIP allows embedding of images and text in the same latent
-%      space.}
-%    \end{figure}
-%  \end{minipage}
-%  \footcite{clip}
-%\end{frame}
-\begin{frame}{DALL-E2 method}
-  Let $(x,y)$ an image, caption pair.
+\begin{frame}{DALL-E2 with higher detail}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{./pic/dalle-encdec.png}
+  \end{figure}
+  Let $(x,y)$ an (image, caption pair).
   \begin{enumerate}
     \item \textbf{CLIP} such that $(x,y)\mapsto(z_i, z_t)$.
     \item \textbf{Prior} which estimate $q(\zz_i\,\vert\,\yy)$ \hfill
-      \onslide<2->{\textit{\color{rred}Provide an image embedding conditioned
+      \onslide<2->{\textit{\color{blue}Provide an image embedding conditioned
           to a text.}}
     \item \onslide<2->{\textbf{Decoder} which estimate $q(\xx\,\vert\, \zz_i,
       \yy)$}\hfill
       \onslide<2->{\textit{\color{blue}Provide an Image conditioned to a
       text and Image Emb..}}
   \end{enumerate}
+  \pause
+  \begin{block}{Observation}
+    \[
+      p(\xx\,\vert\, \yy) \underbrace{=}_{\mbox{\color{rred} Deterministic}}
+      p(\xx,\zz_i\,\vert\,\yy) \underbrace{=}_{\mbox{\color{rred} Bayes Rule}} p(\xx\,\vert\,
+      \zz_i,\yy)p(\zz_i\,\vert\,\yy)
+    \]
+  \end{block}
+\end{frame}
+\begin{frame}{Decoding through Diffusion models}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \textbf{Step 1: Generate a low-resolution image from $z_i$}\\
+      A guided diffusion models is used to get a low resolution image from
+      the image embedding.
+      \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \onslide<2->{%
+      \begin{center}
+        \textbf{Step 2. Upsampling Procedure} \\
+        Two diffusion models are used to increase the resolution of the image
+        from low to super-high
+      \end{center}}
+    \end{column}
+  \end{columns}
+  \begin{figure}[h]
+    \centering
+    \includegraphics<1>[clip, width=\textwidth, trim = 0 8cm 0 10cm]{./pic/dalle-decoder_1.png}%
+    \includegraphics<2->[clip, width=\textwidth, trim= 0 8cm 0 10cm]{./pic/dalle-decoder_2.png}
+  \end{figure}
 \end{frame}
 \section{Broader Impacts}
 \begin{frame}{Image Generation}
