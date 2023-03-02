@@ -172,7 +172,7 @@ such that
     \item \textbf{Markov Property:} $\xx^{(t+1)}$ not dep. $\xx^{(0)},\cdots,\xx^{(t-1)}$.
       \vspace{1cm}
 
-    \item \textbf{Transaction Matrix}: \(
+    \item \textbf{Transition Matrix}: \(
         \Ph\left( \xx^{(t+1)}=s_j \vert \xx^{(t)}=s_i\right)=p_{ij}
       \)
     \end{itemize}
@@ -360,7 +360,7 @@ such that
   \begin{columns}
   \begin{column}{0.45\textwidth}
     \begin{center}
-      \bf Aim
+      \bf Goal
     \end{center}
     Search for the best parameters $\theta$ 
     \[
@@ -419,7 +419,7 @@ such that
 \end{frame}
 \begin{frame}{Training of $\mub_\theta$ and  $\Sigmab_\theta$}
   \begin{center}
-    \textbf{Aim: Deduce a tractable loss function}
+    \textbf{Goal: Deduce a tractable loss function}
   \end{center}
     \[
       \tikzmarkin{a1}(0.1,0.6)(-0.1,-0.5)D_{KL}(q\,||\,p_\theta):=\int q(\xx^{(0)})\log\left(
@@ -432,13 +432,21 @@ such that
       \bf
       Simplification I: Minimize the Cross Entropy
     \end{center}
+    %\[
+    %D_{KL}\left( q(\xx^{(0)})||p_\theta(\xx^{)0)} \right) =
+    %\visible<2>{\int q(\xx^{(0)})\log(q(\xx^{(0)})\,d\xx^{(0)}+
+    %  \int-q(\xx^{(0)})\log(p_\theta(\xx^{(0)}))\,d\xx^{(0)}}
+    %\visible<3->{\underbrace{\int q(\xx^{(0)})\log(q(\xx^{(0)})\,d\xx^{(0)}}_{-\Hh\left(
+    %  q(\xx^{(0)}\right)} + 
+    %\underbrace{\int-q(\xx^{(0)})\log(p_\theta(\xx^{(0)}))\,d\xx^{(0)}}_{L_{CE}(p_\theta)}}
+    %\]
     \[
     D_{KL}\left( q(\xx^{(0)})||p_\theta(\xx^{)0)} \right) =
-    \only<2>{\int q(\xx^{(0)})\log(q(\xx^{(0)})\,d\xx^{(0)}+
-      \int-q(\xx^{(0)})\log(p_\theta(\xx^{(0)}))\,d\xx^{(0)}}
-    \only<3->{\underbrace{\int q(\xx^{(0)})\log(q(\xx^{(0)})\,d\xx^{(0)}}_{-\Hh\left(
-      q(\xx^{(0)}\right)} + 
-    \underbrace{\int-q(\xx^{(0)})\log(p_\theta(\xx^{(0)}))\,d\xx^{(0)}}_{L_{CE}(p_\theta)}}
+    \onslide<3->\underbrace{\onslide<2->%
+    \int q(\xx^{(0)})\log(q(\xx^{(0)})\,d\xx^{(0)}\onslide<3->}_{-\Hh\left(
+        q(\xx^{(0)}\right)} \onslide<2->+ 
+    \onslide<3->\underbrace{\onslide<2->%
+  \int-q(\xx^{(0)})\log(p_\theta(\xx^{(0)}))\,d\xx^{(0)}\onslide<3->}_{L_{CE}(p_\theta)}
     \]
 \end{frame}
 \begin{frame}{Training of $\mub_\theta$ and  $\Sigmab_\theta$}
@@ -519,7 +527,7 @@ such that
     \includegraphics[width=0.5\textwidth]{./pic/sampling.png}
   \end{figure}
 \end{frame}
-\begin{frame}{Experiments}
+\begin{frame}{Experiments\footcite{thermodynamic}}
   \begin{minipage}[h!]{0.5\textwidth}
     \begin{center}
       \bf
@@ -540,9 +548,8 @@ such that
       \includegraphics[width=0.75\textwidth]{./pic/mnist_thermo.png}
     \end{figure}
   \end{minipage}
-  \vfill .\footcite{thermodynamic}
 \end{frame}
-\begin{frame}{Experiments}
+\begin{frame}{Experiments\footcite{thermodynamic}}
   \begin{minipage}[h!]{0.5\textwidth}
     \begin{center}
       \bf CIFAR10 (original)
@@ -561,9 +568,7 @@ such that
       \includegraphics[width=0.75\textwidth]{./pic/cifar10_thermo_generated.png}
     \end{figure}
   \end{minipage}
-  \vfill .\footcite{thermodynamic}
 \end{frame}
-
 
 \begin{frame}{Timeline}
 \begin{enumerate}
@@ -600,7 +605,7 @@ such that
   \vfill
 \end{frame}
 \begin{frame}{Denoising Diffusion Probabilistic Model}
-  \textbf{Previous work aim at estimating}
+  \textbf{Previous work aims at estimating}
   \(
     \mub_\theta(\xx^{(t)},t)
   \) and
@@ -770,7 +775,6 @@ such that
     \includegraphics[clip, width=\textwidth,trim = 0 0 26.75cm 0]{./pic/sde_overview.png}
   \end{figure}
   \end{minipage}
-  \pause
 \end{frame}
 \begin{frame}{Reverse Process explicity given by $\nabla_{\xx} p_t(\xx)$}
   \begin{minipage}[t]{0.45\textwidth}
@@ -860,10 +864,10 @@ such that
   \begin{columns}
   \begin{column}{0.5\textwidth}
     \only<1>{\begin{enumerate}
-    \item  The \textbf{Text Encoder} takes a text $y$ in
+    \item  The \textbf{Text Encoder} takes as input a text $y$ in
       and embeds it in $z\in\R^n$.
       \vspace{0.5cm}
-    \item The \textbf{Image Encoder} takes an image $x$ and embeds it in the
+    \item The \textbf{Image Encoder} takes as input an image $x$ and embeds it in the
       latent space $\R^n$.
       \vspace{0.5cm}
     \item \textbf{Property}: The two embedded objects can be directly compared
@@ -895,32 +899,32 @@ such that
     \centering
     \includegraphics[width=0.5\textwidth]{./pic/dalle-encdec.png}
   \end{figure}
-  Let $(x,y)$ an (image, caption pair).
+  Let $(x,y)$ be an (image, caption) pair.
   \begin{enumerate}
     \item \textbf{CLIP} such that $(x,y)\mapsto(z_i, z_t)$.
-    \item \textbf{Prior} which estimate $q(\zz_i\,\vert\,\yy)$ \hfill
+    \item \textbf{Prior} which estimates $q(\zz_i\,\vert\,\yy)$ \hfill
       \onslide<2->{\textit{\color{blue}Provide an image embedding conditioned
           to a text.}}
-    \item \onslide<2->{\textbf{Decoder} which estimate $q(\xx\,\vert\, \zz_i,
-      \yy)$}\hfill
+    \item \textbf{Decoder} which estimate $q(\xx\,\vert\, \zz_i,
+      \yy)$\hfill
       \onslide<2->{\textit{\color{blue}Provide an Image conditioned to a
-      text and Image Emb..}}
+      text and Image Emb.}}
   \end{enumerate}
-  \pause
+  \onslide<3->{
   \begin{block}{Observation}
     \[
       p(\xx\,\vert\, \yy) \underbrace{=}_{\mbox{\color{rred} Deterministic}}
       p(\xx,\zz_i\,\vert\,\yy) \underbrace{=}_{\mbox{\color{rred} Bayes Rule}} p(\xx\,\vert\,
       \zz_i,\yy)p(\zz_i\,\vert\,\yy)
     \]
-  \end{block}
+\end{block}}
 \end{frame}
 \begin{frame}{Decoding through Diffusion models}
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{center}
         \textbf{Step 1: Generate a low-resolution image from $z_i$}\\
-      A guided diffusion models is used to get a low resolution image from
+      A guided diffusion model is used to get a low resolution image from
       the image embedding.
       \end{center}
     \end{column}
@@ -939,14 +943,54 @@ such that
     \includegraphics<2->[clip, width=\textwidth, trim= 0 8cm 0 10cm]{./pic/dalle-decoder_2.png}
   \end{figure}
 \end{frame}
-\section{Broader Impacts}
-\begin{frame}{Image Generation}
+\begin{frame}{Prior}
+  \begin{center}
+    \textbf{Diffusion Prior}: ``The image embedding $\zz_i$ is directly modelled 
+    using a Gaussian diffusion model conditioned on the caption $\yy$''.
+  \end{center}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.75\textwidth]{./pic/dalle-prior.png}
+  \end{figure}
+  \textbf{Training Loss Function}
+  \(
+    L_{prior} = \E_{t\sim \left[ 1,T \right],\, \zz_i^{(t)} \sim q_t}
+    \left[\|f_\theta(\zz_i^{(t)},\yy,t) - \zz_i\|^2  \right]
+    \quad\mbox{where}\quad \zz_i^{(0)} = \zz_t
+  \)
+\end{frame}
+%\begin{frame}{Image Interpolation}
+%  \begin{figure}[h]
+%    \centering
+%    \includegraphics[width=0.75\textwidth]{./pic/dalle-image_interp.png}
+%    \caption{For each row, the decoder is applied to a combination of
+%    $\zz_i(left)$ and $\zz_i(right)$.}
+%  \end{figure}
+%\end{frame}
+%\begin{frame}{Text Interpolation}
+%  \begin{figure}[h]
+%    \centering
+%    \includegraphics[width=0.75\textwidth]{./pic/dalle-image_interp.png}
+%    \caption{For each row, the prior is applied to 
+%    $\zz_i(left)$ and $\zz_i(right)$.}
+%  \end{figure}
+%
+%\end{frame}<++>
+\section{Conclusion}
+\begin{frame}{Summary}
   \begin{enumerate}
-    \item Diffusion models, as generative models, can be used for malicius
+    \item Diffusion Generative Models (from 2015 to 2022)
+    \item Overview on CLIP model for representation learning.
+    \item The Diffusion models inside DALL-E2
+  \end{enumerate}
+\end{frame}
+\begin{frame}{Broader Impacts}
+  \begin{enumerate}
+    \item Diffusion models, as generative models, can be used for malicious 
       porpouse. Fake images can become less detectable.
-    \item Diffusion models relfect the biases in the dataset in which they
-      are trianed. Hence, using generated images for training other
-      models can produce a \textbf{fade in} effect.
+    \item Diffusion models reflects the biases in the dataset with which they
+      are trained. Hence, using generated images for training other
+      models can produce a \textbf{fade-in} effect.
   \end{enumerate}
   \pause
   \begin{center}
@@ -955,14 +999,14 @@ such that
     reinforced further.\footcite{ho}''
   \end{center}
 \end{frame}
-\begin{frame}{CLIP Model}
-  \begin{center}
-    \it
-    ``We also found discrepancies across gender and race for people
-    categorized into the ‘crime’ and ‘non-human’
-    categories\ldots''\footcite{clip}
-  \end{center}
-\end{frame}
+%\begin{frame}{CLIP Model}
+%  \begin{center}
+%    \it
+%    ``We also found discrepancies across gender and race for people
+%    categorized into the ‘crime’ and ‘non-human’
+%    categories\ldots''\footcite{clip}
+%  \end{center}
+%\end{frame}
 {%
   \setbeamercolor{background canvas}{bg=black!10!white}
   \setbeamertemplate{background}{%
@@ -992,6 +1036,7 @@ such that
   \end{minipage}
 \end{frame}
 }
+
 \appendix
 \section{Proof Details}
 \begin{frame}{Proof of Explicit Representation of Forward Diffusion Process}
