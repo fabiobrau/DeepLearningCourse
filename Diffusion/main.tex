@@ -959,14 +959,54 @@ such that
     \quad\mbox{where}\quad \zz_i^{(0)} = \zz_t
   \)
 \end{frame}
-%\begin{frame}{Image Interpolation}
-%  \begin{figure}[h]
-%    \centering
-%    \includegraphics[width=0.75\textwidth]{./pic/dalle-image_interp.png}
-%    \caption{For each row, the decoder is applied to a combination of
-%    $\zz_i(left)$ and $\zz_i(right)$.}
-%  \end{figure}
-%\end{frame}
+
+\begin{frame}{Experiments:Image Interpolation}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{./pic/dalle-image_interp.png}
+    \caption{For each row, the decoder is applied to a combination of
+    $\zz_i(left)$ and $\zz_i(right)$.}
+  \end{figure}
+\end{frame}
+\begin{frame}{Experiments: Abstract Representation}
+  \begin{center}
+    \bf Representation of the Dignity
+  \end{center}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}[h!]
+        \centering
+        \visible<2->{%
+        \includegraphics[width=0.75\textwidth]{./pic/dignity.png}
+        \caption{\vspace{1pt}\bf DALL-E2}}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}[h!]
+        \centering
+        \visible<3->{%
+        \includegraphics[width=\textwidth]{./pic/Dignity-simposon.jpg}
+      \caption{\vspace{1pt}\bf Matt Groening (S8 E6)}}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+\begin{frame}{Experiments: Ricreate Anchient Works}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.9\textwidth]{./pic/anchient-work.png}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.8\textwidth]{./pic/trash-argue.png}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
 %\begin{frame}{Text Interpolation}
 %  \begin{figure}[h]
 %    \centering
@@ -975,15 +1015,8 @@ such that
 %    $\zz_i(left)$ and $\zz_i(right)$.}
 %  \end{figure}
 %
-%\end{frame}<++>
+%\end{frame}
 \section{Conclusion}
-\begin{frame}{Summary}
-  \begin{enumerate}
-    \item Diffusion Generative Models (from 2015 to 2022)
-    \item Overview on CLIP model for representation learning.
-    \item The Diffusion models inside DALL-E2
-  \end{enumerate}
-\end{frame}
 \begin{frame}{Broader Impacts}
   \begin{enumerate}
     \item Diffusion models, as generative models, can be used for malicious 
@@ -998,6 +1031,15 @@ such that
     proliferate throughout the internet, then these biases will only be
     reinforced further.\footcite{ho}''
   \end{center}
+\end{frame}
+\begin{frame}{Summary}
+  \begin{enumerate}
+    \item Diffusion Generative Models (from 2015 to 2022)
+      \vfill
+    \item Overview on CLIP model for representation learning.
+      \vfill
+    \item The Diffusion models inside DALL-E2
+  \end{enumerate}
 \end{frame}
 %\begin{frame}{CLIP Model}
 %  \begin{center}

@@ -197,56 +197,68 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {69}{69}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {57}{69}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {57}{69}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {4}{Conclusion}{70}{Conclusion}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{0}{1}{70/70}{}{0}}
+\headcommand {\slideentry {3}{0}{9}{70/70}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {70}{70}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{0}{2}{71/71}{}{0}}
+\headcommand {\slideentry {3}{0}{10}{71/73}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {71}{71}}
+\headcommand {\beamer@framepages {71}{73}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{0}{3}{72/73}{}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {72}{73}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{0}{4}{74/74}{}{0}}
+\headcommand {\slideentry {3}{0}{11}{74/74}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {74}{74}}
-\headcommand {\gdef \insertmainframenumber {44}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\partentry {Appendix}{1}}
+\headcommand {\beamer@sectionpages {57}{74}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@partpages {1}{74}}
+\headcommand {\beamer@subsectionpages {57}{74}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {70}{74}}
+\headcommand {\sectionentry {4}{Conclusion}{75}{Conclusion}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {70}{74}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@appendixpages {75}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {75}{74}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {75}{74}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {5}{Proof Details}{75}{Proof Details}{1}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {5}{0}{1}{75/75}{}{1}}
+\headcommand {\slideentry {4}{0}{1}{75/75}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {75}{75}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {5}{0}{2}{76/76}{}{1}}
+\headcommand {\slideentry {4}{0}{2}{76/77}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {76}{76}}
-\headcommand {\beamer@partpages {75}{76}}
-\headcommand {\beamer@subsectionpages {75}{76}}
-\headcommand {\beamer@sectionpages {75}{76}}
-\headcommand {\beamer@documentpages {76}}
+\headcommand {\beamer@framepages {76}{77}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {4}{0}{3}{78/78}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {78}{78}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {4}{0}{4}{79/79}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {79}{79}}
+\headcommand {\gdef \insertmainframenumber {47}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\partentry {Appendix}{1}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@partpages {1}{79}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {75}{79}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {75}{79}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@appendixpages {80}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {80}{79}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {80}{79}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {5}{Proof Details}{80}{Proof Details}{1}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {5}{0}{1}{80/80}{}{1}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {80}{80}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {5}{0}{2}{81/81}{}{1}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {81}{81}}
+\headcommand {\beamer@partpages {80}{81}}
+\headcommand {\beamer@subsectionpages {80}{81}}
+\headcommand {\beamer@sectionpages {80}{81}}
+\headcommand {\beamer@documentpages {81}}
 \headcommand {\gdef \inserttotalframenumber {1}}
-\headcommand {\gdef \inserttotalframenumber {44}}
+\headcommand {\gdef \inserttotalframenumber {47}}
 \headcommand {\gdef \appendixtotalframenumber {1}}

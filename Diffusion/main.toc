@@ -6,6 +6,6 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {3}{DALL-E2}{57}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Conclusion}{70}{0}{4}
+\beamer@sectionintoc {4}{Conclusion}{75}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {5}{Proof Details}{75}{1}{5}
+\beamer@sectionintoc {5}{Proof Details}{80}{1}{5}
