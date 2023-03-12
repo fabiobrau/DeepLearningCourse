@@ -1,0 +1,322 @@
+\documentclass[aspectratio=169, 9pt]{beamer}
+\usepackage{bbm}
+%\usepackage{algorithm2e}
+%\usepackage{mathtools}
+%\usepackage{graphicx}
+%\usepackage{animate}
+%\usepackage{hyperref}
+\renewcommand\appendixname{Appendix}
+%\usepackage{xcolor}
+\usepackage[customcolors]{hf-tikz}
+%\tikzset{offset def/.style={
+%        above left offset={-0.1,0.35},
+%        below right offset={0.1,-0.2},
+%    },
+%    color def/.style={
+%        offset def,
+%        set fill color=green,
+%        set border color=red,
+%    },
+%}
+\usepackage{marvosym}
+\usepackage{fontawesome}
+\colorlet{rred}{red!80!black}
+\colorlet{ggreen}{green!80!black}
+\colorlet{grey}{black!50!white}
+
+\usetheme[progressbar=foot]{metropolis}
+\metroset{block=fill}
+\usepackage{appendixnumberbeamer}
+\setbeamercovered{invisible}
+
+\usepackage{booktabs}
+%\usepackage[scale=2]{ccicons}
+\usepackage[style=authortitle,backend=bibtex]{biblatex}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+\setlength{\abovecaptionskip}{-3pt plus 0pt minus 0pt}
+
+%\usepackage{xspace}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{obs}{Observation}
+
+% math symbols
+\input{fancy-math-fonts.tex}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+
+
+\title{Certifiable Robustness only formulas}
+\date{March 1, 2023}
+\author{Fabio Brau}
+\institute{Scuola Superiore Sant'Anna, Pisa.}
+% \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+
+\setbeamertemplate{background}{%
+    \begin{picture}(300,253)
+      \hspace{14.45cm}
+       \includegraphics[scale=0.1]{pic/logoretis_noname.png}
+   \end{picture}
+}
+\setbeamercolor{background canvas}{bg=white}
+\begin{document}
+{\setbeamertemplate{background}{%
+    \begin{picture}(300,240)
+      \hspace{0.9cm}
+       \includegraphics[scale=0.35]{pic/tecip_logo-ENG.png}
+       \hspace{0.5cm}
+       \includegraphics[scale=0.085]{pic/logoretis.png}
+   \end{picture}}%
+\maketitle
+}
+\begin{frame}{Boundary}
+  \[
+    \mathbf{f:\R^n\to\R^C}
+  \]
+  \[
+    \KK_f(x) = \argmax_i f_i(x)
+  \]
+
+  \[
+    \BB=\left\{ p\in\R^n\,:\, f(p) = 0 \right\}
+  \]
+  \[
+    \begin{aligned}
+      d(x,l)=&\min_\delta\quad\quad \|\delta\|\\
+      &\mbox{s.t}\quad \quad f_l(x+\delta) - \max_{j\ne l} f_j(x+\delta)\le 0
+    \end{aligned}
+  \]
+\end{frame}
+\begin{frame}{General Case into Binary Case}
+  \[
+    F_l(x) = f_l(x) - \max_{j\ne l} f_j(x)
+  \]
+  \[
+    d(x,l) = d_l(x)
+  \]
+\end{frame}
+\begin{frame}{Verification}
+  \[
+    \zeta(x):\quad "\forall y\in\NN(x)\,\quad \KK(x)=\KK(y)"
+  \]
+  where $\NN(X)$ a neighborhood of $x$.
+  \[
+    \NN(x)=\{y\in\R^n\,:\, \|y-x\|_\infty \le \varepsilon\} 
+  \]
+  \[
+    \begin{aligned}       
+      P(x)=&\min _{j\ne l} \min_{y\in\R^n} \quad {\large f_l(y)-f_j(y)}&\\
+      &\mbox{s.t.}\quad -\varepsilon\le x_i-y_i \le \varepsilon,\forall
+      i&
+    \end{aligned}
+  \]
+  \[
+    \zeta(x)\quad\Leftrightarrow\quad P(x) > 0
+  \]
+\end{frame}
+\begin{frame}{Verifiers}
+  \[
+    \begin{aligned}
+      &\hat z^{(i)} = W_i z^{(i)} + b_i\,\quad &i=1,\cdots,L-1\\
+      &z^{(i)} = \max\{0,\hat z^{(i)}\}\,\quad &i=2,\cdots,L-1
+    \end{aligned}
+  \]
+  where $z_1\equiv x$
+  \[
+    \begin{aligned}
+      P(x) = &\min _{j\ne l}\min_{y\in\R^n} &\hat z^{(L)}_l-\hat
+      z^{(L)}_j\\
+      &\mbox{subject to} &-\varepsilon\le x-z^{(0)} \le \varepsilon \\
+      & & \hat z^{(i)} = W_i z^{(i)} + b_i&,\quad i=1,\cdots,L-1\\
+      & & z^{(i)} = \max\{0,\hat z^{(i)}\}&,\quad i=2,\cdots,L-1\\
+    \end{aligned}
+  \]
+\end{frame}
+\begin{frame}{Relaxing}
+  \[
+    \begin{aligned}
+    z = \max\{0,\hat z\}\\
+    \mbox{Relax to}\\
+    &z\ge 0\\
+    &z \ge \hat z\\
+    -&u \hat z +(u-l)z\le -ul
+    \end{aligned}
+  \]
+  \[
+    \begin{aligned}
+      P(x) = &\min _{j\ne l}\min_{y\in\R^n} &\hat z^{(L)}_l-\hat
+      z^{(L)}_j\\
+      &\mbox{subject to} &-\varepsilon\le x-z^{(0)} \le \varepsilon&& \\
+      & & \hat z^{(i)} = W_i z^{(i)} + b_i&,\quad i=1,\cdots,L-1\\
+      %& & z^{(i)} = \max\{0,\hat z^{(i)}\}&,\quad i=2,\cdots,L-1\\
+      & & z^{(i)}\ge 0&,\quad i=2,\cdots,L-1\\
+      & & z^{(i)} \ge \hat z^{(i)}&,\quad\qquad ''\\
+      & &-u^{(i)} \hat z^{(i)} +(u^{(i)}-l^{(i)})z^{(i)}\le
+      -u^{(i)}l^{(i)}&,\quad\qquad ''&
+    \end{aligned}
+  \]
+\end{frame}
+\begin{frame}{Robust Training}
+  \[
+    (x_i,y_i)\in\XX,i=1,\cdots,N
+  \]
+  \[
+    \theta^*\in\argmin_\theta \frac{1}{N} \sum_{i=1}^N \max_{\|\delta\|\le
+    \varepsilon} L(f_\theta(x_i+\delta), y_i)
+  \]
+\end{frame}
+\begin{frame}{L-Lipschitz}
+  \[
+    \forall x,y\in\R^n,\quad \|f(x)-f(y)\|_p \le L\|x-y\|_p
+  \]
+  \[
+    \forall \delta,\|\delta\|_p\le \varepsilon,\quad \|f(x)-f(x+\delta)\|_p\le
+    L\|\delta\|_p
+  \]
+  \[
+    \beta_L(x) = \min_{j\ne l} \frac{f_l(x) - f_j(x)}{L\,2^\frac{p-1}{p}}
+  \]
+  \[
+    "\varepsilon< \beta_L(x)"\Rightarrow \zeta(x)
+  \]
+\end{frame}
+\begin{frame}
+  \[
+    f_l - f_j\quad\mbox{is $L_j$-lipschitz in $B_p(x,R)$
+}
+  \]
+  \[
+    \beta_L(x) = \min_{j\ne l} \frac{f_l(x) - f_j(x)}{L_j}
+  \]
+  \[
+    L_j = \max_{y\in B_p(x,R)} \|\nabla f_l(y) - \nabla f_j(y)\|_q
+  \]
+  where $\frac1p+\frac1q=1$
+
+  in $B_p(x,R)$
+\end{frame}
+\begin{frame}{Lipschitz Function}
+  \[
+    f = f^{(L)}\circ f^{(L-1)}\circ\cdots\circ f^{(1)}
+  \]
+  \[
+    L = \prod_{i=1}^L L_i
+  \]
+  \[
+    f(x) = W\,x +b
+  \]
+  \[
+    \|f(y) -f(x)\|_p = \|W\,y - W\,x + b-b\|_p
+  \]
+  \[
+    (y-x = v)
+  \]
+  \[
+    \|f(y) - f(x)\|_p = \|W\, v\|_p 
+  \]
+  \[
+    \frac{\|f(y) - f(x)\|_p}{\|y-x\|_p} = \frac{\|W\, v\|_p}{\|v\|_p}
+    {\color{rred} \le \sup_{v\in\R^n\setminus\{0\}}\frac{\|W\,v\|_p}{\|v\|_p}}
+  \]
+  \[
+    W\in\R^{m\times n},\quad \|W\|_p :=\sup_{v\in\R^n\setminus\{0\}}\frac{\|W\,v\|_p}{\|v\|_p}
+
+  \]
+  \[
+    \|f(y)-f(x)\|_p = \|W\|_p\,\|y-x\|_p
+  \]
+  \[
+    \|A\|_2 = \sqrt{\lambda_{max} (A^TA)} = \sigma_{max}(A)
+  \]
+\end{frame}
+\begin{frame}
+  \[
+    Q\in\R^{n\times n}\,\quad QQ^T = Q^TQ = I
+  \]
+  \[
+    f_W(x) = \tilde W\, x + b,\quad\mbox{where}\quad \tilde W = \frac{W}{\|W\|_2}
+  \]
+\end{frame}
+\begin{frame}{Orthogonal}
+  \[
+    f_Q(x) = Q\,x +b
+  \]
+    \begin{equation}
+      \begin{aligned}
+        Q_k &= I - W_k^TW_k\\ 
+        W_{k+1} &= W_k\left( I + \frac12 Q_k+ \frac{3}{8}Q_k^2+\cdots+(-1)^p 
+    \begin{pmatrix}
+      -\frac12\\
+      p
+    \end{pmatrix} Q_k^p
+  \right)
+\end{aligned}
+\end{equation}
+\[
+  W_0 = W
+\]
+
+\end{frame}
+\begin{frame}{Cayley}
+  \[
+  \begin{aligned}
+    A &= W-W^T\\
+    Q &= (I-A)(I+A)^{-1}
+  \end{aligned}
+  \]
+  \[
+  \begin{aligned}
+    A &= W-W^T\\
+    Q &= \exp(A):=\sum_{k=0}^\infty \frac{A^k}{k!}
+  \end{aligned}
+  \]
+\end{frame}
+\begin{frame}
+  \[
+    (x_i,y_i) \in\XX, \quad i=1,\cdots,N
+  \]
+  \[
+    \Ac_\varepsilon(\XX) = \frac1N \#\left\{ i\,:\, \KK_f(x_i)=y_i,\, d(x_i)\ge
+    \varepsilon\right\}
+  \]
+  \[
+      \tilde\Ac_\varepsilon(\XX) = \frac1N \#\left\{ i\,:\, \KK_f(x_i)=y_i,\,
+        \beta(x_i)\ge
+    \varepsilon\right\}
+  \]
+\end{frame}
+{%
+  \setbeamercolor{background canvas}{bg=black!10!white}
+  \setbeamertemplate{background}{%
+  \begin{picture}(300,240)
+    \hspace{0.9cm}
+    \includegraphics[scale=0.35]{pic/tecip_logo-ENG.png}
+    \hspace{0.5cm}
+    \includegraphics[scale=0.17]{pic/dipe.png}
+    \hspace{0.5cm}
+    \includegraphics[scale=0.085]{pic/logoretis.png}
+  \end{picture}}
+\begin{frame}{}
+  \textbf{\Huge Thanks for the attention}\\
+  \vspace{20pt}
+  \begin{minipage}[h]{0.6\textwidth}
+  {\large\bf Fabio Brau}
+  \vspace{5pt}
+  \begin{itemize}
+    \item[\faUniversity] {\bf Scuola Superiore Sant'Anna, Pisa}
+    \item[\Letter] \texttt{fabio.brau@santannapisa.it}
+    \item[\faGlobe] \href{http://retis.santannapisa.it/~f.brau/}{\tt %
+                    retis.santannapisa.it/\textasciitilde f.brau}
+    \item[\faLinkedin]
+      \href{https://www.linkedin.com/in/fabio-brau}{\tt%
+        linkedin.com/in/fabio-brau}
+  \end{itemize}
+  \end{minipage}
+\end{frame}
+}
+
+\end{document}
+
