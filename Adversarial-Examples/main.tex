@@ -1,0 +1,195 @@
+\documentclass[aspectratio=169, 9pt]{beamer}
+\usepackage{bbm}
+%\usepackage{algorithm2e}
+%\usepackage{mathtools}
+%\usepackage{graphicx}
+%\usepackage{animate}
+%\usepackage{hyperref}
+\renewcommand\appendixname{Appendix}
+%\usepackage{xcolor}
+\usepackage[customcolors]{hf-tikz}
+%\tikzset{offset def/.style={
+%        above left offset={-0.1,0.35},
+%        below right offset={0.1,-0.2},
+%    },
+%    color def/.style={
+%        offset def,
+%        set fill color=green,
+%        set border color=red,
+%    },
+%}
+\usepackage{marvosym}
+\usepackage{fontawesome}
+\colorlet{rred}{red!80!black}
+\colorlet{ggreen}{green!80!black}
+\colorlet{grey}{black!50!white}
+
+\usetheme[progressbar=foot]{metropolis}
+\metroset{block=fill}
+\usepackage{appendixnumberbeamer}
+\setbeamercovered{invisible}
+
+\usepackage{booktabs}
+%\usepackage[scale=2]{ccicons}
+\usepackage[style=authortitle,backend=bibtex]{biblatex}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+\setlength{\abovecaptionskip}{-3pt plus 0pt minus 0pt}
+
+%\usepackage{xspace}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{obs}{Observation}
+
+% math symbols
+\input{fancy-math-fonts.tex}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+
+
+\title{Certifiable Robustness only formulas}
+\date{March 1, 2023}
+\author{Fabio Brau}
+\institute{Scuola Superiore Sant'Anna, Pisa.}
+% \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+
+\setbeamertemplate{background}{%
+    \begin{picture}(300,253)
+      \hspace{14.45cm}
+       \includegraphics[scale=0.1]{pic/logoretis_noname.png}
+   \end{picture}
+}
+\setbeamercolor{background canvas}{bg=white}
+\begin{document}
+{\setbeamertemplate{background}{%
+    \begin{picture}(300,240)
+      \hspace{0.9cm}
+       \includegraphics[scale=0.35]{pic/tecip_logo-ENG.png}
+       \hspace{0.5cm}
+       \includegraphics[scale=0.085]{pic/logoretis.png}
+   \end{picture}}%
+\maketitle
+}
+\begin{frame}{Lp norms}
+
+  \[
+    \|\delta\|_p = \left( \sum_{i=1}^n |\delta_i|^p\right)^{\frac1p}
+  \]
+  \[
+    \|\delta\|_\infty = \max_{i} |\delta_i|
+  \]
+  \[
+    \|\delta\|_0 = \#\{i\,:\,\delta_i\ne 0\}
+  \]
+\end{frame}
+\begin{frame}
+  \[
+    \LL :\R^C\times \{1,\cdots,C\}\to \R
+  \]
+  \[
+    \LL(y, c) = -\log\left(\frac{e^{y_c}}{\sum_{i=1}^C e^{y_i}}\right)
+  \]
+  \[
+    \begin{aligned}
+      \max_{\delta\in\R^n} \quad & \LL(f(x+\delta), l_{true})\\
+      \mbox{s.t.} \quad &\|\delta\|_p\le \varepsilon \\
+      & {0\le x+\delta\le 1}\\
+      & {Q*(x+\delta)\in\{0,\cdots,Q\}}
+    \end{aligned}
+  \]
+  \[
+    \begin{aligned}
+      \min_{\delta\in\R^n} \quad & \|\delta\|_p\\
+      \mbox{s.t.} \quad & \KK(x+\delta) \ne l_{true} \\
+      & {0\le x+\delta\le 1}\\
+      & {Q*(x+\delta)\in\{0,\cdots,Q\}}
+    \end{aligned}
+  \]
+\end{frame}
+\begin{frame}{Targeted}
+  \[
+    \begin{aligned}
+      \min_{\delta\in\R^n} \quad & \LL(f(x+\delta), l_{target})\\
+      \mbox{s.t.} \quad &\|\delta\|_p\le \varepsilon \\
+      & {0\le x+\delta\le 1}\\
+      & {Q*(x+\delta)\in\{0,\cdots,Q\}}
+    \end{aligned}
+  \]
+  \[
+    \begin{aligned}
+      \min_{\delta\in\R^n} \quad & \|\delta\|_p\\
+      \mbox{s.t.} \quad & \KK(x+\delta) = l_{target} \\
+      & {0\le x+\delta\le 1}\\
+      & {Q*(x+\delta)\in\{0,\cdots,Q\}}
+    \end{aligned}
+  \]
+  \[
+    \delta^* = \varepsilon \,\cdot\, \mbox{sign}\left(\nabla_x \LL(f(x),
+    l_{true})\right)
+  \]
+  \[
+    x^* = x+ \delta^*,\quad \|\delta^*\|_\infty=\varepsilon
+  \]
+  \[
+    \tilde \LL(f(x),l) = \alpha\,\cdot\,\LL(f(x),l) 
+    \quad+\quad (1-\alpha)\,\cdot\,\LL(f( x+\delta^*), l)
+  \]
+\end{frame}
+\begin{frame}{Szegedy}
+  \[
+    \begin{aligned}
+      \min_{\delta\in\R^n} \quad & c\, \|\delta\|_p +
+      \LL(f(x+\delta),l_{target})\\
+      \mbox{s.t.} \quad & {0\le x+\delta\le 1}\\
+      & {Q*(x+\delta)\in\{0,\cdots,Q\}}
+    \end{aligned}
+  \]
+
+  \[
+    \delta(c)\quad \KK(x+\delta(c)) = l_{target}
+  \]
+  \[
+    c_{left} =0,\, c_{right} = 100,\quad c_{test} = \frac{c_{left} +
+    c_{out}}{2}
+  \]
+  \[
+    c_{left} = c_{left}, c_{right} = c_{test}\quad\mbox{if}\quad
+    \KK(x+\delta(c_{test})) = l
+  \]
+  
+\end{frame}<++>
+
+{%
+  \setbeamercolor{background canvas}{bg=black!10!white}
+  \setbeamertemplate{background}{%
+  \begin{picture}(300,240)
+    \hspace{0.9cm}
+    \includegraphics[scale=0.35]{pic/tecip_logo-ENG.png}
+    \hspace{0.5cm}
+    \includegraphics[scale=0.17]{pic/dipe.png}
+    \hspace{0.5cm}
+    \includegraphics[scale=0.085]{pic/logoretis.png}
+  \end{picture}}
+\begin{frame}{}
+  \textbf{\Huge Thanks for the attention}\\
+  \vspace{20pt}
+  \begin{minipage}[h]{0.6\textwidth}
+  {\large\bf Fabio Brau}
+  \vspace{5pt}
+  \begin{itemize}
+    \item[\faUniversity] {\bf Scuola Superiore Sant'Anna, Pisa}
+    \item[\Letter] \texttt{fabio.brau@santannapisa.it}
+    \item[\faGlobe] \href{http://retis.santannapisa.it/~f.brau/}{\tt %
+                    retis.santannapisa.it/\textasciitilde f.brau}
+    \item[\faLinkedin]
+      \href{https://www.linkedin.com/in/fabio-brau}{\tt%
+        linkedin.com/in/fabio-brau}
+  \end{itemize}
+  \end{minipage}
+\end{frame}
+}
+
+\end{document}
+
