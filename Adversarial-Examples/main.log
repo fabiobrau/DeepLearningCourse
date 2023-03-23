@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.11.28)  15 MAR 2023 17:50
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.11.28)  20 MAR 2023 17:39
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1827,41 +1827,231 @@ Package luatex.def Info: pic/logoretis_noname.png  used on input line 162.
  [5
 
 ]
-LaTeX Font Info:    Trying to load font information for U+mvs on input line 191.
+! Misplaced alignment tab character &.
+\beamer@doifinframe ... \min _{w\in \R ^n} \quad &
+                                                   \|\frac {1}{2}\left ( \ta...
+l.179 \end{frame}
+               
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
 
-(/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd)
-Underfull \vbox (badness 10000) has occurred while \output is active []
+! LaTeX Error: There's no line here to end.
 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.179 \end{frame}
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.179 \end{frame}
+               
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+\par 
+l.179 \end{frame}
+               
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.179 \end{frame}
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.179 \end{frame}
+               
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+\endgroup 
+l.179 \end{frame}
+               
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Misplaced alignment tab character &.
+\beamer@doifinframe ... \min _{w\in \R ^n} \quad &
+                                                   \|\underbrace {\frac {1}{...
+l.179 \end{frame}
+               
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.179 \end{frame}
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.179 \end{frame}
+               
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+\par 
+l.179 \end{frame}
+               
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.179 \end{frame}
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.179 \end{frame}
+               
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+\endgroup 
+l.179 \end{frame}
+               
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 179.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+[6
+
+]
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 199.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+ [7
+
+]
+Overfull \vbox (7.69144pt too high) detected at line 221
+ []
+
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 221.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+[8
+
+]
+Overfull \vbox (3.19144pt too high) detected at line 239
+ []
+
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 239.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+[9
+
+]
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 258.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+ [10
+
+]
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 273.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+ [11
+
+]
+File: pic/logoretis_noname.png Graphic file (type png)
+<use pic/logoretis_noname.png>
+Package luatex.def Info: pic/logoretis_noname.png  used on input line 280.
+(luatex.def)             Requested size: 37.64282pt x 20.02597pt.
+ [12
+
+]
+LaTeX Font Info:    Trying to load font information for U+mvs on input line 310.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd)
 File: pic/tecip_logo-ENG.png Graphic file (type png)
 <use pic/tecip_logo-ENG.png>
-Package luatex.def Info: pic/tecip_logo-ENG.png  used on input line 191.
+Package luatex.def Info: pic/tecip_logo-ENG.png  used on input line 310.
 (luatex.def)             Requested size: 123.77626pt x 49.9152pt.
-<pic/dipe.png, id=61, 714.9912pt x 286.1892pt>
+<pic/dipe.png, id=97, 714.9912pt x 286.1892pt>
 File: pic/dipe.png Graphic file (type png)
 <use pic/dipe.png>
-Package luatex.def Info: pic/dipe.png  used on input line 191.
+Package luatex.def Info: pic/dipe.png  used on input line 310.
 (luatex.def)             Requested size: 121.54689pt x 48.6515pt.
 File: pic/logoretis.png Graphic file (type png)
 <use pic/logoretis.png>
-Package luatex.def Info: pic/logoretis.png  used on input line 191.
+Package luatex.def Info: pic/logoretis.png  used on input line 310.
 (luatex.def)             Requested size: 88.73828pt x 50.37604pt.
- [6
+
+Overfull \hbox (41.38708pt too wide) has occurred while \output is active
+[][]  
+ []
+
+[13
 
 <./pic/dipe.png>]
-File: pic/tecip_logo-ENG.png Graphic file (type png)
-<use pic/tecip_logo-ENG.png>
-Package luatex.def Info: pic/tecip_logo-ENG.png  used on input line 191.
-(luatex.def)             Requested size: 123.77626pt x 49.9152pt.
-File: pic/dipe.png Graphic file (type png)
-<use pic/dipe.png>
-Package luatex.def Info: pic/dipe.png  used on input line 191.
-(luatex.def)             Requested size: 121.54689pt x 48.6515pt.
-File: pic/logoretis.png Graphic file (type png)
-<use pic/logoretis.png>
-Package luatex.def Info: pic/logoretis.png  used on input line 191.
-(luatex.def)             Requested size: 88.73828pt x 50.37604pt.
- [7]
 \tf@nav=\write7
 
 \openout7 = main.nav
@@ -1880,14 +2070,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 47308 strings out of 478824
+ 47356 strings out of 478824
  125031,1977958 words of node,token memory allocated
- 3289 words of node memory still in use:
+ 3344 words of node memory still in use:
    33 hlist, 7 vlist, 2 rule, 6 disc, 7 local_par, 2 math, 77 glue, 21 kern, 24 
-penalty, 151 glyph, 104 attribute, 80 glue_spec, 104 attribute_list, 4 write, 2 
-pdf_start_link, 2 pdf_end_link, 2 pdf_action, 22 pdf_colorstack nodes
-   avail lists: 1:2,2:400,3:139,4:156,5:215,6:20,7:1181,8:38,9:589,10:4,11:24
- 65017 multiletter control sequences out of 65536+600000
+penalty, 1 sub_mlist, 151 glyph, 117 attribute, 80 glue_spec, 117 attribute_list
+, 4 write, 2 pdf_start_link, 2 pdf_end_link, 2 pdf_action, 22 pdf_colorstack nod
+es
+   avail lists: 1:2,2:374,3:141,4:156,5:506,6:24,7:3008,8:59,9:589,10:22,11:315
+ 65029 multiletter control sequences out of 65536+600000
  87 fonts using 19001639 bytes
  131i,14n,131p,1820b,983s stack positions out of 5000i,500n,10000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf><
@@ -1906,10 +2097,10 @@ s/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 usr/share/texlive/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (7 pages, 312375 bytes).
+Output written on main.pdf (13 pages, 330383 bytes).
 
-PDF statistics: 150 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 131072)
+PDF statistics: 183 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

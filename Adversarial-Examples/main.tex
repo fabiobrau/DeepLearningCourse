@@ -159,7 +159,126 @@
     \KK(x+\delta(c_{test})) = l
   \]
   
-\end{frame}<++>
+\end{frame}
+\begin{frame}{Carlini}
+  \[
+    \delta = \frac{1}{2}\left( \tanh(w)+1 \right)-x
+  \]
+  \[
+    \LL(y,l) = \left[ y_l - \max_{j\ne l} y_j \right]^+
+  \]
+  \[
+      \min_{w\in\R^n} \quad & \|\frac{1}{2}\left( \tanh(w)+1 \right)-x\|_p +
+      c\,\cdot\, \LL(f(\frac{1}{2}( \tanh(w)+1 )),l_{target})\\
+  \]
+  \[
+      \min_{w\in\R^n} \quad & \|\underbrace{\frac{1}{2}\left( \tanh(w)+1
+      \right)-x}_{\color{red}\delta}\|_p +
+      c\,\cdot\, \LL(f(\underbrace{\frac{1}{2}( \tanh(w)+1 )}_{\color{red} x+\delta}),l_{target})\\
+  \]
+\end{frame}
+%\begin{frame}{DeepFool}
+%  \[
+%    f(x) = w^T \, x + b
+%  \]
+%  \[
+%    \delta = - \frac{f(x)}{\|w\|^{2}} w
+%  \]
+%\end{frame}
+\begin{frame}{DeepFool Attack}
+\textbf{What is DeepFool Attack?}
+
+DeepFool is a white-box attack that aims to deceive deep neural networks by crafting adversarial examples. The goal of the attack is to perturb an input image in such a way that it is misclassified by the network, while the perturbation is imperceptible to humans.
+
+\vspace{0.5cm}
+
+\textbf{How does it work?}
+
+DeepFool works by iteratively finding the direction of the minimum amount of perturbation required to move an input image across the decision boundary of a neural network. The algorithm computes the gradient of the neural network's output with respect to the input image, and then finds the direction of the smallest perturbation that can cause a change in the predicted class.
+
+\end{frame}
+
+\begin{frame}{DeepFool Attack (cont.)}
+
+\textbf{Iterative algorithm}
+
+The DeepFool algorithm is iterative, and repeats the following steps until the input image is classified as the target class:
+
+Compute the gradient of the neural network's output with respect to the input image.
+
+Calculate the minimum perturbation required to move the input image across the decision boundary of the network.
+
+Add the computed perturbation to the input image.
+
+Check if the image is now classified as the target class. If yes, stop the algorithm. If no, repeat from step 1.
+
+\vspace{0.5cm}
+
+\textbf{Effectiveness}
+
+DeepFool has been shown to be effective in producing imperceptible adversarial examples that fool state-of-the-art neural networks. The attack can be applied to a wide range of deep learning models, including image classifiers and object detectors.
+
+\end{frame}
+\begin{frame}{DeepFool Attack (cont.)}
+
+\textbf{Defenses against DeepFool Attack}
+
+Several defenses have been proposed to mitigate the effectiveness of the DeepFool attack, including:
+
+Adversarial training: Training the neural network on a mix of original and adversarial examples.
+
+Defensive distillation: Training the network to output smoothed probabilities instead of hard probabilities.
+
+Input transformation: Applying a non-linear transformation to the input image before feeding it to the neural network.
+
+Gradient masking: Hiding the gradient information from the attacker by adding random noise to the gradients.
+
+\vspace{0.5cm}
+\textbf{Conclusion}
+The DeepFool attack is a powerful tool for crafting adversarial examples that can deceive deep neural networks. While several defenses have been proposed, the arms race between attacks and defenses continues, highlighting the importance of ongoing research in this area.
+\end{frame}
+\begin{frame}
+  \[
+    f(x) = W x + b, \quad
+    W = \left[ 
+      \begin{array}{c}
+        w^{(1)T}\\
+        \vdots\\
+        w^{(C)T}
+      \end{array}
+    \right]\in\R^{C\times n}
+  \]
+  \[
+    \delta^{(i)} = - \frac{f_i(x)}{\|w^{(i)}\|^{2}} w^{(i)}
+  \]
+  \[
+    \rho_{adv}(\XX) = \frac{1}{|\XX|}\sum_{x \in\XX}
+    \frac{\|\delta(x)\|_2}{\|x\|_2}
+  \]
+\end{frame}
+\begin{frame}{Projected Gd}
+  \[
+    \begin{aligned}
+      \tilde x^{(t)} &= x^{(t-1)} +
+    \alpha\,\mbox{sgn}\left( \nabla_x \LL(f(x^{(t-1)}),l_{true}) \right)\\
+    x^{(t)} &= \Pi_{B_p(x,\varepsilon)}\left(\tilde x^{(t)}\right)
+  \end{aligned}
+  \]
+  \[
+    \min_\theta \rho(\theta),\quad \rho(\theta) = \E_{(x,l)\in\XX} \left[
+  \max_{\|\delta\|_p < \varepsilon} \LL\left( f_\theta(x+\delta),l;\theta) \right) \right]
+  \]
+
+
+\end{frame}
+
+\begin{frame}{Distillation}
+  \[
+    \LL(y, l; T) = -\log\left(\frac{e^{\frac{y_l}{T}}}{\sum_{i=1}^C
+    e^{\frac{y_i}{T}}}\right)
+  \]
+\end{frame}
+
 
 {%
   \setbeamercolor{background canvas}{bg=black!10!white}
