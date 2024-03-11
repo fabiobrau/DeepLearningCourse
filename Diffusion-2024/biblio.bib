@@ -1,0 +1,47 @@
+@InProceedings{clip,
+  title = 	 {Learning Transferable Visual Models From Natural Language Supervision},
+  author =       {Radford, Alec and Kim, Jong Wook and Hallacy, Chris and Ramesh, Aditya and Goh, Gabriel and Agarwal, Sandhini and Sastry, Girish and Askell, Amanda and Mishkin, Pamela and Clark, Jack and Krueger, Gretchen and Sutskever, Ilya},
+  booktitle = 	 {Proceedings of the 38th International Conference on Machine Learning},
+  pages = 	 {8748--8763},
+  year = 	 {2021},
+  editor = 	 {Meila, Marina and Zhang, Tong},
+  volume = 	 {139},
+  series = 	 {Proceedings of Machine Learning Research},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v139/radford21a/radford21a.pdf},
+  url = 	 {https://proceedings.mlr.press/v139/radford21a.html},
+  abstract = 	 {State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories. This restricted form of supervision limits their generality and usability since additional labeled data is needed to specify any other visual concept. Learning directly from raw text about images is a promising alternative which leverages a much broader source of supervision. We demonstrate that the simple pre-training task of predicting which caption goes with which image is an efficient and scalable way to learn SOTA image representations from scratch on a dataset of 400 million (image, text) pairs collected from the internet. After pre-training, natural language is used to reference learned visual concepts (or describe new ones) enabling zero-shot transfer of the model to downstream tasks. We study the performance of this approach by benchmarking on over 30 different existing computer vision datasets, spanning tasks such as OCR, action recognition in videos, geo-localization, and many types of fine-grained object classification. The model transfers non-trivially to most tasks and is often competitive with a fully supervised baseline without the need for any dataset specific training. For instance, we match the accuracy of the original ResNet-50 on ImageNet zero-shot without needing to use any of the 1.28 million training examples it was trained on.}
+}
+
+@article{thermodynamic, 
+  title={Deep Unsupervised Learning using Nonequilibrium Thermodynamics}, 
+  abstractNote={A central problem in machine learning involves modeling complex data-sets using highly ﬂexible families of probability distributions in which learning, sampling, inference, and evaluation are still analytically or computationally tractable. Here, we develop an approach that simultaneously achieves both ﬂexibility and tractability. The essential idea, inspired by non-equilibrium statistical physics, is to systematically and slowly destroy structure in a data distribution through an iterative forward diffusion process. We then learn a reverse diffusion process that restores structure in data, yielding a highly ﬂexible and tractable generative model of the data. This approach allows us to rapidly learn, sample from, and evaluate probabilities in deep generative models with thousands of layers or time steps, as well as to compute conditional and posterior probabilities under the learned model. We additionally release an open source reference implementation of the algorithm.}, 
+  author={Sohl-Dickstein, Jascha and Weiss, Eric A and Maheswaranathan, Niru and Ganguli, Surya}, 
+  language={en},
+year={2021},
+publisher={ICML},
+series = {International Conference on Machine Learning}}
+
+@book{Norris_1998, title={Markov Chains}, ISBN={978-0-521-63396-3}, abstractNote={Publisher Description (unedited publisher data) Markov chains are central to the understanding of random processes. This is not only because they pervade the applications of random processes, but also because one can calculate explicitly many quantities of interest. This textbook, aimed at advanced undergraduate or MSc students with some background in basic probability theory, focuses on Markov chains and quickly develops a coherent and rigorous theory whilst showing also how actually to apply it. Both discrete-time and continuous-time chains are studied. A distinguishing feature is an introduction to more advanced topics such as martingales and potentials in the established context of Markov chains. There are applications to simulation, economics, optimal control, genetics, queues and many other topics, and exercises and examples drawn both from theory and practice. It will therefore be an ideal text either for elementary courses on random processes or those that are more oriented towards applications.}, note={Google-Books-ID: qM65VRmOJZAC}, publisher={Cambridge University Press}, author={Norris, J. R.}, year={1998}, month={Jul}, language={en} }
+
+@inproceedings{ho,
+    author      = {Ho, Jonathan and Jain, Ajay and Abbeel, Pieter},
+    booktitle   = {Advances in Neural Information Processing Systems},
+    editor      = {H. Larochelle and M. Ranzato and R. Hadsell and M.F. Balcan and H. Lin},
+    pages       = {6840--6851},
+    publisher   = {Curran Associates, Inc.},
+    title       = {Denoising Diffusion Probabilistic Models},
+    url         = {https://proceedings.neurips.cc/paper/2020/file/4c5bcfec8584af0d967f1ab10179ca4b-Paper.pdf},
+    volume      = {33},
+    year        = {2020}
+}
+
+@article{sde,
+  title={Score-based generative modeling through stochastic differential equations},
+  author={Song, Yang and Sohl-Dickstein, Jascha and Kingma, Diederik P and Kumar, Abhishek and Ermon, Stefano and Poole, Ben},
+  journal={arXiv preprint arXiv:2011.13456},
+  year={2020}
+}
+
+@article{dalle2, title={Hierarchical Text-Conditional Image Generation with CLIP Latents}, url={http://arxiv.org/abs/2204.06125}, abstractNote={Contrastive models like CLIP have been shown to learn robust representations of images that capture both semantics and style. To leverage these representations for image generation, we propose a two-stage model: a prior that generates a CLIP image embedding given a text caption, and a decoder that generates an image conditioned on the image embedding. We show that explicitly generating image representations improves image diversity with minimal loss in photorealism and caption similarity. Our decoders conditioned on image representations can also produce variations of an image that preserve both its semantics and style, while varying the non-essential details absent from the image representation. Moreover, the joint embedding space of CLIP enables language-guided image manipulations in a zero-shot fashion. We use diffusion models for the decoder and experiment with both autoregressive and diffusion models for the prior, finding that the latter are computationally more efficient and produce higher-quality samples.}, note={arXiv:2204.06125 [cs]}, number={arXiv:2204.06125}, publisher={arXiv}, author={Ramesh, Aditya and Dhariwal, Prafulla and Nichol, Alex and Chu, Casey and Chen, Mark}, year={2022}}
+
