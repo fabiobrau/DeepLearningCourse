@@ -181,16 +181,22 @@ such that
     Let $S=\left\{ s_0,\cdots,s_n,\cdots \right\}$ be a discrete state
     space.\\
     A sequence $\{\xx^{(t)}\}_t \subseteq S$ is a Markov
-    chain if there exists a transition matrix $P=(p_{ij})$ such that
-    \vspace{1cm}
-    \begin{itemize}
-    \item $\xx^{(t+1)}$ not dep. $\xx^{(0)},\cdots,\xx^{(t-1)}$ \hfill(Markov
-      Property).
-      \vspace{0.5cm}
-    \item \(
+    chain if there exists a transition matrix $P=(p_{ij})$ such that\\
+    %\item $\xx^{(t+1)}$ not dep. $\xx^{(0)},\cdots,\xx^{(t-1)}$ \hfill(Markov
+    %  Property).
+    \vspace{0.3cm}
+    (Markov Property)\\
+        \begin{gather*}
+          \Ph(\xx^{(t+1)}=s_j\vert \xx^{(0)}=s_{i_0}, \cdots,
+          \xx^{(t)}=s_{i_t})\\
+        =\\
+        \Ph(\xx^{(t+1)}=s_j\vert \xx^{(t)}=s_{i_t})
+      \end{gather*}
+    \vspace{0.5cm}
+    (Homogeneous Property)\\
+    \[
         \Ph\left( \xx^{(t+1)}=s_j \vert \xx^{(t)}=s_i\right)=p_{ij}
-      \)\hfill (Homogeneous Property)
-    \end{itemize}
+      \]
   \end{column}
     \begin{column}{0.4\textwidth}
       \onslide<2>{%
@@ -211,13 +217,13 @@ such that
 \begin{frame}{Reminder: DTMC with Continuous State Space}
   \textbf{Definition} (DTMC Continous state)
   A sequence $\{(\xx^{(t)}\}\subseteq S$ of random variables, with labeled distributions
-    $q(\xx^{(i)})$ (stochastic process), is a Markov Chain if there exists a
+    $q(\xx^{(i)})$, is a DTMC if there exists a
         parameterized map $\kappa_t: S\times S\to [0,1]$ such that
         \[
           \Ph(x^{(t+1)} \in A\,|\, x^{(t)}=s_t) = \int_A \kappa_t(y,s_t)\, dy
         \]
-        and the Markov property holds ,i.e. $\xx^{(t+1)}$ depends on $\xx^{(t)}$ 
-        and not on previous states.\\
+        and the Markov property holds, i.e. absence of memory.\\
+        \vspace{0.5cm}
   \textbf{Notation}\\
   \begin{itemize}
     \item We call $(\xx^{(1)},\cdots,\xx^{(T)})$ \textbf{trajectory}
@@ -235,7 +241,7 @@ such that
       \hfill\onslide<2->{{\color{red} Not Analytic!!}}
     \item \textbf{Transaction Kernel}: $q\left( \xx^{(t)}\,\vert\,\xx^{(t-1)}
       \right)=\NN\left( \xx^{(t)};\sqrt{1-\beta_t}\xx^{(t-1)}; \beta_t I \right)$
-    \item \textbf{Variance Scheduler}: $0<\beta_1<\cdots<\beta_T< 1$ 
+    \item \textbf{Diffusion rates}: $0<\beta_1<\cdots<\beta_T=1$ 
   \end{itemize}
   \begin{figure}[h!]
     \centering
@@ -245,13 +251,16 @@ such that
 \begin{frame}{Forward Diffusion Process: Explicit Representation}
   \textbf{Observation I}
   Each term of the trajectory can be expressed as a combination of the
-  previous state and the gaussian noise.
+  previous state and the Gaussian noise.
   \[
     \xx^{(t)}=\sqrt{1-\beta_t}\,\xx^{(t-1)} +
     \sqrt{\beta_t}\,\varepsilonb_t,\quad
     \varepsilonb_t\sim\NN(0,I)
   \]
+  \vspace{0.5cm}
   \textbf{Observation II}
+  Each term can be written as a combination of the initial state and a
+  Gaussian noise.
     \[
       \xx^{(t)} = \sqrt{1-\alpha_t}\, \xx^{(0)} + \sqrt{\alpha_t}
       \varepsilonb,\quad \varepsilonb\sim\NN(0,I)
@@ -262,9 +271,10 @@ such that
     \]
 \end{frame}
 \begin{frame}{Forward Diffusion Process: Distribution Representation}
-  \begin{center}
-    Markov property allows breaking up distributional Representation\ldots
-  \end{center}
+  \textbf{Observation}\\
+   The markov property allows breaking up the distributional
+   Representation of the whole trajectory as a product of transitional
+   distributions. Consiering the following interemediate rappresentation
   \begin{equation}
     \begin{aligned}
     q(\xx^{(0)},\ldots,\xx^{(T)}) &= q\left( \xx^{(T)}\,|\,
@@ -276,6 +286,8 @@ such that
       &\vdots\\
     \end{aligned}
   \end{equation}
+  By iterating the procedure we get the following representation of the
+  diffusione process
   \pause
   \begin{block}{Distributional Representation}
     \[
@@ -306,6 +318,7 @@ such that
   \end{figure}
   \vfill
   \onslide<3->{%
+    \textbf{\color{rred}Learned Reverse Process}
   {\color{rred}\footnotesize
   \[
     \begin{aligned}
@@ -316,7 +329,8 @@ such that
       \NN\left(\xx^{(t-1)};\mub_\theta\left(\xx^{(t)},t
       \right),\Sigmab_\theta\left(\xx^{(t)},t \right)\right)&
     \end{aligned}
-  \]} \textbf{\color{rred}Learned Reverse Process}}
+  \]}
+}
 \end{frame}
 \begin{frame}{Reverse Diffusion Process}
   \begin{minipage}[t]{0.45\textwidth}
@@ -348,7 +362,9 @@ such that
   \pause
   \begin{block}{Theorem. Reverse of Gaussian DP is $\approx$ Gaussian DP\footcite{thermodynamic}}
     If $|\beta_i-\beta_{i+1}|\approx 0$, i.e.\ diffusion \textbf{slow
-    enough}, then% $q\left( \xx^{(t)}\,\vert\,\xx^{(t-1)} \right)=\NN\left( \xx^{(t)};\sqrt{1-\beta_t}\xx^{(t-1)}; \beta_t I \right)$ is such that
+    enough}, then the reverse diffusion process can be approximated by an
+    other diffusion process with a gaussin transition kernel
+    % $q\left( \xx^{(t)}\,\vert\,\xx^{(t-1)} \right)=\NN\left( \xx^{(t)};\sqrt{1-\beta_t}\xx^{(t-1)}; \beta_t I \right)$ is such that
     \[
       q(\xx^{(t-1)}\,\vert\, \xx^{(t)}) 
       \approx \NN\left(\xx^{(t-1)};\,\onslide<3->{\tikzmarkin{z1}} 
@@ -360,13 +376,29 @@ such that
   \end{block}
   \onslide<3->{\tikzmarkin[below right offset={0.,-0.2}, above left
     offset={0.,0.4}]{b} Mean $\mub_\theta$ and covariance
-  $\Sigmab_\theta$ have to be learned!!\tikzmarkend{b}}
+  $\Sigmab_\theta$ are the output of a neural model !!\tikzmarkend{b}}
 \end{frame}
-\begin{frame}{Visualization of Diffusion Process: 2D dimensional case}
-  \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.75\textwidth]{./pic/summary-forw-reverse.png}\footcite{thermodynamic}
-  \end{figure}
+\begin{frame}{Visualization of Diffusion Process: 2D dimensional case\footcite{thermodynamic}}
+  \begin{minipage}[h]{0.5\textwidth}
+    \begin{itemize}
+      \item \textbf{(Top)} Forward diffusion process that brings the
+        swiss-roll data (left) into the $\NN(0,I)$ gaussian
+          distribution (right).
+        \item \textbf{(Center)} The trained reverse trajectory from the
+          identity-covariance gaussian distribution (right) to the
+          reconstructed data distribution.
+        \item \textbf{(Bottom)} The drift term for different time slices defined as follows
+          \[
+            \epsilon_t =\mu_\theta(\xx^{(t)},t) - \xx^{(t)}
+          \]
+    \end{itemize}
+  \end{minipage}\hfill
+  \begin{minipage}{0.5\textwidth}
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=1.25\textwidth]{./pic/summary-forw-reverse.png}
+    \end{figure}
+  \end{minipage}
 \end{frame}
 \begin{frame}{Training of $\mub_\theta$ and  $\Sigmab_\theta$}
   \begin{columns}
@@ -491,8 +523,7 @@ such that
     \]
 \end{frame}
 \begin{frame}{Training of $\mub_\theta$ and  $\Sigmab_\theta$}
-  \begin{minipage}[t]{0.75\textwidth}
-\ldots after some algebraic steps :)
+  \ldots after some manipulations :)
   \begin{center}
     \bf
     Reformulated Loss Function
@@ -511,33 +542,70 @@ such that
       p_\theta(\xx^{(t)}\,\vert\, \xx^{(t+1)}) \right)
     \right]
     \\
-    \LL_0 &= \E_{q(\xx^{(0\ldots T)})}\left[ p_\theta(\xx^{(0)}\,\vert\, \xx^{(1)}) \right]
+    \LL_0 &= \E_{q(\xx^{(0\ldots T)})}\left[
+    -\log(p_\theta(\xx^{(0)}\,\vert\, \xx^{(1)})) \right]
   \end{aligned}
   \]
-\end{minipage}\hfill%
-\begin{minipage}[t]{0.20\textwidth}
-  \vspace{4cm}
-  \textbf{Note.}\\
-  $\LL_T$ is constant.\\
-  $\LL_0,\,\LL_t$ explicit.\\
-\end{minipage}\\
+  \textbf{Observation}\\
+  Note that in $\LL_T$ does not depend on $\theta$. $L_t$ allows an explicit
+  formulation being the forward transition gaussian and the reverse
+  transition gaussian with parameterized mean and convariance. The term
+  $\LL_0$ has a closed form.
  % \tikzmarkin{a3}All the expectations can be \textbf{explicitly} calculated
  % and only depends on $\theta$!!\tikzmarkend{a3}
 \end{frame}
-\begin{frame}{Neural Network that estimate $\mub_\theta$ and
+\begin{frame}{Neural Network that estimates $\mub_\theta$ and
   $\Sigmab_\theta$}
+  \begin{minipage}[h]{0.5\textwidth}
+    \textbf{Description of the model}
+    \begin{itemize}
+      \item Simple model, only convolutions, no residual layers.
+      \item For each input $x\in\R^n$ and $t$, the model returns a vector
+        $y=f_\theta(x) \in\R^{2n}$ that stores the mean and a diagonal 
+        covariance $\mu_\theta,\, \Sigma_\theta$.
+      \item The diffusions rate $\beta_t$ are trained as the other paramters
+        and fixed.
+    \end{itemize}
+    \vspace{0.5cm}
+
+%    \textbf{Inference, a.k.a sampling or generation}\\
+%    \begin{verbatim}
+%    1 Generate x_curr ~ N(0,I)
+%    2 for t in range(T):
+%    3   [mu, sigma] = f(x_curr, t)
+%    \end{verbatim}
+    
+  \end{minipage}\hfill
+  \begin{minipage}[h]{0.5\textwidth}
   \begin{figure}[h!]
     \centering
-    \includegraphics<1>[width=0.45\textwidth]{./pic/diff_net_1.png}%
-    \includegraphics<2>[width=0.45\textwidth]{./pic/diff_net_2.png}%
+    \includegraphics<1>[width=0.9\textwidth]{./pic/diff_net_1.png}%
+    \includegraphics<2>[width=0.9\textwidth]{./pic/diff_net_2.png}%
   \caption{Proposed Neural Network for CIFAR10 image generation. T=1000}
   \end{figure}
+  \end{minipage}
 \end{frame}
 \begin{frame}{Sampling or Generative Stage}
-  \begin{figure}[h]
+  \begin{minipage}[h]{0.5\textwidth}
+    \begin{enumerate}
+      \item Set $t=T$ and pick a random image $x^{(t)}\in\R^n$ from $\NN(0,I)$;
+      \item Deduce mean and covariance from $y=f_\theta(x^{(t)}, t)$
+      \item Pick a random image $x^{(t-1)}$ from $\NN(\mu,\Sigma)$ and set
+        $t=t-1$;
+      \item Iterate 2. and 3. until $t=0$.
+    \end{enumerate}
+  \end{minipage}\hfill
+  \begin{minipage}[h]{0.5\textwidth}
+  \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.5\textwidth]{./pic/sampling.png}
+    \includegraphics[width=1\textwidth]{./pic/sampling.png}
+  \caption{Proposed Neural Network for CIFAR10 image generation. T=1000}
   \end{figure}
+  \end{minipage}
+ % \begin{figure}[h]
+ %   \centering
+ %   \includegraphics[width=0.5\textwidth]{./pic/sampling.png}
+ % \end{figure}
 \end{frame}
 \begin{frame}{Experiments\footcite{thermodynamic}}
   \begin{minipage}[h!]{0.5\textwidth}
