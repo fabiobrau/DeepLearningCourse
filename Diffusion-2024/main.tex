@@ -879,7 +879,6 @@ such that
   \end{figure}
   \end{minipage}
 \end{frame}
-\iffalse
 \section{DALL-E2}
 \begin{frame}{Introduction}
   \begin{center}
@@ -908,7 +907,7 @@ such that
   \begin{figure}[h]
     \centering
     \includegraphics<1>[clip, width=0.85\textwidth, trim=0 0 0 0]{./pic/dalle-samples2.png}%
-    \includegraphics<2->[clip, width=0.85\textwidth, trim=0 0 0 1.25cm]{./pic/dalle-samples3.png}
+   % \includegraphics<2->[clip, width=0.85\textwidth, trim=0 0 0 1.25cm]{./pic/dalle-samples3.png}
     \caption{\footnote{\textbf{Credits:} DALL-E2 website}}
   \end{figure}
 \end{frame}
@@ -955,11 +954,13 @@ such that
       through cosine similarity.
     \end{enumerate}}
     \only<2->{\begin{enumerate}
-        \item[4.] \textbf{Aim}: Zero-shot classification (of unseen
-      datasets, see later.)
+        \item[4.] \textbf{Aim}: Initially the model was designed for
+          performing a Zero-shot classification (classification of unseen
+          data).
       \vspace{0.5cm}
         \item[5.]  The \textbf{Text Encoder} is a Transformer for NLP ($63M$ of
-      parameters, next lectures).
+          parameters, 12 layers 512-wide model with 8 attention head. Token
+        lenght 76 (lol)).
       \vspace{0.5cm}
     \item[6.] The \textbf{Image Encoder} include ResNet-50 and Vision-Transformers
   \end{enumerate}}
@@ -976,11 +977,8 @@ such that
 \end{columns}
 \end{frame}
 \begin{frame}{DALL-E2 with higher detail}
-  \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.5\textwidth]{./pic/dalle-encdec.png}
-  \end{figure}
-  Let $(x,y)$ be an (image, caption) pair.
+  Dall-E2 is composed by the following modules. Let $(x,y)$ be an (image,
+  caption) pair,
   \begin{enumerate}
     \item \textbf{CLIP} such that $(x,y)\mapsto(z_i, z_t)$.
     \item \textbf{Prior} which estimates $q(\zz_i\,\vert\,\yy)$ \hfill
@@ -991,16 +989,30 @@ such that
       \onslide<2->{\textit{\color{blue}Provide an Image conditioned to a
       text and Image Emb.}}
   \end{enumerate}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{./pic/dalle-encdec.png}
+  \end{figure}
   \onslide<3->{
-  \begin{block}{Observation}
-    \[
-      p(\xx\,\vert\, \yy) \underbrace{=}_{\mbox{\color{rred} Deterministic}}
-      p(\xx,\zz_i\,\vert\,\yy) \underbrace{=}_{\mbox{\color{rred} Bayes Rule}} p(\xx\,\vert\,
-      \zz_i,\yy)p(\zz_i\,\vert\,\yy)
-    \]
-\end{block}}
+    \textbf{Pipeline of Generation}\\
+    The aim of the DALL-E2 is to recover the distribution of the image $p(\xx
+    | \yy)$ conditioned to the text $\yy$.\\
+    \vspace{0.2cm}
+
+    The \textbf{Text Encoder} returns the embedding $z_t$ which is processed
+    by the \textbf{prior} to find a good estimation of the
+    embedding of the (desired) output image $z_i$. The \textbf{decoder}
+    inverts the embedding $z_i$ and return the image $\xx$.
+  %\begin{block}{Observation}
+  %  \[
+  %    p(\xx\,\vert\, \yy) \underbrace{=}_{\mbox{\color{rred} Deterministic}}
+  %    p(\xx,\zz_i\,\vert\,\yy) \underbrace{=}_{\mbox{\color{rred} Bayes Rule}} p(\xx\,\vert\,
+  %    \zz_i,\yy)p(\zz_i\,\vert\,\yy)
+  %  \]
+  %\end{block}
+  }
 \end{frame}
-\begin{frame}{Decoding through Diffusion models}
+\begin{frame}{Decoder: Guided Diffusion models}
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{center}
@@ -1024,6 +1036,27 @@ such that
     \includegraphics<2->[clip, width=\textwidth, trim= 0 8cm 0 10cm]{./pic/dalle-decoder_2.png}
   \end{figure}
 \end{frame}
+\begin{frame}{The guided diffusion model\footcite{glide}}
+  \vspace{0.5cm}
+  \textbf{Guidance through classification}\\
+  A neural classifier that estimate $p_\Phi(y|\xx)$ can be used to
+  \textbf{guide} a diffusion model to produce an image of a certain class
+  $\yy$.\\
+  \[
+  \tilde \mu_\theta(\xx^{(t)}|\yy) = \mu_\theta(\xx^{(t)}|\yy) + \nabla
+  _{\xx^{(t)}} \log(p_\Phi(\yy|\xx^{(t)}))
+  \]
+  \vspace{0.5cm}
+
+  \textbf{Guidance through CLIP similarity}\\
+  To apply the same idea to diffusion models, we can replace the classifier with a CLIP 
+  model in classifier guidance. Given a caption $\yy$, the mean of the
+  diffusion process is perturbed by using the dot product of the embeddings
+  \[
+  \tilde \mu_\theta(\xx^{(t)}|\yy) = \mu_\theta(\xx^{(t)}|\yy) + \nabla
+  _{\xx^{(t)}} \zz_t(\yy)\cdot \zz_i(\xx^{(t)})
+  \]
+\end{frame}
 \begin{frame}{Prior}
   \begin{center}
     \textbf{Diffusion Prior}: ``The image embedding $\zz_i$ is directly modelled 
@@ -1041,15 +1074,32 @@ such that
   \)
 \end{frame}
 
-\begin{frame}{Experiments:Image Interpolation}
+\begin{frame}{Experiments: Image Generation}
+
   \begin{figure}[h]
     \centering
-    \includegraphics[width=0.75\textwidth]{./pic/dalle-image_interp.png}
-    \caption{For each row, the decoder is applied to a combination of
-    $\zz_i(left)$ and $\zz_i(right)$.}
+    \includegraphics[width=0.70\textwidth]{./pic/dalle-e2 examples.png}
+    \caption{Generation examples in the original paper.}
   \end{figure}
 \end{frame}
-\begin{frame}{Experiments: Abstract Representation}
+\begin{frame}{Experiments: Image Interpolation}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.70\textwidth]{./pic/dalle-image_interp.png}
+    \caption{For each row, the decoder is applied to a combination of
+    $\zz_i(left)$ and $\zz_i(right)$. The intermediate variations naturally
+  blend the content and style from both input images}
+  \end{figure}
+\end{frame}
+\begin{frame}{Experiments: Hands Generation}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{./pic/hand-dalle2.png}
+    \caption{Random samples from unCLIP for prompt “A close up of a handpalm with leaves growing from it.}
+  \end{figure}
+\end{frame}
+\iffalse
+\begin{frame}{Experiments Abstract Representation}
   \begin{center}
     \bf Representation of the Dignity
   \end{center}
@@ -1088,6 +1138,7 @@ such that
     \end{column}
   \end{columns}
 \end{frame}
+\fi
 %\begin{frame}{Text Interpolation}
 %  \begin{figure}[h]
 %    \centering
@@ -1097,7 +1148,6 @@ such that
 %  \end{figure}
 %
 %\end{frame}
-\fi
 \section{Conclusion}
 \begin{frame}{Broader Impacts}
   \begin{enumerate}
